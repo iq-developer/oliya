@@ -1,0 +1,27 @@
+{
+  "products" : {
+    "1" : {
+      "id": 1,
+      "category": "Олія сиродавлена",
+      "title": "чорного кмину",
+      "img": "http://janardano.com/img/chornyj-kmyn.png",
+      "price": {
+        "100": "123",
+        "200": "456",
+        "500": "1011"
+      }
+    },
+    "2" : {
+      "id": 1,
+      "category": "Олія сиродавлена",
+      "title": "конопляна",
+      "img": "http://janardano.com/img/konoplya.png",
+      "price": {
+        "100": "119",
+        "250": "283",
+        "500": "452"
+      }
+    }
+    
+  }
+}
