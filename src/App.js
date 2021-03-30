@@ -9,7 +9,7 @@ const Tr = ({prices, id, handleInputChangeBlock, cart}) => {
 
   const handleInputChange = (event) => {
     console.log('event.target.id: ', event.target.id);
-    handleInputChangeBlock(event.target.id);
+    handleInputChangeBlock(event.target.id, event.target.value);
   }
 
   const plus = (event) => { //доделать потом
@@ -25,7 +25,7 @@ const Tr = ({prices, id, handleInputChangeBlock, cart}) => {
         <td className="form">
           <form>
             <button>-</button>
-            <input id={`${id}-${priceKey}`} size="1" placeholder=" 0" value={cart.priceId || 0} onChange={handleInputChange} />
+            <input id={`${id}-${priceKey}`} size="1" value={cart[id + '-' + priceKey] || ''} onChange={handleInputChange} />
             <button onClick={plus}>+</button>
           </form>
         </td>
@@ -53,21 +53,23 @@ const Block = ({handleInputChangeApp, cart}) => {
 
 function App() {
   const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
+  const [sum, setSum] = useState(0);
+  const [amount, setAmount] = useState(0);
 
-  const sum = () => {
-    return Object.values(cart).reduce((sum, current) => sum + current, 0);
-  }
+  const handleInputChangeFinal = (priceId, inputValue) => {
 
-  const amount = () => {
-    return Object.keys(cart).length;
-  }
+    console.log('priceId: ', priceId, ' inputValue: ', inputValue);
 
-  const handleInputChangeFinal = (priceId) => {
-    console.log('priceId: ', priceId);
-    //setCart(); // TODO
-  }
+    setCart(prevState => { //почему срабатывает с задержкой в 1 действие?
+      return {...prevState, [priceId]: inputValue};
+    });
 
+    setSum(Object.values(cart).reduce((sum, current) => sum + (+current), 0));
 
+    setAmount(Object.keys(cart).length);
+
+    console.log('cart: ', cart);
+  };
 
   return (
     <>
