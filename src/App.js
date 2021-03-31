@@ -3,21 +3,24 @@ import logoImg from './assets/logo.png';
 import menuImg from './assets/menu.png';
 import cartImg from './assets/cart.png';
 import database from './oliya-db.json';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const Tr = ({prices, id, handleInputChangeBlock, cart}) => {
+const Tr = ({prices, id, handleInputChangeBlock, cart, setCart}) => {
 
   const handleInputChange = (event) => {
-    console.log('event.target.id: ', event.target.id);
-    handleInputChangeBlock(event.target.id, event.target.value);
+    handleInputChangeBlock(event.target.name, event.target.value);
   }
 
-  const plus = (event) => { //доделать потом
+  const handlePlus = (event) => { //доделать потом
     event.preventDefault();
+    // setCart(prevState => {
+    //   return {...prevState, [priceId]: +inputValue};
+    // })
     return;
   }
 
   return Object.entries(prices).map(([priceKey, priceValue]) => {
+    const priceId = `${id}-${priceKey}`;
     return (
       <tr key={priceKey}>
         <td className="volume">{priceKey}<small> мл:</small></td>
@@ -25,8 +28,9 @@ const Tr = ({prices, id, handleInputChangeBlock, cart}) => {
         <td className="form">
           <form>
             <button>-</button>
-            <input id={`${id}-${priceKey}`} size="1" value={cart[id + '-' + priceKey] || ''} onChange={handleInputChange} />
-            <button onClick={plus}>+</button>
+            <input name={priceId} size="1" value={cart[priceId] || ''} onChange={handleInputChange} />
+            <button id={priceId} onClick={handlePlus}>+</button>
+
           </form>
         </td>
       </tr>
@@ -34,7 +38,7 @@ const Tr = ({prices, id, handleInputChangeBlock, cart}) => {
   });
 }
 
-const Block = ({handleInputChangeApp, cart}) => {
+const Block = ({handleInputChangeApp, cart, setCart}) => {
   return Object.entries(database.products).map(([key, value]) => {
     return (
       <article className="block" key={key}>
@@ -44,7 +48,7 @@ const Block = ({handleInputChangeApp, cart}) => {
         </div>
         <table className="table">
           <tbody>
-            <Tr prices={value.price} id={value.id} handleInputChangeBlock={handleInputChangeApp} cart={cart}/>
+            <Tr prices={value.price} id={value.id} handleInputChangeBlock={handleInputChangeApp} cart={cart} setCart={setCart} />
           </tbody>
         </table>
       </article>
@@ -57,19 +61,16 @@ function App() {
   const [amount, setAmount] = useState(0);
 
   const handleInputChangeFinal = (priceId, inputValue) => {
-
-    console.log('priceId: ', priceId, ' inputValue: ', inputValue);
-
-    setCart(prevState => { //почему срабатывает с задержкой в 1 действие?
-      return {...prevState, [priceId]: inputValue};
-    });
-
-    setSum(Object.values(cart).reduce((sum, current) => sum + (+current), 0));
-
-    setAmount(Object.keys(cart).length);
-
-    console.log('cart: ', cart);
+    if (+inputValue || +inputValue === 0){
+      setCart(prevState => {
+        return {...prevState, [priceId]: +inputValue};
+      });
+    }
   };
+
+  useEffect(() => {setSum(Object.values(cart).reduce((sum, current) => sum + current, 0))}, [cart]);
+
+  useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + (+!!current), 0))}, [cart]);
 
   return (
     <>
@@ -99,7 +100,7 @@ function App() {
       </header>
 
       <main>
-        <Block handleInputChangeApp={handleInputChangeFinal} cart={cart} />
+        <Block handleInputChangeApp={handleInputChangeFinal} cart={cart} setCart={setCart} />
       </main>
     </>
   );
