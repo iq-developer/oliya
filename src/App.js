@@ -5,6 +5,7 @@ import cartImg from './assets/cart.png';
 import { useState, useEffect } from 'react';
 import { TextContext } from './context/textContext';
 import Block from './components/Block';
+import database from './oliya-db.json';
 
 function App() {
   const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
@@ -24,15 +25,38 @@ function App() {
     }
   };
 
-  useEffect(() => {setSum(Object.values(cart).reduce((sum, current) => sum + current , 0))}, [cart]); // добавить умножение на цену
+  useEffect(() => {setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
+   const [id, priceKey] = priceId.split('-');
+   const priceValue = database.products[id].price[priceKey];
+   return sum + amount * priceValue;
+  }, 0))}, [cart]); 
 
   useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + (+!!current), 0))}, [cart]);
+
+  const handlePlusFinal = (event) => {
+    event.preventDefault();
+    const newValue = cart[event.target.name] ? cart[event.target.name] + 1 : 1;
+    setCart(prevState => {
+      return {...prevState, [event.target.name]: newValue};
+    });
+  }
+
+  const handleMinusFinal = (event) => {
+    event.preventDefault();
+    const newValue = cart[event.target.name] ? cart[event.target.name] - 1 : '';
+    setCart(prevState => {
+      return {...prevState, [event.target.name]: newValue};
+    });
+  }
 
   return (
     <TextContext.Provider value={{
       theme,
-      onChangeTheme: handleChangeTheme
-      }}>
+      onChangeTheme: handleChangeTheme,
+      onPlus: handlePlusFinal,
+      onMinus: handleMinusFinal
+    }}>
+      
       <nav>
         <div className="inner">
           <a href="#"><img src={logoImg} className="logo" alt="Лого" /></a>

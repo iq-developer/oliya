@@ -3,26 +3,26 @@ import { TextContext } from '../context/textContext';
 
 const Tr = ({prices, id, handleInputChangeBlock, cart, setCart}) => {
 
-  const themeContext = useContext(TextContext);
-  console.log('themeContext: ', themeContext);
-
   const handleInputChange = (event) => {
     handleInputChangeBlock(event.target.name, event.target.value);
   }
 
+  const themeContext = useContext(TextContext);
+
   const handlePlus = (event) => {
     event.preventDefault();
-    const newValue = cart[event.target.id] + 1;
-    setCart(prevState => {
-      return {...prevState, [event.target.id]: newValue};
-    })
-    return;
+    themeContext.onPlus(event);
   }
 
-  const handleClick = (event) => {
+  const handleMinus = (event) => {
     event.preventDefault();
-    themeContext.onChangeTheme(themeContext.theme === 'light' ? 'dark' : 'light');
+    themeContext.onMinus(event);
   }
+
+  // const handleClick = (event) => {
+  //   event.preventDefault();
+  //   themeContext.onChangeTheme(themeContext.theme === 'light' ? 'dark' : 'light');
+  // }
 
   return Object.entries(prices).map(([priceKey, priceValue]) => {
     const priceId = `${id}-${priceKey}`;
@@ -32,9 +32,9 @@ const Tr = ({prices, id, handleInputChangeBlock, cart, setCart}) => {
         <td className="price"><strong>{priceValue}</strong><small> грн</small></td>
         <td className="form">
           <form>
-            <button onClick={handleClick}>-</button>
+            <button name={priceId} onClick={handleMinus}>-</button>
             <input name={priceId} size="1" value={cart[priceId] || ''} onChange={handleInputChange} />
-            <button id={priceId} onClick={handlePlus}>+</button>
+            <button name={priceId} onClick={handlePlus}>+</button>
           </form>
         </td>
       </tr>
