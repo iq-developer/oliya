@@ -33,7 +33,7 @@ const Tr = ({prices, id, handleInputChangeBlock, cart, setCart}) => {
         <td className="form">
           <form>
             <button name={priceId} onClick={handleMinus}>-</button>
-            <input name={priceId} size="1" value={cart[priceId] || ''} onChange={handleInputChange} />
+            <input name={priceId} size="1" placeholder='0' value={cart[priceId] || ''} onChange={handleInputChange} />
             <button name={priceId} onClick={handlePlus}>+</button>
           </form>
         </td>
