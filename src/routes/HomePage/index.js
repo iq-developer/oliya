@@ -1,13 +1,11 @@
-import './style.module.css';
-import logoImg from './assets/logo.png';
-import menuImg from './assets/menu.png';
-import cartImg from './assets/cart.png';
+import logoImg from './../../assets/logo.png';
+import menuImg from './../../assets/menu.png';
+import cartImg from './../../assets/cart.png';
 import { useState, useEffect } from 'react';
-import { TextContext } from './context/textContext';
-import Block from './components/Block';
-import database from './oliya-db.json';
-import Cart from './routes/CartPage';
-import {useRouteMatch, Route, Switch, Redirect} from 'react-router-dom';
+import { TextContext } from './../../context/textContext';
+import Block from './../../components/Block';
+import database from './../../oliya-db.json';
+
 
 function HomePage() {
   const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
@@ -31,7 +29,7 @@ function HomePage() {
    const [id, priceKey] = priceId.split('-');
    const priceValue = database.products[id].price[priceKey];
    return sum + amount * priceValue;
-  }, 0))}, [cart]); 
+  }, 0))}, [cart]);
 
   useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + (+!!current), 0))}, [cart]);
 
@@ -58,7 +56,7 @@ function HomePage() {
       onPlus: handlePlusFinal,
       onMinus: handleMinusFinal
     }}>
-      
+
       <nav>
         <div className="inner">
           <a href="#"><img src={logoImg} className="logo" alt="Лого" /></a>
