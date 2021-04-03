@@ -1,7 +1,7 @@
 import Tr from './Tr';
 import database from '../oliya-db.json';
 
-const Block = ({handleInputChangeApp, cart, setCart}) => {
+const Block = () => {
   return Object.entries(database.products).map(([key, value]) => {   
     const blockClassName = () => {
       switch (value.categoryId) {
@@ -25,7 +25,7 @@ const Block = ({handleInputChangeApp, cart, setCart}) => {
         </div>
         <table className="table">
           <tbody>
-            <Tr prices={value.price} id={value.id} handleInputChangeBlock={handleInputChangeApp} cart={cart} setCart={setCart} />
+            <Tr prices={value.price} id={value.id} />
           </tbody>
         </table>
       </article>

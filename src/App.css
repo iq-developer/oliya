@@ -21,6 +21,9 @@ nav {
 .logo:hover {
   opacity: 1;
 }
+.title{
+  margin-top: 0;
+}
 .search {
   position: relative;
   left: 95px;
@@ -39,8 +42,11 @@ nav {
 /* Header panel */
 
 header {
+  position: sticky;
+  top: 0;
   height: 75px;
-  background: rgba(107, 69, 58, 0.2);
+  background: url(assets/background.jpg) #fcedd4;
+  box-shadow: 0 0 0 100px rgba(107, 69, 58, 0.2) inset;
   font-size: 1.5em;
   color: #3d2117;
   padding: 10px 20px 10px;
@@ -63,13 +69,14 @@ header strong {
 
 /* Main  */
 main { 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 0.5vw;
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 0.5vw;
+}
 
 /* Elements */
 .inner {
