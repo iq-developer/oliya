@@ -6,17 +6,28 @@ const CartBlock = () => {
 
   const context = useContext(TextContext);
 
-  return Object.entries(context.cart).map(([key, value]) => { 
-    console.log('key:', key); // priceValue
-    console.log('value:', value); // сколько штук 
+  return Object.entries(context.cart).map(([priceId, quantity]) => { 
+
+    const [code, priceKey] = priceId.split('-');
+
+    const product = database.products[code];
+
     return (
       
-      <article className="block" key={key}>
+      <article className="block" key={priceId}>
 
-        {/* <div className="title">
-          <img src={value.img} alt={`${value.title}`} className="float" />
-          <h2>{value.category} <br /><strong>{value.title}</strong></h2>
-        </div> */}
+        <div className="title">
+          <img src={product.img} alt={`${product.title}`} className="float" />
+          <h2>{product.category} <br /><strong>{product.title}</strong></h2>
+        </div>
+
+        <div className="desc form">
+          <form>
+            <button name={priceId} onClick={context.handleMinus}>-</button>
+            <input name={priceId} size="1" placeholder='0' value={context.cart[priceId] || ''} onChange={context.handleInputChange} />
+            <button name={priceId} onClick={context.handlePlus}>+</button>
+          </form>
+        </div>
 
 
       </article>

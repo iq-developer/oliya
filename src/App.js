@@ -11,7 +11,9 @@ function App() {
   const [sum, setSum] = useState(0);
   const [amount, setAmount] = useState(0);
 
-  const handleInputChangeFinal = (priceId, inputValue) => {
+  const handleInputChange = (event) => {
+    const priceId = event.target.name;
+    const inputValue = event.target.value;
     if (+inputValue || +inputValue === 0){
       setCart(prevState => {
         return {...prevState, [priceId]: +inputValue};
@@ -27,7 +29,7 @@ function App() {
 
   useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + (+!!current), 0))}, [cart]);
 
-  const handlePlusFinal = (event) => {
+  const handlePlus = (event) => {
     event.preventDefault();
     const newValue = cart[event.target.name] ? cart[event.target.name] + 1 : 1;
     setCart(prevState => {
@@ -35,7 +37,7 @@ function App() {
     });
   }
 
-  const handleMinusFinal = (event) => {
+  const handleMinus = (event) => {
     event.preventDefault();
     const newValue = cart[event.target.name] ? cart[event.target.name] - 1 : '';
     setCart(prevState => {
@@ -49,9 +51,9 @@ function App() {
       setCart,
       sum,
       amount,
-      onInputChange: handleInputChangeFinal,
-      onPlus: handlePlusFinal,
-      onMinus: handleMinusFinal
+      handleInputChange,
+      handlePlus,
+      handleMinus
     }}>
       <Switch>
         <Route path='/' exact component={HomePage} />
