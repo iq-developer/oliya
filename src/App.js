@@ -20,8 +20,8 @@ function App() {
   };
 
   useEffect(() => {setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
-   const [id, priceKey] = priceId.split('-');
-   const priceValue = database.products[id].price[priceKey];
+   const [code, priceKey] = priceId.split('-');
+   const priceValue = database.products[code].price[priceKey]; //заменил на ключ БД
    return sum + amount * priceValue;
   }, 0))}, [cart]);
 

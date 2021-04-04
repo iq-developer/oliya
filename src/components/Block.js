@@ -25,7 +25,7 @@ const Block = () => {
         </div>
         <table className="table">
           <tbody>
-            <Tr prices={value.price} id={value.id} />
+            <Tr prices={value.price} id={key} />
           </tbody>
         </table>
       </article>
