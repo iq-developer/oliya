@@ -23,7 +23,7 @@ const Block = () => {
           <img src={value.img} alt={`${value.title}`} className="float" />
           <h2>{value.category} <br /><strong>{value.title}</strong></h2>
         </div>
-        <table className="table">
+        <table className="table center">
           <tbody>
             <Tr prices={value.price} id={key} />
           </tbody>

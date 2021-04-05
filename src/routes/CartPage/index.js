@@ -11,7 +11,7 @@ const CartPage = () => {
           <h1 className="title">Кошик</h1>
         </div>
       </header>
-      <main>
+      <main className="grid">
         <CartBlock />
       </main>
     </>
