@@ -6,15 +6,15 @@ const CartBlock = () => {
 
   const context = useContext(TextContext);
 
-  return Object.entries(context.cart).map(([priceId, quantity]) => { 
+  return Object.entries(context.cart).map(([priceId, quantity]) => {
 
     const [code, priceKey] = priceId.split('-');
 
     const product = database.products[code];
 
     if (quantity) {
-      
-        return (          
+
+        return (
             <article className="block fullWidth" key={priceId}>
 
               <div className="title float">
@@ -41,7 +41,7 @@ const CartBlock = () => {
                 </tr>
               </table>
 
-              <table className="float">
+              <table className="float additional">
                 <tr>
                   <th className="form">Сума</th>
                   <th className="form">Видалити</th>
@@ -51,18 +51,18 @@ const CartBlock = () => {
                   <td><button className="round">x</button></td>
                 </tr>
               </table>
-              
-              
-              
+
+
+
               <div className="desc float form ">
               <div className="float big"></div>
 
               </div>
 
-            </article> 
+            </article>
       );
     } else {
-      return <>no</>;
+      return;
     }
 })};
 

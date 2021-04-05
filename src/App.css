@@ -87,11 +87,11 @@ header strong {
 }
 
 /* Main  */
-main { 
+main {
   max-width: 1200px;
   margin: 0 auto;
 }
-.grid { 
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 0.5vw;
@@ -174,4 +174,22 @@ small {
 }
 .round {
   border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+
+  .additional {
+    display: none;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .fullWidth {
+    min-height: 150px;
+    text-align: center;
+  }
+  
+
 }
