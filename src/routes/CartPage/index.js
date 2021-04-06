@@ -1,8 +1,11 @@
 import CartBlock from './../../components/CartBlock';
+import Order from './../../components/Order';
 import returnImg from './../../assets/return.png';
 import {Link} from 'react-router-dom';
+import { useState } from 'react';
 
 const CartPage = () => {
+
   return (
     <>
     <header>
@@ -13,6 +16,7 @@ const CartPage = () => {
       </header>
       <main className="cart-page">
         <CartBlock />
+        <Order />
       </main>
     </>
 
