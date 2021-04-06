@@ -21,11 +21,8 @@ nav {
 .logo:hover {
   opacity: 1;
 }
-.title{
-  margin-top: 0;
-}
-.desc{
-  width: 300px;
+.desc {
+  margin: 0 auto;
 }
 .big {
   font-size: 1.3em;
@@ -175,6 +172,13 @@ small {
 .round {
   border-radius: 50%;
 }
+.floatResponsive {
+  float: left;
+}
+.cart-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 @media (max-width: 800px) {
 
@@ -186,10 +190,13 @@ small {
 
 @media (max-width: 640px) {
 
-  .fullWidth {
+  /* .fullWidth {
     min-height: 150px;
     text-align: center;
+  } */
+  .floatResponsive {
+    float: none;
   }
-  
+
 
 }

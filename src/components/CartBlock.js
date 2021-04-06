@@ -17,52 +17,40 @@ const CartBlock = () => {
         return (
             <article className="block fullWidth" key={priceId}>
 
-              <div className="title float">
+              <div className="title floatResponsive">
                 <img src={product.img} alt={`${product.title}`} className="float cartIcon" />
                 <h2>{product.category} <br /><strong>{product.title}</strong></h2>
               </div>
 
-              <table className="float">
-                <tr>
-                  <th>Об'єм</th>
-                  <th>Ціна</th>
-                  <th className="form">Кількість (шт)</th>
-                </tr>
-                <tr>
-                  <td>{priceKey}<small> мл:</small></td>
-                  <td><strong>{product.price[priceKey]}</strong><small> грн</small></td>
-                  <td className="form">
-                    <form>
-                      <button name={priceId} onClick={context.handleMinus}>-</button>
-                      <input name={priceId} size="1" placeholder='0' value={context.cart[priceId] || ''} onChange={context.handleInputChange} />
-                      <button name={priceId} onClick={context.handlePlus}>+</button>
-                    </form>
-                  </td>
-                </tr>
+              <table className="desc">
+                <tbody>
+                  <tr>
+                    <th>Об'єм</th>
+                    <th>Ціна</th>
+                    <th className="form">Кількість (шт)</th>
+                    <th className="form additional">Сума</th>
+                    <th className="form additional">Видалити</th>
+                  </tr>
+                  <tr>
+                    <td>{priceKey}<small> мл:</small></td>
+                    <td><strong>{product.price[priceKey]}</strong><small> грн</small></td>
+                    <td className="form">
+                      <form>
+                        <button name={priceId} onClick={context.handleMinus}>-</button>
+                        <input name={priceId} size="1" placeholder='0' value={context.cart[priceId] || ''} onChange={context.handleInputChange} />
+                        <button name={priceId} onClick={context.handlePlus}>+</button>
+                      </form>
+                    </td>
+                    <td className="form additional"><strong>{product.price[priceKey] * context.cart[priceId]}</strong><small> грн</small></td>
+                    <td className="form additional"><button className="round">x</button></td>
+                  </tr>
+                </tbody>
               </table>
-
-              <table className="float additional">
-                <tr>
-                  <th className="form">Сума</th>
-                  <th className="form">Видалити</th>
-                </tr>
-                <tr>
-                  <td className="form"><strong>{product.price[priceKey] * context.cart[priceId]}</strong><small> грн</small></td>
-                  <td><button className="round">x</button></td>
-                </tr>
-              </table>
-
-
-
-              <div className="desc float form ">
-              <div className="float big"></div>
-
-              </div>
 
             </article>
       );
     } else {
-      return;
+      return null;
     }
 })};
 
