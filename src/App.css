@@ -145,7 +145,7 @@ table {
 .block {
   text-align: center;
   padding: 20px 0 20px 10px;
-  background: rgba(255, 238, 227, 0.5);
+  background: rgba(255, 245, 227, 0.5);
   color: #9d856c;
   font-weight: bold;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
@@ -177,10 +177,19 @@ small {
   margin: 0 auto;
 }
 .block-order {
-    padding: 20px 0 20px 10px;
-    background: rgba(255, 238, 227, 0.5);
-    box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
-    font-size: 1.2em;
+  padding: 20px 0 20px 20px;
+  background: rgba(255, 245, 227, 0.7);
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
+  font-size: 1.2em;
+}
+.total {
+  text-align: left;
+  font-size: 1.2em;
+  padding-left: 20px;
+}
+
+.w220 {
+  width: 150px;
 }
 
 @media (max-width: 800px) {

@@ -5,6 +5,7 @@ const Order = () => {
   const option = "Нова пошта";
   const option1 = "Самовивіз з офісу (пр. Чорновола 63)";
   const option2 = "Самовивіз з кафе Грін (вул. Братів Рогатинців, 5)";
+
   const option3 = 'На відділення Нової Пошти';
   const option4 = "Курь'єрська доставка за адресою";
 
@@ -18,16 +19,29 @@ const Order = () => {
   const handleDeliveryOptionChange = (event) => {
     setDeliveryOption(event.target.value);
   }
-  // универсальный хендлер для всех значений пользователя 
   const handleChange = (event) => {
     setUser(prevState => {
       return {...prevState, [event.target.name]: event.target.value}
     });
   }
+  const handleCheckbox = (event) => {
+    setUser(prevState => {
+      return {...prevState, [event.target.name]: event.target.checked}
+    });
+  }
+
+  const handlePhone = (event) => {
+    setUser(prevState => {
+      return {...prevState, phone: event.target.value, contactPhone: event.target.value, viber: event.target.value}
+    });
+  }
 
   return (
-    <article className="block-order">
+    <article className="block-order fullWidth">
+    {JSON.stringify(user, null, '  ')};
+
       <form>
+        
         <h2>Спосіб доставки</h2>
         <input
           name="delivery"
@@ -35,93 +49,162 @@ const Order = () => {
           value={option}
           checked={delivery === option}
           onChange={handleDeliveryChange}
-        /> {option}<br />
+        /> {option}
+        <br />
         <input
           name="delivery"
           type="radio"
           value={option1}
           checked={delivery === option1}
           onChange={handleDeliveryChange}
-        /> {option1}<br />
+        /> {option1}
+        <br />
         <input
           name="delivery"
           type="radio"
           value={option2}
           checked={delivery === option2}
           onChange={handleDeliveryChange}
-        /> {option2}<br /><br />
-
-        <input
-          name="name"
-          value={user.name}
-          onChange={handleChange}
-          />
-        <label> Ім'я отримувача<br /></label>
-        <input
-          name="familyName"
-          value={user.familyName}
-          onChange={handleChange}
-          />
-        <label> Призвіще отримувача<br /></label>
-        <input
-          name="phone"
-          value={user.phone}
-          onChange={handleChange}
-          />
-        <label> Телефон отримувача<br /></label>
-
+        /> {option2}
+        <br />
         <div hidden={delivery !== option}>
-          <h3>Відправляти на відділення або курьерськой доставкою за вашою адресою?</h3>
-
+          <h3>Відправка на відділення або на адресу</h3>
           <input
             name="deliveryOption"
             type="radio"
             value={option3}
             checked={deliveryOption === option3}
             onChange={handleDeliveryOptionChange}
-          /> {option3} <br />
+          /> {option3}
+          <br />
           <input
             name="deliveryOption"
             type="radio"
             value={option4}
             checked={deliveryOption === option4}
             onChange={handleDeliveryOptionChange}
-          /> {option4} <br /><br />
-
+          /> {option4}
+          <br />
+          <br hidden={deliveryOption === option4} />
+          <label hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
           <input
             name="branchNumber"
             value={user.branchNumber}
             onChange={handleChange}
             hidden={deliveryOption === option4}
-            size="1"
-            />
-          <label hidden={deliveryOption === option4}> Номер відділення Нової Пошти<br /></label>
+            size="4"
+          />
+          <br />
+          <label hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
           <input
             name="address"
             value={user.address}
             onChange={handleChange}
             hidden={deliveryOption === option3}
-            />
-          <label hidden={deliveryOption === option3}> Адреса для доставки курьєром<br /></label>
-
+          />
+          <br />
+          <label className="w220 float"> Місто<br /></label>
           <input
             name="city"
             value={user.city}
             onChange={handleChange}
             list="cities"
             />
-          <label> Город<br /></label>
           <datalist id="cities">
             <option value="Львів" />
             <option value="Київ" />
           </datalist>
+          <br />
+          <label className="w220 float"> Область<br /></label>
           <input
             name="region"
             value={user.region}
             onChange={handleChange}
-            />
-          <label> Область<br /></label>
+          />
         </div>
+
+        <h3>Відомості про одержувача </h3>
+        <label className="w220 float"> Телефон</label>
+        <input
+          name="phone"
+          value={user.phone}
+          onChange={handlePhone}
+        />
+        <br />
+        <label className="w220 float"> Ім'я</label>
+        <input
+          name="name"
+          value={user.name}
+          onChange={handleChange}
+        />
+        <br /> 
+        <label className="w220 float" hidden={delivery !== option}> Призвіще</label>
+        <input
+          name="familyName"
+          value={user.familyName}
+          onChange={handleChange}
+          hidden={delivery !== option}
+        />
+        <br hidden={delivery !== option} />
+        <label className="w220 float" hidden={delivery !== option}> По-батькові</label>
+        <input
+          name="fathersName"
+          value={user.fathersName}
+          onChange={handleChange}
+          hidden={delivery !== option}
+        />
+        <br hidden={delivery !== option} />
+        <h3>Як з вами контактувати</h3>
+        <label className="w220 float">
+        <input
+          name="isContactPhone"
+          type="checkbox"
+          value="isContactPhone"
+          checked={user.isContactPhone}
+          onChange={handleCheckbox}
+        />
+        &nbsp;Телефон&nbsp;</label>
+        <input
+          name="contactPhone"
+          value={user.contactPhone}
+          onChange={handleChange}
+          hidden={!user.isContactPhone}
+        />
+        <br />
+        <label className="w220 float">
+        <input
+          name="isViber"
+          type="checkbox"
+          value="isViber"
+          checked={user.isViber}
+          onChange={handleCheckbox}
+        />
+        &nbsp;Вайбер&nbsp;</label>
+        <input
+          name="viber"
+          value={user.viber}
+          onChange={handleChange}
+          hidden={!user.isViber}
+        />
+        <br />
+        <label className="w220 float">
+        <input
+          name="isEmail"
+          type="checkbox"
+          value="isEmail"
+          checked={user.isEmail}
+          onChange={handleCheckbox}
+        />
+        &nbsp;Email&nbsp;</label>
+        <input
+          name="email"
+          value={user.email}
+          onChange={handleChange}
+          hidden={!user.isEmail}
+        />
+        <br />
+
+
       </form>
     </article>
   );
