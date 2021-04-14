@@ -19,6 +19,8 @@ const Order = () => {
   const handleDeliveryOptionChange = (event) => {
     setDeliveryOption(event.target.value);
   }
+
+  
   const handleChange = (event) => {
     setUser(prevState => {
       return {...prevState, [event.target.name]: event.target.value}
@@ -34,6 +36,16 @@ const Order = () => {
     setUser(prevState => {
       return {...prevState, phone: event.target.value, contactPhone: event.target.value, viber: event.target.value}
     });
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //alert('submited :)');
+    console.log('submited');
+
+    //if(){}
+
+    return null;
   }
 
   return (
@@ -203,8 +215,8 @@ const Order = () => {
           hidden={!user.isEmail}
         />
         <br />
-
-
+        <br />
+      <a href="#" className="button big" onClick={handleSubmit}>Замовити</a>
       </form>
     </article>
   );

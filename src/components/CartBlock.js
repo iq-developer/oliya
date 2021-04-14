@@ -29,7 +29,6 @@ const CartBlock = () => {
                     <th>Ціна</th>
                     <th className="form">Кількість (шт)</th>
                     <th className="form additional">Сума</th>
-                    <th className="form additional">Видалити</th>
                   </tr>
                   <tr>
                     <td>{priceKey}<small> мл:</small></td>
@@ -42,7 +41,6 @@ const CartBlock = () => {
                       </form>
                     </td>
                     <td className="form additional"><strong>{product.price[priceKey] * context.cart[priceId]}</strong><small> грн</small></td>
-                    <td className="form additional"><button className="round">x</button></td>
                   </tr>
                 </tbody>
               </table>
