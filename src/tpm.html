@@ -5,21 +5,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="App.css">
+
   <style>
-    .ccc {
-      background: #ccc;
-      border: solid 1px green;
-      padding: 20px;
+    .outer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      /* align-items: stretch; */
+
+      width: 100%;
+      background:lavender;
+      color: #fff;
+      font-size: 2em;
+      text-align: center;
+      height: 300px;
+      /* width: 400px; */
     }
+    .inner {
+      display: inline-block;
+      background: coral;
+      width: 100px;
+      /* height: 200px; */
+    }
+    .one {
+      background:cornflowerblue;
+      width: 200px;
+      /* height: 120px; */
+      font-size: 2em;
+    }
+    .two {
+      background:darkblue;
+      width: 150px;
+      height: 150px;
+    }
+
   </style>
 </head>
 <body>
 
-<div class="ccc">
-  <div class="float ccc">111111111111111111111</div>
-  <div class="ccc">222222222222</div>
-</div>
+  <div class="outer ccc">
+    <span class="inner">1</span>
+    <span class="inner">2</span>
+    <div class="one">3</div>
+    <span class="inner">4</span>
+    <div class="two">5</div>
+  </div>
+
 
 </body>
 </html>

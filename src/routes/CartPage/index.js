@@ -10,7 +10,7 @@ const CartPage = () => {
     <>
     <header>
         <div className="inner">
-          <Link to="/"><button className="white-button"><img src={returnImg} alt="Повернутись до інтернет-магазину" /></button></Link>
+          <Link to="/shop"><button className="white-button"><img src={returnImg} alt="Повернутись до інтернет-магазину" /></button></Link>
           <h1 className="title">Кошик</h1>
         </div>
       </header>

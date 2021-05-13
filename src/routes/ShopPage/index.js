@@ -22,8 +22,21 @@ function HomePage() {
         </div>
       </nav>
 
-      <main className="grid">
+      <header>
+        <div className="inner">
+          <div className="phone" hidden>
+            <a href="tel:+380959300302">+38(095)930-03-02</a>
+          </div>
+          <div className="cart">
+            <Link to="cart"><button className="white-button"><img src={cartImg} alt="Корзина замовлення" /></button></Link>
+            <div className="amount">товарів: <strong>{context.amount}</strong> шт</div>
+            <div className="sum">сума: <strong>{context.sum}</strong> грн</div>
+          </div>
+        </div>
+      </header>
 
+      <main className="grid">
+        <Block />
       </main>
     </>
   );
