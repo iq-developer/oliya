@@ -27,7 +27,7 @@ function App() {
    return sum + amount * priceValue;
   }, 0))}, [cart]);
 
-  useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + (+!!current), 0))}, [cart]);
+  useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + current, 0))}, [cart]);
 
   const handlePlus = (event) => {
     event.preventDefault();
@@ -61,7 +61,7 @@ function App() {
         <Route path='/cart' component={CartPage} />
         <Route path='/' render={() =>(<div>404</div>
         )} />
-      </Switch>    
+      </Switch>
     </TextContext.Provider>
   );
 }

@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { send } from 'emailjs-com';
+import{ init } from 'emailjs-com';
+init("user_sI9r9eHLuS7gdbxX83bpG");
 
 const Order = () => {
 
@@ -20,7 +23,7 @@ const Order = () => {
     setDeliveryOption(event.target.value);
   }
 
-  
+
   const handleChange = (event) => {
     setUser(prevState => {
       return {...prevState, [event.target.name]: event.target.value}
@@ -48,12 +51,42 @@ const Order = () => {
     return null;
   }
 
+  //EmailJS start
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    to_name: '',
+    message: '',
+    reply_to: '',
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    send(
+      'service_skcbnpf',
+      'template_6vxi5i8',
+      toSend,
+      'user_sI9r9eHLuS7gdbxX83bpG'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+  };
+
+  const handleChange1 = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
+   //EmailJS end
+
   return (
     <article className="block-order fullWidth">
     {JSON.stringify(user, null, '  ')};
 
       <form>
-        
+
         <h2>Спосіб доставки</h2>
         <input
           name="delivery"
@@ -149,7 +182,7 @@ const Order = () => {
           value={user.name}
           onChange={handleChange}
         />
-        <br /> 
+        <br />
         <label className="w220 float" hidden={delivery !== option}> Призвіще</label>
         <input
           name="familyName"
@@ -218,6 +251,44 @@ const Order = () => {
         <br />
       <a href="#" className="button big" onClick={handleSubmit}>Замовити</a>
       </form>
+
+
+     {/* EmailJS start */}
+
+      <form onSubmit={onSubmit}>
+        <input
+          type='text'
+          name='from_name'
+          placeholder='from name'
+          value={toSend.from_name}
+          onChange={handleChange1}
+        />
+        <input
+          type='text'
+          name='to_name'
+          placeholder='to name'
+          value={toSend.to_name}
+          onChange={handleChange1}
+        />
+        <input
+          type='text'
+          name='message'
+          placeholder='Your message'
+          value={toSend.message}
+          onChange={handleChange1}
+        />
+        <input
+          type='text'
+          name='reply_to'
+          placeholder='Your email'
+          value={toSend.reply_to}
+          onChange={handleChange1}
+        />
+        <button type='submit'>Submit</button>
+      </form>
+
+      {/* EmailJS end */}
+
     </article>
   );
 
