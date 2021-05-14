@@ -2,6 +2,7 @@ import './App.css';
 import HomePage from './routes/HomePage';
 import CartPage from './routes/CartPage';
 import ShopPage from './routes/ShopPage';
+import AboutPage from './routes/AboutPage';
 import {Route, Switch} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import {TextContext} from './context/textContext';
@@ -61,6 +62,7 @@ function App() {
         <Route path='/home' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
         <Route path='/cart' component={CartPage} />
+        <Route path='/about' component={AboutPage} />
         <Route path='/' render={() =>(<div>404</div>
         )} />
       </Switch>
