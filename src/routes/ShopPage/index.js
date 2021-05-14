@@ -28,7 +28,7 @@ function ShopPage() {
         </div>
       </header>
 
-      <main className="grid shop">
+      <main className="grid content">
         <Block />
       </main>
     </>

@@ -111,19 +111,31 @@ header strong {
 }
 
 /* Shop  */
-
-.shop {
+.about {
+  padding: 50px;
+  background: rgba(255, 245, 227, 0.5);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  font-size: 1.5em;
+}
+.content {
   max-width: 1200px;
   margin: 0 auto;
 }
+.about h2{
+  font-size: 1.5em;
+  color: #693b3b;
+}
+.about blockquote {
+  color: #693b3b;
+}
 
+
+/* Elements */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 0.5vw;
 }
-
-/* Elements */
 .inner {
   max-width: 1200px;
   margin: 0 auto;
