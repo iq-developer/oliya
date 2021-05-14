@@ -15,7 +15,7 @@ function HomePage() {
     <>
       <Nav />
 
-      <main>
+      <main className={s.home}>
 
         <div className={cn(s.banner, s.white)}>
           <div>
@@ -193,7 +193,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear2col}>
-              <button className={cn(s.big_button, s.bgwhite)}>Для чого вони це роблять?</button>
+              <button hidden className={cn(s.big_button, s.bgwhite)}>Для чого вони це роблять?</button>
             </div>
 
           </div>

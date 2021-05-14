@@ -6,16 +6,36 @@
 .center {
   margin: 0 auto;
 }
-.beige {
+.left {
+  text-align: left;
+}
+.bgbeige {
   background: #efd8b4;
   color: black;
 }
+.bgwhite {
+  background: #fff;
+  color: black;
+}
+
+/* elements css */
+
 .bars {
   margin: auto;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1920px;
+}
+.oils {
+  margin: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1920px;
+}
+.oil_txt {
+  font-size: 0.8em;
 }
 .gears {
   margin: auto;
@@ -39,33 +59,6 @@
   margin-right: 20px;
   width: 150px;
 }
-
-@media screen and (max-width: 1200px){
-  .bars {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .gears {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .gear {
-    margin: 20px auto;
-  }
-  .long {
-    height: 270vh!important;
-  }
-  .gear2col {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-}
-@media screen and (max-width: 640px){
-  .bars {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-}
-
-/* elements css */
 .bar {
   background: #fff;
   margin: 1px;
@@ -100,35 +93,39 @@
 .big_button:hover {
   color: #fff;
 }
-
-
-/* basic css */
-
-* {
-  margin: 0;
+.placeholder {
+  display: none;
 }
+
+/* Common */
+
 body {
   overflow-x: hidden;
 }
-
-h1 {
-  font-size: 3.5em;
-  margin: 0 0.5em;
-}
-h2 {
-  font-size: 2em;
-  margin: 2em 0.5em 0.5em;
-}
-h3 {
-  font-size: 1.8em;
-}
-main {
+.home {
   margin: 0 auto;
   background: rgba(255, 238, 227, 0.5);
   font-size: 1.3em;
   font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
   text-align: center;
 }
+.home h1 {
+  font-size: 3.5em;
+  margin: 0 0.5em;
+}
+.home h2 {
+  font-size: 2em;
+  margin: 2em 0.5em 0.5em;
+}
+.home h3 {
+  font-size: 1.8em;
+}
+.home h4 {
+  font-size: 1.5em;
+}
+
+/* Banner css */
+
 .banner {
   margin-left: calc(50% - 50vw);
   margin-bottom: 30px;
@@ -137,21 +134,68 @@ main {
   min-height: 35em;
   background: var(--img) 50%/cover;
   background-attachment: fixed;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .banner:nth-of-type(1) {
-  --img: url(http://janardano.com/img/landing/utp.jpg);
+  --img: url(http://oliya.com.ua/img/landing/utp.jpg);
 }
 .banner:nth-of-type(2) {
-
 }
 .banner:nth-of-type(3) {
-  --img: url(http://janardano.com/img/landing/maslozavod.jpg);
+  --img: url(http://oliya.com.ua/img/landing/maslozavod.jpg);
   height: 150vh;
 }
 .banner:nth-of-type(4) {
-  --img: url(http://janardano.com/img/landing/smak.jpg);
+}
+.banner:nth-of-type(5) {
+  --img: url(http://oliya.com.ua/img/landing/smak.jpg);
+}
+
+/* Media */
+
+@media screen and (max-width: 1500px){
+  .oils {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .placeholder {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .bars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .oils {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gears {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gear {
+    margin: 20px auto;
+  }
+  .long {
+    height: 300vh!important;
+  }
+  .gear2col {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .placeholder {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px){
+  .bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .oils {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .placeholder {
+    display: none;
+  }
 }

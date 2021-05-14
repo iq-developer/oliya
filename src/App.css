@@ -74,7 +74,13 @@ menu a:active {
 menu a:hover {
   background: rgba(86, 58, 44, 0.6);
 }
-
+footer {
+  background: #efd8b4;
+  font-size: 1.5em;
+  padding: 40px 20px 40px;
+  text-align: center;
+  margin-top: -30px;
+}
 
 /* Header panel */
 
@@ -104,11 +110,13 @@ header strong {
   max-width: 220px;
 }
 
-/* Main  */
-main {
+/* Shop  */
+
+.shop {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -222,6 +230,13 @@ small {
   font-size: 1.2em;
 }
 
+
+
+
+
+
+
+
 @media (max-width: 800px) {
 
   .additional {
@@ -232,10 +247,6 @@ small {
 
 @media (max-width: 640px) {
 
-  /* .fullWidth {
-    min-height: 150px;
-    text-align: center;
-  } */
   .floatResponsive {
     float: none;
   }

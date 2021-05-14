@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
 import {useContext} from 'react';
 
-function HomePage() {
+function ShopPage() {
 
   const context = useContext(TextContext);
 
@@ -28,11 +28,11 @@ function HomePage() {
         </div>
       </header>
 
-      <main className="grid">
+      <main className="grid shop">
         <Block />
       </main>
     </>
   );
 }
 
-export default HomePage;
+export default ShopPage;
