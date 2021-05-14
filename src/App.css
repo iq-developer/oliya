@@ -54,6 +54,28 @@ th {
   opacity: 0.9;
 }
 
+menu  {
+  position: absolute;
+  top: 79px;
+  right: 200px;
+}
+menu a {
+  background: rgba(86, 58, 44, 0.5);
+  display: block;
+  color: #fff;
+  font-size: 2em;
+  padding: 20px 50px;
+  text-decoration: none;
+  width: 150px;
+}
+menu a:active {
+  background: rgba(86, 58, 44, 0.4);
+}
+menu a:hover {
+  background: rgba(86, 58, 44, 0.6);
+}
+
+
 /* Header panel */
 
 header {

@@ -1,0 +1,157 @@
+/* partial css */
+
+.white {
+  color: #fff;
+}
+.center {
+  margin: 0 auto;
+}
+.beige {
+  background: #efd8b4;
+  color: black;
+}
+.bars {
+  margin: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1920px;
+}
+.gears {
+  margin: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1000px;
+}
+.gear {
+  width: 500px;
+  height: 150px;
+  text-align: left;
+  margin: 20px 50px 20px 0;
+}
+.gear2col {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.gear_img {
+  float: left;
+  margin-right: 20px;
+  width: 150px;
+}
+
+@media screen and (max-width: 1200px){
+  .bars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gears {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gear {
+    margin: 20px auto;
+  }
+  .long {
+    height: 270vh!important;
+  }
+  .gear2col {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+@media screen and (max-width: 640px){
+  .bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/* elements css */
+.bar {
+  background: #fff;
+  margin: 1px;
+}
+.bar > img {
+  width: 100%;
+}
+.bar hr {
+  width: 50%;
+  margin: 20px auto;
+  color: brown;
+}
+.bar_desc {
+  padding: 20px 20px 40px;
+}
+.bar_desc p {
+  font-size: 1.2em;
+}
+.subtitle {
+  font-size: 1.5em;
+  margin: 0 2em 0.5em;
+}
+.h2subtitle {
+  font-size: 1.5em;
+  margin: 0 2em 3em;
+}
+.big_button {
+  font-size: 1.2em;
+  padding: 0.7em 1.2em;
+  margin: 5px;
+}
+.big_button:hover {
+  color: #fff;
+}
+
+
+/* basic css */
+
+* {
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin: 2em 0.5em 0.5em;
+}
+h3 {
+  font-size: 1.8em;
+}
+main {
+  margin: 0 auto;
+  background: rgba(255, 238, 227, 0.5);
+  font-size: 1.3em;
+  font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
+  text-align: center;
+}
+.banner {
+  margin-left: calc(50% - 50vw);
+  margin-bottom: 30px;
+  width: 100vw;
+  height: 37.5vh;
+  min-height: 35em;
+  background: var(--img) 50%/cover;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner:nth-of-type(1) {
+  --img: url(http://janardano.com/img/landing/utp.jpg);
+}
+.banner:nth-of-type(2) {
+
+}
+.banner:nth-of-type(3) {
+  --img: url(http://janardano.com/img/landing/maslozavod.jpg);
+  height: 150vh;
+}
+.banner:nth-of-type(4) {
+  --img: url(http://janardano.com/img/landing/smak.jpg);
+}
