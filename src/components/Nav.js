@@ -26,7 +26,7 @@ const Nav = () => {
           </form>
         </div>
       </nav>
-      <menu hidden={menuActive}>
+      <menu hidden={!menuActive}>
         <Link onClick={menuToggle} to="/">Главная</Link>
         <Link to="/shop">Купити</Link>
         <Link to="/about">Про нас</Link>
