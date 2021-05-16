@@ -21,10 +21,12 @@ function HomePage() {
           <div>
             <h1>Сиродавлена олія</h1>
             <p className={s.subtitle}>робимо під замовлення на дубовому пресі</p>
-            <button className={cn(s.big_button, s.bgbeige)}>Що особливого? ▼</button> <button className={cn(s.big_button, s.bgbeige)}>Вибрати олію ►</button>
+            <br />
+            <a className={cn("button", s.big_button, s.bgbeige)} href="#special">Що особливо? ▼</a>
+            <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">Вибрати олію ►</Link>
           </div>
         </div>
-        <h2>Особливе виробництво - особлива олія</h2>
+        <h2 id="special">Особливе виробництво - особлива олія</h2>
         <p className={s.h2subtitle}>подивиться як дбайливо ми робимо нашу олію</p>
         <div className={s.bars}>
 
@@ -393,7 +395,8 @@ function HomePage() {
           <div>
             <h1>Природний чистий смак</h1>
             <p className={s.subtitle}>відрізняється так, як смак джерельної води від кип'яченої </p>
-            <button className={cn(s.big_button, s.bgbeige)}>Вибрати найкращу олію ►</button>
+            <br />
+            <Link onClick={context.scroll} to="/shop" className={cn("button", s.big_button, s.bgbeige)}>Вибрати найкращу олію ►</Link>
           </div>
         </div>
 

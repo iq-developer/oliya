@@ -18,7 +18,9 @@
   color: black;
 }
 
-/* elements css */
+/* elements (semantic) css */
+
+/* Bars */
 
 .bars {
   margin: auto;
@@ -27,16 +29,27 @@
   grid-template-columns: repeat(4, 1fr);
   max-width: 1920px;
 }
-.oils {
-  margin: auto;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  max-width: 1920px;
+.bar {
+  background: #fff;
+  margin: 1px;
 }
-.oil_txt {
-  font-size: 0.8em;
+.bar > img {
+  width: 100%;
 }
+.bar hr {
+  width: 50%;
+  margin: 20px auto;
+  color: brown;
+}
+.bar_desc {
+  padding: 20px 20px 40px;
+}
+.bar_desc p {
+  font-size: 1.2em;
+}
+
+/* Gears */
+
 .gears {
   margin: auto;
   width: 100vw;
@@ -59,24 +72,25 @@
   margin-right: 20px;
   width: 150px;
 }
-.bar {
-  background: #fff;
-  margin: 1px;
+.gears h3 {
+  margin: 0;
 }
-.bar > img {
-  width: 100%;
+
+/* Oils */
+
+.oils {
+  margin: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1920px;
 }
-.bar hr {
-  width: 50%;
-  margin: 20px auto;
-  color: brown;
+.oil_txt {
+  font-size: 0.8em;
 }
-.bar_desc {
-  padding: 20px 20px 40px;
-}
-.bar_desc p {
-  font-size: 1.2em;
-}
+
+/* Other */
+
 .subtitle {
   font-size: 1.5em;
   margin: 0 2em 0.5em;

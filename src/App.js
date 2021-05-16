@@ -47,6 +47,11 @@ function App() {
     });
   }
 
+  const scroll = () => {
+    window.scrollTo(0, 0);
+  }
+  
+
   return (
     <TextContext.Provider value={{
       cart,
@@ -55,7 +60,8 @@ function App() {
       amount,
       handleInputChange,
       handlePlus,
-      handleMinus
+      handleMinus,
+      scroll
     }}>
       <Switch>
         <Route path='/' exact component={HomePage} />

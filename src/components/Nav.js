@@ -18,7 +18,7 @@ const Nav = () => {
   return (
     <>
       <nav>
-        <div className="inner">
+        <div id="top" className="inner">
           <Link to="/"><img src={logoImg} className="logo" alt="Лого" /></Link>
           <img onClick={menuToggle} src={menuImg} class="menu" alt="Меню" />
           <form>
@@ -27,7 +27,7 @@ const Nav = () => {
         </div>
       </nav>
       <menu hidden={!menuActive}>
-        <Link onClick={menuToggle} to="/">Главная</Link>
+        <Link to="/">Главная</Link>
         <Link to="/shop">Купити</Link>
         <Link to="/about">Про нас</Link>
       </menu>
