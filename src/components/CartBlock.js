@@ -18,17 +18,17 @@ const CartBlock = () => {
             <article className="block fullWidth" key={priceId}>
 
               <div className="title floatResponsive">
-                <img src={product.img} alt={`${product.title}`} className="float cartIcon" />
-                <h2>{product.category} <br /><strong>{product.title}</strong></h2>
+                <img src={product.img} alt={`${context.ua ? product.title : product.titleRu}`} className="float cartIcon" />
+                <h2>{context.ua ? product.category : product.categoryRu}<br /><strong>{context.ua ? product.title : product.titleRu}</strong></h2>
               </div>
 
               <table className="desc">
                 <tbody>
                   <tr>
-                    <th>Об'єм</th>
-                    <th>Ціна</th>
-                    <th className="form">Кількість (шт)</th>
-                    <th className="form additional">Сума</th>
+                    <th>{context.ua ? "Об'єм" : "Объем"}</th>
+                    <th>{context.ua ? "Ціна" : "Цена"}</th>
+                    <th className="form">{context.ua ? "Кількість" : "Количество"} (шт)</th>
+                    <th className="form additional">{context.ua ? "Сума" : "Сумма"}</th>
                   </tr>
                   <tr>
                     <td>{priceKey}<small> мл:</small></td>

@@ -1,8 +1,14 @@
 import Tr from './Tr';
 import database from '../oliya-db.json';
+import {useContext} from 'react';
+import { TextContext } from '../context/textContext';
 
 const Block = () => {
-  return Object.entries(database.products).map(([key, value]) => {   
+
+  const context = useContext(TextContext);
+
+  return Object.entries(database.products).map(([key, value]) => {
+
     const blockClassName = () => {
       switch (value.categoryId) {
         case 1:
@@ -21,7 +27,7 @@ const Block = () => {
       <article className={blockClassName()} key={key}>
         <div className="title">
           <img src={value.img} alt={`${value.title}`} className="float" />
-          <h2>{value.category} <br /><strong>{value.title}</strong></h2>
+          <h2>{context.ua ? value.category : value.categoryRu} <br /><strong>{context.ua ? value.title : value.titleRu}</strong></h2>
         </div>
         <table className="table center">
           <tbody>

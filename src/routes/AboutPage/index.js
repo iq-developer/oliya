@@ -1,8 +1,6 @@
-import logoImg from './../../assets/logo.png';
-import menuImg from './../../assets/menu.png';
 import cartImg from './../../assets/cart.png';
-import Block from './../../components/Block';
 import Nav from './../../components/Nav';
+import Footer from './../../components/Footer';
 import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
 import {useContext} from 'react';
@@ -150,6 +148,8 @@ function AboutPage() {
 
 
       </main>
+
+      <Footer />
     </>
   );
 }

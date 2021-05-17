@@ -3,9 +3,11 @@
     "code1" : {
       "id": 1,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "чорного кмину",
-      "img": "http://janardano.com/img/chornyj-kmyn.png",
+      "titleRu": "черного тмина",
+      "img": "https://oliya.com.ua/img/chornyj-kmyn.png",
       "price": {
         "100": "232",
         "200": "551",
@@ -15,9 +17,11 @@
     "code2" : {
       "id": 2,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "конопляна",
-      "img": "http://janardano.com/img/konoplya.png",
+      "titleRu": "конопляное",
+      "img": "https://oliya.com.ua/img/konoplya.png",
       "price": {
         "100": "119",
         "250": "283",
@@ -27,9 +31,11 @@
     "code3" : {
       "id": 3,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "насіння гарбуза",
-      "img": "http://janardano.com/img/garbuz.png",
+      "titleRu": "семян тыквы",
+      "img": "https://oliya.com.ua/img/garbuz.png",
       "price": {
         "100": "107",
         "250": "255",
@@ -39,9 +45,11 @@
     "code4" : {
       "id": 4,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "мигдалева",
-      "img": "http://janardano.com/img/mygdal.png",
+      "titleRu": "миндальное",
+      "img": "https://oliya.com.ua/img/mygdal.png",
       "price": {
         "100": "107",
         "250": "255",
@@ -51,9 +59,11 @@
     "code5" : {
       "id": 5,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "чорного кунжута",
-      "img": "http://janardano.com/img/chornyj-kunzhut.png",
+      "titleRu": "черного кунжута",
+      "img": "https://oliya.com.ua/img/chornyj-kunzhut.png",
       "price": {
         "100": "80",
         "250": "190",
@@ -63,9 +73,11 @@
     "code6" : {
       "id": 6,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "волоського горіха",
-      "img": "http://janardano.com/img/voloskyj-gorikh.png",
+      "titleRu": "грецкого ореха",
+      "img": "https://oliya.com.ua/img/voloskyj-gorikh.png",
       "price": {
         "100": "78",
         "250": "185",
@@ -75,9 +87,11 @@
     "code7" : {
       "id": 7,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "білого кунжута",
-      "img": "http://janardano.com/img/bilyj-kunzhut.png",
+      "titleRu": "белого кунжута",
+      "img": "https://oliya.com.ua/img/bilyj-kunzhut.png",
       "price": {
         "100": "70",
         "250": "167",
@@ -87,9 +101,11 @@
     "code8" : {
       "id": 8,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "лляна",
-      "img": "http://janardano.com/img/len.png",
+      "titleRu": "льняное",
+      "img": "https://oliya.com.ua/img/len.png",
       "price": {
         "100": "60",
         "250": "144",
@@ -99,9 +115,11 @@
     "code9" : {
       "id": 9,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "соняшникова",
-      "img": "http://janardano.com/img/sonyashnyk.png",
+      "titleRu": "подсолнечное",
+      "img": "https://oliya.com.ua/img/sonyashnyk.png",
       "price": {
         "100": "45",
         "250": "108",
@@ -111,9 +129,11 @@
     "code10" : {
       "id": 10,
       "category": "Олія сиродавлена",
+      "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
       "title": "кокосова",
-      "img": "http://janardano.com/img/kokos.png",
+      "titleRu": "кокосовое",
+      "img": "https://oliya.com.ua/img/kokos.png",
       "price": {
         "200": "159",
         "500": "302"
@@ -122,9 +142,11 @@
     "code11" : {
       "id": 11,
       "category": "Паста горіхова",
+      "categoryRu": "Паста ореховая",
       "categoryId": 2,
       "title": "кешью 100%",
-      "img": "http://janardano.com/img/keshju.png",
+      "titleRu": "кешью 100%",
+      "img": "https://oliya.com.ua/img/keshju.png",
       "price": {
         "200": "140"
       }
@@ -132,9 +154,11 @@
     "code12" : {
       "id": 12,
       "category": "Паста горіхова",
+      "categoryRu": "Паста ореховая",
       "categoryId": 2,
       "title": "фундук 100%",
-      "img": "http://janardano.com/img/funduk.png",
+      "titleRu": "фундук 100%",
+      "img": "https://oliya.com.ua/img/funduk.png",
       "price": {
         "200": "140"
       }
@@ -142,9 +166,11 @@
     "code13" : {
       "id": 13,
       "category": "Паста горіхова",
+      "categoryRu": "Паста ореховая",
       "categoryId": 2,
       "title": "мигдаль 100%",
-      "img": "http://janardano.com/img/mygdal.png",
+      "titleRu": "миндаль 100%",
+      "img": "https://oliya.com.ua/img/mygdal.png",
       "price": {
         "200": "130"
       }
@@ -152,9 +178,11 @@
     "code14" : {
       "id": 14,
       "category": "Паста горіхова",
+      "categoryRu": "Паста ореховая",
       "categoryId": 2,
       "title": "волоський 100%",
-      "img": "http://janardano.com/img/voloskyj-gorikh.png",
+      "titleRu": "грецкий 100%",
+      "img": "https://oliya.com.ua/img/voloskyj-gorikh.png",
       "price": {
         "200": "120"
       }
@@ -162,9 +190,11 @@
     "code15" : {
       "id": 15,
       "category": "Паста тахіні",
+      "categoryRu": "Паста тахини",
       "categoryId": 2,
       "title": "кунжут 100%",
-      "img": "http://janardano.com/img/bilyj-kunzhut.png",
+      "titleRu": "кунжут 100%",
+      "img": "https://oliya.com.ua/img/bilyj-kunzhut.png",
       "price": {
         "200": "100"
       }
@@ -172,13 +202,15 @@
     "code16" : {
       "id": 16,
       "category": "Паста горіхова",
+      "categoryRu": "Паста ореховая",
       "categoryId": 2,
       "title": "арахіс 100%",
-      "img": "http://janardano.com/img/arakhis.png",
+      "titleRu": "арахис 100%",
+      "img": "https://oliya.com.ua/img/arakhis.png",
       "price": {
         "200": "85"
       }
     }
-    
+
   }
 }

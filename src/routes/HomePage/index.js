@@ -1,6 +1,5 @@
-import cartImg from './../../assets/cart.png';
-import Block from './../../components/Block';
 import Nav from './../../components/Nav';
+import Footer from './../../components/Footer';
 import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
 import {useContext} from 'react';
@@ -31,7 +30,7 @@ function HomePage() {
         <div className={s.bars}>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar0.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar0.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Обираємо вишукане насіння</h3>
               <hr />
@@ -40,7 +39,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar1.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar1.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Тільки свіжого врожаю</h3>
               <hr />
@@ -49,7 +48,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar2.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar2.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Очищене від макухи та соломи</h3>
               <hr />
@@ -58,7 +57,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar3.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar3.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Миємо під проточною водою</h3>
               <hr />
@@ -67,7 +66,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar4.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar4.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Сушимо при температурі 30°C</h3>
               <hr />
@@ -76,7 +75,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar5.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar5.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Віджимаємо на дубовому пресі</h3>
               <hr />
@@ -85,7 +84,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar7.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar7.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Отримуємо свіжо віджату олію</h3>
               <hr />
@@ -94,7 +93,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/bar8.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar8.jpg"  alt="" />
             <div className={s.bar_desc}>
               <h3>Розливаємо в темні скляни пляшки</h3>
               <hr />
@@ -123,7 +122,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon1.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon1.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Подрібнення</h3>
                 <hr />
@@ -132,7 +131,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon2.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon2.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Екстрагування</h3>
                 <hr />
@@ -141,7 +140,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon3.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon3.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Гідратація</h3>
                 <hr />
@@ -150,7 +149,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon4.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon4.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Нейтралізація</h3>
                 <hr />
@@ -159,7 +158,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon5.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon5.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Відбілювання</h3>
                 <hr />
@@ -168,7 +167,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon6.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon6.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Дезодорація</h3>
                 <hr />
@@ -177,7 +176,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon7.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon7.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Виморожування</h3>
                 <hr />
@@ -186,7 +185,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="http://janardano.com/img/landing/icon8.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon8.png" className={s.gear_img} alt="" />
               <div className={s.gear_desc}>
                 <h3>Фільтрація</h3>
                 <hr />
@@ -210,7 +209,7 @@ function HomePage() {
         <div className={s.oils}>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil01.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil01.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>чорного кмину</h3>
@@ -226,7 +225,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil02.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil02.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>конопляна</h3>
@@ -241,7 +240,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil03.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil03.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>насіння гарбуза</h3>
@@ -257,7 +256,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil04.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil04.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>мигдалева</h3>
@@ -273,7 +272,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil05.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil05.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>чорного кунжута</h3>
@@ -289,7 +288,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil06.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil06.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>волоського горіха</h3>
@@ -305,7 +304,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil07.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil07.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>білого кунжута</h3>
@@ -322,7 +321,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil08.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil08.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>лляна</h3>
@@ -337,7 +336,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil09.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil09.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>соняшникова</h3>
@@ -352,7 +351,7 @@ function HomePage() {
           </div>
 
           <div className={cn(s.bar, s.placeholder)}>
-            <img src="http://janardano.com/img/landing/oilcoconut-bg.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oilcoconut-bg.jpg"  alt="" />
             <div className={s.bar_desc}>
               <div className={cn(s.oil_txt, s.left)}>
               </div>
@@ -360,7 +359,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="http://janardano.com/img/landing/oil10.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil10.jpg"  alt="" />
             <div className={s.bar_desc}>
               <p>сиродавлена олія</p>
               <h3>кокосова</h3>
@@ -374,7 +373,7 @@ function HomePage() {
           </div>
 
           <div className={cn(s.bar, s.placeholder)}>
-            <img src="http://janardano.com/img/landing/oil11.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil11.jpg"  alt="" />
             <div className={s.bar_desc}>
               <div className={cn(s.oil_txt, s.left)}>
               </div>
@@ -402,10 +401,7 @@ function HomePage() {
 
         </main>
 
-        <footer>
-          <p><strong> TM "Їжа як ліки". </strong> <a href="https://www.instagram.com/oliya_com_ua/" target="_blank" rel="noopener noreferrer">Ось наш Інстаграм <img src="http://janardano.com/img/landing/instagram_icon.jpg"  alt="" /></a> </p>
-          <p>2021 ©  Дозволяється копиювання зі ссилкою на сайт.</p>
-        </footer>
+        <Footer />
     </>
   );
 }

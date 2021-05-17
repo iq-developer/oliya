@@ -12,6 +12,7 @@ function App() {
   const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
   const [sum, setSum] = useState(0);
   const [amount, setAmount] = useState(0);
+  const [ua, setUa] = useState(true); // ukrainian language by default
 
   const handleInputChange = (event) => {
     const priceId = event.target.name;
@@ -29,7 +30,7 @@ function App() {
    return sum + amount * priceValue;
   }, 0))}, [cart]);
 
-  useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + current, 0))}, [cart]);
+  useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + +current, 0))}, [cart]);
 
   const handlePlus = (event) => {
     event.preventDefault();
@@ -50,7 +51,7 @@ function App() {
   const scroll = () => {
     window.scrollTo(0, 0);
   }
-  
+
 
   return (
     <TextContext.Provider value={{
@@ -61,7 +62,9 @@ function App() {
       handleInputChange,
       handlePlus,
       handleMinus,
-      scroll
+      scroll,
+      ua,
+      setUa
     }}>
       <Switch>
         <Route path='/' exact component={HomePage} />
