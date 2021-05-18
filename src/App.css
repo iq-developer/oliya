@@ -20,6 +20,7 @@ nav {
 }
 .logo {
   opacity: 0.8;
+  float: left;
 }
 .logo:hover {
   opacity: 1;
@@ -48,28 +49,27 @@ th {
   top: -60px;
   width: 140px;
 }
-.menu {
+.mobile_menu {
+  display: none;
   float: right;
   opacity: 0.5;
   margin: 12px;
 }
-.menu:hover {
+.mobile_menu:hover {
   opacity: 0.9;
 }
-
 menu  {
-  position: absolute;
-  top: 79px;
-  right: 200px;
+  float: left;
+  margin: 0;
+  display: block;
 }
 menu a {
-  background: rgba(86, 58, 44, 0.5);
   display: block;
   color: #fff;
-  font-size: 2em;
-  padding: 20px 50px;
+  font-size: 1.5em;
+  padding: 10px 20px;
   text-decoration: none;
-  width: 150px;
+  float: left;
 }
 menu a:active {
   background: rgba(86, 58, 44, 0.4);
@@ -88,6 +88,12 @@ footer {
   background: #efd8b4;
   padding: 10px;
   font-size: 0.8em;
+  float: right;
+  opacity: 0.7;
+  margin: 12px;
+}
+.lang_selector:hover {
+  opacity: 1;
 }
 
 /* Header panel */
@@ -119,6 +125,7 @@ header strong {
 }
 
 /* Shop  */
+
 .about {
   padding: 50px;
   background: rgba(255, 245, 227, 0.5);
@@ -137,8 +144,8 @@ header strong {
   color: #693b3b;
 }
 
-
 /* Elements */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -175,7 +182,6 @@ input {
   padding: 5px 10px;
   text-align: center;
 }
-
 input::placeholder {
   color: #ccc;
 }
@@ -237,30 +243,42 @@ small {
   font-size: 1.2em;
   padding: 10px 0 10px 20px;
 }
-
 .w220 {
   width: 150px;
 }
-
 .error {
   border: 2px solid red;
 }
-
 .big {
   font-size: 1.2em;
 }
-
-
-
-
-
-
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 
 
 @media (max-width: 800px) {
 
   .additional {
     display: none;
+  }
+  menu  {
+    display: none;
+    position: absolute;
+    top: 95px;
+    right: 0;
+  }
+  menu a {
+    background: rgba(86, 58, 44, 0.5);
+    padding: 20px 50px;
+    width: 150px;
+    float: none;
+  }
+  .mobile_menu {
+    display: block;
   }
 
 }
@@ -271,5 +289,12 @@ small {
     float: none;
   }
 
+}
+
+@media (min-width: 801px) {
+
+  menu  {
+    display: block!important;
+  }
 
 }

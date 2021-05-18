@@ -9,10 +9,12 @@ const Nav = () => {
 
   const context = useContext(TextContext);
 
-  const [menuActive, setMenuActive] = useState(false);
+  const [menuActive, setMenuActive] = useState('');
 
   const menuToggle = () => {
-    setMenuActive(!menuActive);
+    if (!menuActive || menuActive=== 'hide') {
+      setMenuActive('show');
+    } else setMenuActive('hide');
   }
 
   const langToggle = () => {
@@ -24,15 +26,18 @@ const Nav = () => {
       <nav>
         <div id="top" className="inner">
           <Link to="/"><img src={logoImg} className="logo" alt="Лого" /></Link>
-          <img onClick={menuToggle} src={menuImg} className="menu" alt="Меню" />
-          <button onClick={langToggle} className="menu lang_selector">{context.ua ? "UA" : "RU"}</button>
+
+          <menu className={menuActive}>
+            <Link to="/">{context.ua ? "Головна" : "Главная"}</Link>
+            <Link to="/shop">{context.ua ? "Купити" : "Купить"}</Link>
+            <Link to="/about">{context.ua ? "Про нас" : "О нас"}</Link>
+          </menu>
+
+          <img onClick={menuToggle} src={menuImg} className="mobile_menu" alt="Меню" />
+          <button onClick={langToggle} className="lang_selector">{context.ua ? "UA" : "RU"}</button>
         </div>
       </nav>
-      <menu hidden={!menuActive}>
-        <Link to="/">{context.ua ? "Главная" : "Главная"}</Link>
-        <Link to="/shop">{context.ua ? "Купити" : "Купить"}</Link>
-        <Link to="/about">Про нас</Link>
-      </menu>
+
     </>
   );
 }

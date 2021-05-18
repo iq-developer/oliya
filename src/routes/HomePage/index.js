@@ -18,8 +18,8 @@ function HomePage() {
 
         <div className={cn(s.banner, s.white)}>
           <div>
-            <h1>Сиродавлена олія</h1>
-            <p className={s.subtitle}>робимо під замовлення на дубовому пресі</p>
+            <h1>{context.ua ? `Сиродавлена олія` : `Сыродавленное масло`}</h1>
+            <p className={s.subtitle}>{context.ua ? `вичавлюємо під замовлення на дубовому пресі` : `выжимаем под заказ на дубовом маслопрессе`}</p>
             <br />
             <a className={cn("button", s.big_button, s.bgbeige)} href="#special">Що особливо? ▼</a>
             <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">Вибрати олію ►</Link>
