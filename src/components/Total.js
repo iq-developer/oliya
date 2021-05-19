@@ -7,8 +7,8 @@ const Total = () => {
 
   return (
     <article className="block fullWidth total" >
-      <p>{context.ua ? `сума:` : `сумма:`} <strong>{context.sum}</strong> грн</p>
-      <p>{context.ua ? `товарів:` : `товаров:`} <strong>{context.amount}</strong> шт</p>
+      <p>{context.ua ? `Товарів:` : `Товаров:`} <strong>{context.amount}</strong> шт <br />
+       {context.ua ? `Сума:` : `Сумма:`} <strong>{context.sum}</strong> грн</p>
     </article>
   );
 }

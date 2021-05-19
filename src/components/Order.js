@@ -87,7 +87,7 @@ const Order = () => {
     order: orderHTML,
     amount: context.amount,
     sum: context.sum,
-
+    lang: context.ua ? 'UA' : 'RU',
   });
 
 
@@ -108,10 +108,6 @@ const Order = () => {
     });
   };
 
-  const handleChange1 = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
-  };
-
   useEffect(() => {
     setToSend({...toSend, ...user, delivery, deliveryOption});
   }, [user, delivery, deliveryOption]);
@@ -120,7 +116,6 @@ const Order = () => {
 
   return (
     <article className="block-order fullWidth">
-    {orderHTML};
 
     <form onSubmit={onSubmit}>
 
@@ -288,50 +283,6 @@ const Order = () => {
         <br />
         <button className="big">Замовити</button>
       </form>
-
-
-     {/* EmailJS start */}
-
-      <form onSubmit={onSubmit}>
-        <input
-          type='text'
-          name='from_name'
-          placeholder='from name'
-          value={toSend.from_name}
-          onChange={handleChange1}
-        />
-        <input
-          type='text'
-          name='to_name'
-          placeholder='to name'
-          value={toSend.to_name}
-          onChange={handleChange1}
-        />
-        <input
-          type='text'
-          name='message'
-          placeholder='Your message'
-          value={toSend.message}
-          onChange={handleChange1}
-        />
-        <input
-          type='text'
-          name='reply_to'
-          placeholder='Your email'
-          value={toSend.reply_to}
-          onChange={handleChange1}
-        />
-        <input
-          type='text'
-          name='test'
-          placeholder='test'
-          value={toSend.test}
-          onChange={handleChange1}
-        />
-        <button type='submit'>Submit</button>
-      </form>
-
-      {/* EmailJS end */}
 
     </article>
   );
