@@ -30,9 +30,6 @@ function ShopPage() {
   //   );
   // }
 
-  console.log('context.amount: ', context.amount);
-  console.log('context.cart: ', context.cart);
-
   return (
     <>
       <Nav />

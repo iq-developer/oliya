@@ -6,6 +6,8 @@ const CartBlock = () => {
 
   const context = useContext(TextContext);
 
+  context.order = [];
+
   return Object.entries(context.cart).map(([priceId, quantity]) => {
 
     const [code, priceKey] = priceId.split('-');
@@ -13,6 +15,8 @@ const CartBlock = () => {
     const product = database.products[code];
 
     if (quantity) {
+
+        context.order.push(`${product.title} ${priceKey}: <b>${context.cart[priceId]} шт</b>`);
 
         return (
             <article className="block fullWidth" key={priceId}>

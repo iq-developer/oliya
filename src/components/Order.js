@@ -1,20 +1,27 @@
-import { useState } from 'react';
-import { send } from 'emailjs-com';
-import{ init } from 'emailjs-com';
+import {useState, useEffect} from 'react';
+import {useContext} from 'react';
+import {TextContext} from './../context/textContext';
+import {send} from 'emailjs-com';
+import{init} from 'emailjs-com';
+
 init("user_sI9r9eHLuS7gdbxX83bpG");
 
 const Order = () => {
 
+  const context = useContext(TextContext);
+
+
+
   const option = "Нова пошта";
-  const option1 = "Самовивіз з офісу (пр. Чорновола 63)";
-  const option2 = "Самовивіз з кафе Грін (вул. Братів Рогатинців, 5)";
+  const option1 = "Львів - заберу при зустричі по домовленності";
+  const option2 = "Львів - самовивіз з кафе Грін (вул. Братів Рогатинців, 5)";
 
   const option3 = 'На відділення Нової Пошти';
   const option4 = "Курь'єрська доставка за адресою";
 
   const [delivery, setDelivery] = useState(option);
   const [deliveryOption, setDeliveryOption] = useState(option3);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({isContactPhone: true, isViber: true, isEmail: true});
 
   const handleDeliveryChange = (event) => {
     setDelivery(event.target.value);
@@ -22,8 +29,6 @@ const Order = () => {
   const handleDeliveryOptionChange = (event) => {
     setDeliveryOption(event.target.value);
   }
-
-
   const handleChange = (event) => {
     setUser(prevState => {
       return {...prevState, [event.target.name]: event.target.value}
@@ -34,22 +39,22 @@ const Order = () => {
       return {...prevState, [event.target.name]: event.target.checked}
     });
   }
-
   const handlePhone = (event) => {
     setUser(prevState => {
       return {...prevState, phone: event.target.value, contactPhone: event.target.value, viber: event.target.value}
     });
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    //alert('submited :)');
-    console.log('submited');
-
-    //if(){}
-
-    return null;
+  const day = () => {
+    const date = new Date();
+    let dateOfMonth = date.getDate();
+    dateOfMonth = dateOfMonth < 10 ? '0' + dateOfMonth : dateOfMonth;
+    let month = (date.getMonth() + 1);
+    month = month < 10 ? '0' + month : month;
+    return `${dateOfMonth}.${month}`;
   }
+
+  const orderHTML = context.order.reduce((accum, current) => accum + current + '<br />', '');
 
   //EmailJS start
   const [toSend, setToSend] = useState({
@@ -57,35 +62,67 @@ const Order = () => {
     to_name: '',
     message: '',
     reply_to: '',
+
+    delivery: '',
+    deliveryOption: '',
+    branchNumber: '',
+    address: '',
+    city: '',
+    region: '',
+
+    phone: '',
+    firstName: '',
+    familyName: '',
+    fathersName: '',
+
+    contactPhone: '',
+    viber: '',
+    email: '',
+
+    isContactPhone: '',
+    isViber: '',
+    isEmail: '',
+
+    date: day(),
+    order: orderHTML,
+    amount: context.amount,
+    sum: context.sum,
+
   });
+
 
   const onSubmit = (e) => {
     e.preventDefault();
+
     send(
       'service_skcbnpf',
-      'template_6vxi5i8',
+      'template_a5rrair',
       toSend,
       'user_sI9r9eHLuS7gdbxX83bpG'
     )
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      })
-      .catch((err) => {
-        console.log('FAILED...', err);
-      });
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    })
+    .catch((err) => {
+      console.log('FAILED...', err);
+    });
   };
 
   const handleChange1 = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-   //EmailJS end
+  useEffect(() => {
+    setToSend({...toSend, ...user, delivery, deliveryOption});
+  }, [user, delivery, deliveryOption]);
+
+  //EmailJS end
 
   return (
     <article className="block-order fullWidth">
-    {JSON.stringify(user, null, '  ')};
+    {orderHTML};
 
-      <form>
+    <form onSubmit={onSubmit}>
 
         <h2>Спосіб доставки</h2>
         <input
@@ -178,8 +215,8 @@ const Order = () => {
         <br />
         <label className="w220 float"> Ім'я</label>
         <input
-          name="name"
-          value={user.name}
+          name="firstName"
+          value={user.firstName}
           onChange={handleChange}
         />
         <br />
@@ -249,7 +286,7 @@ const Order = () => {
         />
         <br />
         <br />
-      <a href="#" className="button big" onClick={handleSubmit}>Замовити</a>
+        <button className="big">Замовити</button>
       </form>
 
 
@@ -282,6 +319,13 @@ const Order = () => {
           name='reply_to'
           placeholder='Your email'
           value={toSend.reply_to}
+          onChange={handleChange1}
+        />
+        <input
+          type='text'
+          name='test'
+          placeholder='test'
+          value={toSend.test}
           onChange={handleChange1}
         />
         <button type='submit'>Submit</button>
