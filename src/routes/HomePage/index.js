@@ -21,7 +21,7 @@ function HomePage() {
             <h1>{context.ua ? `Сиродавлена олія` : `Сыродавленное масло`}</h1>
             <p className={s.subtitle}>{context.ua ? `виробляємо під замовлення на дубовому пресі` : `выжимаем под заказ на дубовом маслопрессе`}</p>
             <br />
-            <a className={cn("button", s.big_button, s.bgbeige)} href="#special">Що&nbsp;особливого?&nbsp;▼</a> 
+            <a className={cn("button", s.big_button, s.bgbeige)} href="#special">Що&nbsp;особливого?&nbsp;▼</a>
             <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">Вибрати&nbsp;олію&nbsp;►</Link>
           </div>
         </div>
@@ -34,7 +34,7 @@ function HomePage() {
             <div className={s.bar_desc}>
               <h3>Обираємо вишукане насіння</h3>
               <hr />
-              <p>тому що ми фанати якісті</p>
+              <p>тому що ми фанати якості</p>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ function HomePage() {
             <div className={s.bar_desc}>
               <h3>Очищене від макухи та соломи</h3>
               <hr />
-              <p>олію не треба фільтрувати</p>
+              <p>нашу олію не треба фільтрувати</p>
             </div>
           </div>
 
@@ -194,7 +194,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear2col}>
-              <button hidden className={cn(s.big_button, s.bgwhite)}>Для чого вони це роблять?</button>
+              {/* <button hidden className={cn(s.big_button, s.bgwhite)}>Для чого вони це роблять?</button> */}
             </div>
 
           </div>

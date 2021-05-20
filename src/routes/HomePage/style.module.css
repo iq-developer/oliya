@@ -52,7 +52,6 @@
 
 .gears {
   margin: auto;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 1000px;
@@ -193,7 +192,7 @@ body {
     margin: 20px auto;
   }
   .long {
-    height: 300vh!important;
+    height: 350vh!important;
   }
   .gear2col {
     grid-column-start: 1;
@@ -213,11 +212,23 @@ body {
   .placeholder {
     display: none;
   }
-
   .home h1 {
     font-size: 2em;
   }
   .subtitle {
     font-size: 1em;
+  }
+  .gear {
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: 20px;
+  }
+  .gear_img {
+    float: none;
+    width: auto;
+  }
+  .long {
+    height: 800vh!important;
   }
 }
