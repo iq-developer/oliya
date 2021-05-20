@@ -19,10 +19,10 @@ function HomePage() {
         <div className={cn(s.banner, s.white)}>
           <div>
             <h1>{context.ua ? `Сиродавлена олія` : `Сыродавленное масло`}</h1>
-            <p className={s.subtitle}>{context.ua ? `вичавлюємо під замовлення на дубовому пресі` : `выжимаем под заказ на дубовом маслопрессе`}</p>
+            <p className={s.subtitle}>{context.ua ? `виробляємо під замовлення на дубовому пресі` : `выжимаем под заказ на дубовом маслопрессе`}</p>
             <br />
-            <a className={cn("button", s.big_button, s.bgbeige)} href="#special">Що особливо? ▼</a>
-            <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">Вибрати олію ►</Link>
+            <a className={cn("button", s.big_button, s.bgbeige)} href="#special">Що&nbsp;особливого?&nbsp;▼</a> 
+            <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">Вибрати&nbsp;олію&nbsp;►</Link>
           </div>
         </div>
         <h2 id="special">Особливе виробництво - особлива олія</h2>
