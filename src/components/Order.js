@@ -2,15 +2,17 @@ import {useState, useEffect} from 'react';
 import {useContext} from 'react';
 import {TextContext} from './../context/textContext';
 import {send} from 'emailjs-com';
-import{init} from 'emailjs-com';
+import {init} from 'emailjs-com';
+import credentials from './../credentials.js';
+import {useHistory} from 'react-router-dom';
 
-init("user_sI9r9eHLuS7gdbxX83bpG");
+init(credentials.user_code);
 
 const Order = () => {
 
+  const history = useHistory();
+
   const context = useContext(TextContext);
-
-
 
   const option = "Нова пошта";
   const option1 = "Львів - заберу при зустричі по домовленності";
@@ -90,22 +92,28 @@ const Order = () => {
     lang: context.ua ? 'UA' : 'RU',
   });
 
-
   const onSubmit = (e) => {
     e.preventDefault();
 
-    send(
-      'service_skcbnpf',
-      'template_a5rrair',
-      toSend,
-      'user_sI9r9eHLuS7gdbxX83bpG'
-    )
-    .then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
-    })
-    .catch((err) => {
-      console.log('FAILED...', err);
-    });
+    if (true) { // add conditions of filling forms
+      send(
+        credentials.service_code,
+        credentials.template_code,
+        toSend,
+        credentials.user_code,
+      )
+      .then((response) => {
+        history.push('/result');
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        history.push('/error');
+        console.log('FAILED...', err);
+      });
+    } else {
+      // show error + mark fields with red border
+    }
+
   };
 
   useEffect(() => {
@@ -115,56 +123,57 @@ const Order = () => {
   //EmailJS end
 
   return (
-    <article className="block-order fullWidth">
+    <article className="block-order">
 
     <form onSubmit={onSubmit}>
 
         <h2>Спосіб доставки</h2>
-        <input
+        <label><input
           name="delivery"
           type="radio"
           value={option}
           checked={delivery === option}
           onChange={handleDeliveryChange}
-        /> {option}
+        /> {option}</label>
         <br />
-        <input
+        <label><input
           name="delivery"
           type="radio"
           value={option1}
           checked={delivery === option1}
           onChange={handleDeliveryChange}
-        /> {option1}
+        /> {option1}</label>
         <br />
-        <input
+        <label><input
           name="delivery"
           type="radio"
           value={option2}
           checked={delivery === option2}
           onChange={handleDeliveryChange}
-        /> {option2}
+        /> {option2}</label>
         <br />
         <div hidden={delivery !== option}>
           <h3>Відправка на відділення або на адресу</h3>
-          <input
+          <label><input
             name="deliveryOption"
             type="radio"
             value={option3}
             checked={deliveryOption === option3}
             onChange={handleDeliveryOptionChange}
-          /> {option3}
+          /> {option3}</label>
           <br />
-          <input
+          <label><input
             name="deliveryOption"
             type="radio"
             value={option4}
             checked={deliveryOption === option4}
             onChange={handleDeliveryOptionChange}
-          /> {option4}
+          /> {option4}</label>
           <br />
           <br hidden={deliveryOption === option4} />
-          <label hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
+          <label for="branchNumber" hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
           <input
+            id="branchNumber"
             name="branchNumber"
             value={user.branchNumber}
             onChange={handleChange}
@@ -172,16 +181,18 @@ const Order = () => {
             size="4"
           />
           <br />
-          <label hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
+          <label for="address" hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
           <input
+            id="address"
             name="address"
             value={user.address}
             onChange={handleChange}
             hidden={deliveryOption === option3}
           />
           <br />
-          <label className="w220 float"> Місто<br /></label>
+          <label for="city" className="w220 float"> Місто<br /></label>
           <input
+            id="city"
             name="city"
             value={user.city}
             onChange={handleChange}
@@ -192,8 +203,9 @@ const Order = () => {
             <option value="Київ" />
           </datalist>
           <br />
-          <label className="w220 float"> Область<br /></label>
+          <label for="region" className="w220 float"> Область<br /></label>
           <input
+            id="region"
             name="region"
             value={user.region}
             onChange={handleChange}
@@ -201,30 +213,34 @@ const Order = () => {
         </div>
 
         <h3>Відомості про одержувача </h3>
-        <label className="w220 float"> Телефон</label>
+        <label for="phone" className="w220 float"> Телефон</label>
         <input
+          id="phone"
           name="phone"
           value={user.phone}
           onChange={handlePhone}
         />
         <br />
-        <label className="w220 float"> Ім'я</label>
+        <label for="firstName" className="w220 float"> Ім'я</label>
         <input
+          id="firstName"
           name="firstName"
           value={user.firstName}
           onChange={handleChange}
         />
         <br />
-        <label className="w220 float" hidden={delivery !== option}> Призвіще</label>
+        <label for="familyName" className="w220 float" hidden={delivery !== option}> Призвіще</label>
         <input
+          id="familyName"
           name="familyName"
           value={user.familyName}
           onChange={handleChange}
           hidden={delivery !== option}
         />
         <br hidden={delivery !== option} />
-        <label className="w220 float" hidden={delivery !== option}> По-батькові</label>
+        <label for="fathersName" className="w220 float" hidden={delivery !== option}> По-батькові</label>
         <input
+          id="fathersName"
           name="fathersName"
           value={user.fathersName}
           onChange={handleChange}
@@ -242,6 +258,7 @@ const Order = () => {
         />
         &nbsp;Телефон&nbsp;</label>
         <input
+          id=""
           name="contactPhone"
           value={user.contactPhone}
           onChange={handleChange}
@@ -250,6 +267,7 @@ const Order = () => {
         <br />
         <label className="w220 float">
         <input
+          id=""
           name="isViber"
           type="checkbox"
           value="isViber"
@@ -258,6 +276,7 @@ const Order = () => {
         />
         &nbsp;Вайбер&nbsp;</label>
         <input
+          id=""
           name="viber"
           value={user.viber}
           onChange={handleChange}
@@ -266,6 +285,7 @@ const Order = () => {
         <br />
         <label className="w220 float">
         <input
+          id=""
           name="isEmail"
           type="checkbox"
           value="isEmail"
@@ -274,6 +294,7 @@ const Order = () => {
         />
         &nbsp;Email&nbsp;</label>
         <input
+          id=""
           name="email"
           value={user.email}
           onChange={handleChange}

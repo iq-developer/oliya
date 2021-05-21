@@ -19,7 +19,7 @@ const CartBlock = () => {
         context.order.push(`${product.title} ${priceKey}: <b>${context.cart[priceId]} шт</b>`);
 
         return (
-            <article className="block fullWidth" key={priceId}>
+            <article className="block" key={priceId}>
 
               <div className="title floatResponsive">
                 <img src={product.img} alt={`${context.ua ? product.title : product.titleRu}`} className="float cartIcon" />

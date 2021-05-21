@@ -3,13 +3,16 @@ import Order from './../../components/Order';
 import Sum from '../../components/Total';
 import returnImg from './../../assets/return.png';
 import {Link} from 'react-router-dom';
+import Nav from './../../components/Nav';
+import Footer from './../../components/Footer';
 
 const CartPage = () => {
 
   return (
     <>
-    <header>
-        <div className="inner">
+      <Nav />
+      <header>
+        <div className="cart-page">
           <Link to="/shop"><button className="white-button"><img src={returnImg} alt="Повернутись до інтернет-магазину" /></button></Link>
           <h1 className="title">Кошик</h1>
         </div>
@@ -19,6 +22,7 @@ const CartPage = () => {
         <Sum />
         <Order />
       </main>
+      <Footer />
     </>
 
   );

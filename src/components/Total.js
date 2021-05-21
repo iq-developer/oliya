@@ -6,7 +6,7 @@ const Total = () => {
   const context = useContext(TextContext);
 
   return (
-    <article className="block fullWidth total" >
+    <article className="block total" >
       <p>{context.ua ? `Товарів:` : `Товаров:`} <strong>{context.amount}</strong> шт <br />
        {context.ua ? `Сума:` : `Сумма:`} <strong>{context.sum}</strong> грн</p>
     </article>

@@ -34,7 +34,7 @@ function ShopPage() {
     <>
       <Nav />
 
-      <header hidden={!context.amount} >
+      <header hidden={!context.amount} className="sticky">
         <div className="inner">
           <div className="cart">
             <Link className="button white-button" to="cart"><img src={cartImg} alt="Корзина замовлення" /></Link>
