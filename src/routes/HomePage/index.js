@@ -2,7 +2,7 @@ import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
 import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
-import {useContext} from 'react';
+import {useContext, useRef} from 'react';
 import s from './style.module.css';
 import cn from 'classnames';
 
@@ -13,7 +13,6 @@ function HomePage() {
   return (
     <>
       <Nav />
-
       <main className={s.home}>
 
         <div className={cn(s.banner, s.white)}>
@@ -21,7 +20,7 @@ function HomePage() {
             <h1>{context.ua ? `Сиродавлена олія` : `Сыродавленное масло`}</h1>
             <p className={s.subtitle}>{context.ua ? `виробляємо під замовлення на дубовому пресі` : `выжимаем под заказ на дубовом маслопрессе`}</p>
             <br />
-            <a className={cn("button", s.big_button, s.bgbeige)} href="#special">{context.ua ? `Що особливого? ▼` : `Что особенного? ▼`}</a>
+            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="">{context.ua ? `Що особливого? ▼` : `Что особенного? ▼`}</a>
             <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">{context.ua ? `Вибрати олію` : `Выбрать масло`} &#128722;</Link>
           </div>
         </div>
@@ -391,7 +390,7 @@ function HomePage() {
             <h1>{context.ua ? `Природний чистий смак` : `Природный чистый вкус`}</h1>
             <p className={s.subtitle}>{context.ua ? `відрізняється так, як смак джерельної води від кип'яченої` : `отличается так, как вкус родниковой воды от кипяченой`} </p>
             <br />
-            <Link onClick={context.scroll} to="/shop" className={cn("button", s.big_button, s.bgbeige)}>{context.ua ? `Вибрати найкращу олію` : `Выбрать лучшее масло`} &#128722;</Link>
+            <Link to="/shop" className={cn("button", s.big_button, s.bgbeige)}>{context.ua ? `Вибрати найкращу олію` : `Выбрать лучшее масло`} &#128722;</Link>
           </div>
         </div>
 

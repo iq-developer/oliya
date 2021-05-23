@@ -51,10 +51,10 @@ function App() {
     });
   }
 
-  const scroll = () => {
-    window.scrollTo(0, 0);
+  const scroll = (e) => {
+    e.preventDefault();
+    window.scroll({top:820, behavior:'smooth'});
   }
-
 
   return (
     <TextContext.Provider value={{
