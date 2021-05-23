@@ -92,6 +92,35 @@ const Order = () => {
     lang: context.ua ? 'UA' : 'RU',
   });
 
+  const [requiredFields, setRequiredFields] = useState({ 
+    branchNumber: true,
+    address: false, // только при Курь'єрська доставка
+    city: true,
+    region: true,
+
+    phone: true,
+    firstName: true,
+    familyName: true,
+    fathersName: false, // только при Курь'єрська доставка
+
+    contactPhone: true,
+    viber: true,
+    email: true,
+  });
+
+  const [errorFields, setErrorFields] = useState({});
+
+  const formVerification = () => { // проверяем только заполненность полей
+    Object.entries(requiredFields).map(([key, value]) => {
+      if (value) { // поле обязательное
+        if (!user[key]) { // поле не заполнено
+          
+          errorFields[key] = 'red'; // НЕЛЬЗЯ МУТИРОВАТЬ ОБЪЕКТ?
+        }
+      }
+    })
+  }
+
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -126,7 +155,7 @@ const Order = () => {
     <article className="block-order">
 
     <form onSubmit={onSubmit}>
-
+      
         <h2>Спосіб доставки</h2>
         <label><input
           name="delivery"
@@ -171,7 +200,9 @@ const Order = () => {
           /> {option4}</label>
           <br />
           <br hidden={deliveryOption === option4} />
-          <label for="branchNumber" hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
+
+
+          <label htmlFor="branchNumber" hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
           <input
             id="branchNumber"
             name="branchNumber"
@@ -179,9 +210,10 @@ const Order = () => {
             onChange={handleChange}
             hidden={deliveryOption === option4}
             size="4"
+            className={errorFields.branchNumber}
           />
           <br />
-          <label for="address" hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
+          <label htmlFor="address" hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
           <input
             id="address"
             name="address"
@@ -190,7 +222,7 @@ const Order = () => {
             hidden={deliveryOption === option3}
           />
           <br />
-          <label for="city" className="w220 float"> Місто<br /></label>
+          <label htmlFor="city" className="w220 float"> Місто<br /></label>
           <input
             id="city"
             name="city"
@@ -203,7 +235,7 @@ const Order = () => {
             <option value="Київ" />
           </datalist>
           <br />
-          <label for="region" className="w220 float"> Область<br /></label>
+          <label htmlFor="region" className="w220 float"> Область<br /></label>
           <input
             id="region"
             name="region"
@@ -213,7 +245,7 @@ const Order = () => {
         </div>
 
         <h3>Відомості про одержувача </h3>
-        <label for="phone" className="w220 float"> Телефон</label>
+        <label htmlFor="phone" className="w220 float"> Телефон</label>
         <input
           id="phone"
           name="phone"
@@ -221,7 +253,7 @@ const Order = () => {
           onChange={handlePhone}
         />
         <br />
-        <label for="firstName" className="w220 float"> Ім'я</label>
+        <label htmlFor="firstName" className="w220 float"> Ім'я</label>
         <input
           id="firstName"
           name="firstName"
@@ -229,7 +261,7 @@ const Order = () => {
           onChange={handleChange}
         />
         <br />
-        <label for="familyName" className="w220 float" hidden={delivery !== option}> Призвіще</label>
+        <label htmlFor="familyName" className="w220 float" hidden={delivery !== option}> Призвіще</label>
         <input
           id="familyName"
           name="familyName"
@@ -238,7 +270,7 @@ const Order = () => {
           hidden={delivery !== option}
         />
         <br hidden={delivery !== option} />
-        <label for="fathersName" className="w220 float" hidden={delivery !== option}> По-батькові</label>
+        <label htmlFor="fathersName" className="w220 float" hidden={delivery !== option}> По-батькові</label>
         <input
           id="fathersName"
           name="fathersName"
