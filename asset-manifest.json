@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/oliya/static/css/main.2ddc51d5.chunk.css",
-    "main.js": "/oliya/static/js/main.d48d0a24.chunk.js",
-    "main.js.map": "/oliya/static/js/main.d48d0a24.chunk.js.map",
+    "main.js": "/oliya/static/js/main.8f40890c.chunk.js",
+    "main.js.map": "/oliya/static/js/main.8f40890c.chunk.js.map",
     "runtime-main.js": "/oliya/static/js/runtime-main.2dbde51e.js",
     "runtime-main.js.map": "/oliya/static/js/runtime-main.2dbde51e.js.map",
     "static/js/2.f13422dc.chunk.js": "/oliya/static/js/2.f13422dc.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2dbde51e.js",
     "static/js/2.f13422dc.chunk.js",
     "static/css/main.2ddc51d5.chunk.css",
-    "static/js/main.d48d0a24.chunk.js"
+    "static/js/main.8f40890c.chunk.js"
   ]
 }
