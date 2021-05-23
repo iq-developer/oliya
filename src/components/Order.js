@@ -92,7 +92,7 @@ const Order = () => {
     lang: context.ua ? 'UA' : 'RU',
   });
 
-  const [requiredFields, setRequiredFields] = useState({ 
+  const [requiredFields, setRequiredFields] = useState({
     branchNumber: true,
     address: false, // только при Курь'єрська доставка
     city: true,
@@ -114,7 +114,7 @@ const Order = () => {
     Object.entries(requiredFields).map(([key, value]) => {
       if (value) { // поле обязательное
         if (!user[key]) { // поле не заполнено
-          
+
           errorFields[key] = 'red'; // НЕЛЬЗЯ МУТИРОВАТЬ ОБЪЕКТ?
         }
       }
@@ -147,7 +147,7 @@ const Order = () => {
 
   useEffect(() => {
     setToSend({...toSend, ...user, delivery, deliveryOption});
-  }, [user, delivery, deliveryOption]);
+  }, [user, delivery, deliveryOption, toSend]); // toSend added
 
   //EmailJS end
 
@@ -155,7 +155,7 @@ const Order = () => {
     <article className="block-order">
 
     <form onSubmit={onSubmit}>
-      
+
         <h2>Спосіб доставки</h2>
         <label><input
           name="delivery"

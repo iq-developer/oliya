@@ -9,6 +9,7 @@ import {Route, Switch} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import {TextContext} from './context/textContext';
 import database from './oliya-db.json';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
@@ -68,6 +69,7 @@ function App() {
       ua,
       setUa
     }}>
+      <ScrollToTop />
       <Switch>
         <Route path='/' exact component={HomePage} />
         <Route path='/home' component={HomePage} />
