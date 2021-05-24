@@ -390,7 +390,7 @@ function HomePage() {
             <h1>{context.ua ? `Природний чистий смак` : `Природный чистый вкус`}</h1>
             <p className={s.subtitle}>{context.ua ? `відрізняється так, як смак джерельної води від кип'яченої` : `отличается так, как вкус родниковой воды от кипяченой`} </p>
             <br />
-            <Link to="/shop" className={cn("button", s.big_button, s.bgbeige)}>{context.ua ? `Вибрати найкращу олію` : `Выбрать лучшее масло`} &#128722;</Link>
+            <Link to="/shop" className={cn("button", s.big_button, s.bgbeige)}>{context.ua ? `Вибрати найкращу олію` : `Выбрать лучшее масло`} &#128722;</Link> <Link className={cn("button", s.big_button, s.bgbeige)} to="/about">{context.ua ? `Або дізнатись більше` : `Или узнать больше`} ►</Link>
           </div>
         </div>
 

@@ -5,21 +5,11 @@ body {
   font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
   background: url(assets/background.jpg) #fcedd4;
 }
-
-.block-order input {
-  margin: 1px;
+blockquote {
+  background: beige;
+  padding: 5px 50px;
+  border: #e2d0ba dotted 2px;
 }
-.block-order input:invalid {
-  border-top: brown 2px solid;
-  border-left: brown 2px solid;
-  border-bottom: brown 1px solid;
-  border-right: brown 1px solid;
-  background: #fdf1f1;
-}
-.block-order input:valid {
-  background: #e5ffce;
-}
-
 
 /* Navigation panel */
 
@@ -138,22 +128,66 @@ header strong {
 
 /* Shop  */
 
-.about {
-  padding: 50px;
-  background: rgba(255, 245, 227, 0.5);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-  font-size: 1.5em;
-}
 .content {
   max-width: 1200px;
   margin: 0 auto;
 }
-.about h2{
+
+/* About  */
+
+.about {
+  background: rgba(255, 245, 227, 0.5);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   font-size: 1.5em;
-  color: #693b3b;
+}
+.about h2{
+  font-size: 2em;
+  margin: 0;
+  padding: 50px;
+  color: #fff;
+  background: #846f5b
 }
 .about blockquote {
   color: #693b3b;
+}
+.about h3 {
+  background: beige;
+  padding: 50px;
+  margin: 0;
+}
+
+.about {
+  margin: 0 auto;
+  background: rgba(255, 238, 227, 0.5);
+  font-size: 1.3em;
+  font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
+  text-align: center;
+}
+.about h1 {
+  font-size: 3.5em;
+  margin: 0 0.5em;
+}
+.about h3 {
+  font-size: 1.8em;
+}
+.about h4 {
+  font-size: 1.5em;
+}
+
+/* Order */
+
+.block-order input {
+  margin: 1px;
+}
+.block-order input:invalid {
+  border-top: brown 2px solid;
+  border-left: brown 2px solid;
+  border-bottom: brown 1px solid;
+  border-right: brown 1px solid;
+  background: #fdf1f1;
+}
+.block-order input:valid {
+  background: #e5ffce;
 }
 
 /* Elements */
@@ -276,6 +310,15 @@ small {
 }
 .hide {
   display: none;
+}
+.p50 {
+  padding: 20px 50px;
+}
+.mTop0 {
+  margin-top: 0;
+}
+.tLeft {
+  text-align: left;
 }
 
 
