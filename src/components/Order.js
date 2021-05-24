@@ -147,7 +147,7 @@ const Order = () => {
 
   useEffect(() => {
     setToSend({...toSend, ...user, delivery, deliveryOption});
-  }, [user, delivery, deliveryOption, toSend]); // toSend added
+  }, [user, delivery, deliveryOption]);
 
   //EmailJS end
 
@@ -181,6 +181,9 @@ const Order = () => {
           onChange={handleDeliveryChange}
         /> {option2}</label>
         <br />
+
+
+
         <div hidden={delivery !== option}>
           <h3>Відправка на відділення або на адресу</h3>
           <label><input
@@ -199,9 +202,8 @@ const Order = () => {
             onChange={handleDeliveryOptionChange}
           /> {option4}</label>
           <br />
+
           <br hidden={deliveryOption === option4} />
-
-
           <label htmlFor="branchNumber" hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
           <input
             id="branchNumber"
@@ -210,7 +212,7 @@ const Order = () => {
             onChange={handleChange}
             hidden={deliveryOption === option4}
             size="4"
-            className={errorFields.branchNumber}
+            required={deliveryOption !== option4}
           />
           <br />
           <label htmlFor="address" hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
@@ -220,6 +222,7 @@ const Order = () => {
             value={user.address}
             onChange={handleChange}
             hidden={deliveryOption === option3}
+            required={deliveryOption !== option3}
           />
           <br />
           <label htmlFor="city" className="w220 float"> Місто<br /></label>
@@ -229,6 +232,7 @@ const Order = () => {
             value={user.city}
             onChange={handleChange}
             list="cities"
+            required={delivery === option}
             />
           <datalist id="cities">
             <option value="Львів" />
@@ -241,6 +245,7 @@ const Order = () => {
             name="region"
             value={user.region}
             onChange={handleChange}
+            required={delivery === option}
           />
         </div>
 
@@ -251,6 +256,7 @@ const Order = () => {
           name="phone"
           value={user.phone}
           onChange={handlePhone}
+          required
         />
         <br />
         <label htmlFor="firstName" className="w220 float"> Ім'я</label>
@@ -259,6 +265,7 @@ const Order = () => {
           name="firstName"
           value={user.firstName}
           onChange={handleChange}
+          required
         />
         <br />
         <label htmlFor="familyName" className="w220 float" hidden={delivery !== option}> Призвіще</label>
@@ -268,6 +275,7 @@ const Order = () => {
           value={user.familyName}
           onChange={handleChange}
           hidden={delivery !== option}
+          required={delivery === option}
         />
         <br hidden={delivery !== option} />
         <label htmlFor="fathersName" className="w220 float" hidden={delivery !== option}> По-батькові</label>
@@ -277,6 +285,7 @@ const Order = () => {
           value={user.fathersName}
           onChange={handleChange}
           hidden={delivery !== option}
+          required={delivery === option}
         />
         <br hidden={delivery !== option} />
         <h3>Як з вами контактувати</h3>
@@ -295,6 +304,7 @@ const Order = () => {
           value={user.contactPhone}
           onChange={handleChange}
           hidden={!user.isContactPhone}
+          required={user.isContactPhone}
         />
         <br />
         <label className="w220 float">
@@ -313,6 +323,7 @@ const Order = () => {
           value={user.viber}
           onChange={handleChange}
           hidden={!user.isViber}
+          required={user.isViber}
         />
         <br />
         <label className="w220 float">
@@ -326,11 +337,13 @@ const Order = () => {
         />
         &nbsp;Email&nbsp;</label>
         <input
+          type="email"
           id=""
           name="email"
           value={user.email}
           onChange={handleChange}
           hidden={!user.isEmail}
+          required={user.isEmail}
         />
         <br />
         <br />

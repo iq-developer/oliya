@@ -6,6 +6,21 @@ body {
   background: url(assets/background.jpg) #fcedd4;
 }
 
+.block-order input {
+  margin: 1px;
+}
+.block-order input:invalid {
+  border-top: brown 2px solid;
+  border-left: brown 2px solid;
+  border-bottom: brown 1px solid;
+  border-right: brown 1px solid;
+  background: #fdf1f1;
+}
+.block-order input:valid {
+  background: #e5ffce;
+}
+
+
 /* Navigation panel */
 
 nav {
@@ -262,6 +277,7 @@ small {
 .hide {
   display: none;
 }
+
 
 
 @media (max-width: 800px) {
