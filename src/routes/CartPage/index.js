@@ -5,11 +5,17 @@ import returnImg from './../../assets/return.png';
 import {Link} from 'react-router-dom';
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const CartPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Кошик товарів. Їжа як ліки</title>
+        <meta name="description" content="Оформити ваше замовлення" />
+        <meta name="theme-color" content="#efd8b4" />
+      </Helmet>
       <Nav />
       <header>
         <div className="cart-page">

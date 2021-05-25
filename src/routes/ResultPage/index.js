@@ -1,10 +1,16 @@
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const ResultPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Замовлення зроблено успішно</title>
+        <meta name="description" content="Дякуємо за ваше замовлення" />
+        <meta name="theme-color" content="#efd8b4" />
+      </Helmet>
       <Nav />
       <main className="about content">
         <h1>Дякуємо за ваше замовлення</h1>

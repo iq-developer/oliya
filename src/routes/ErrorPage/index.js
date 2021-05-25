@@ -1,10 +1,16 @@
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const ErrorPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Помилка</title>
+        <meta name="description" content="Сталася якась помилка" />
+        <meta name="theme-color" content="#efd8b4" />
+      </Helmet>
       <Nav />
       <main className="about content">
         <h1>Сталася якась помилка :(</h1>

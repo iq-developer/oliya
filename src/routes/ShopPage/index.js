@@ -5,6 +5,7 @@ import Footer from './../../components/Footer';
 import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
 import {useContext} from 'react';
+import { Helmet } from 'react-helmet';
 //import { ToastContainer, toast } from 'react-toastify';
 //import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,6 +33,11 @@ function ShopPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Купити сиродавлену олію. Львів. Їжа як ліки</title>
+        <meta name="description" content="Олія чорного кмину, конопляна, насіння гарбуза, мигдалева, чорного кунжута, волоського горіха, білого кунжута, лляна, соняшникова, кокосова." />
+        <meta name="theme-color" content="#efd8b4" />
+      </Helmet>
       <Nav />
 
       <header hidden={!context.amount} className="sticky">

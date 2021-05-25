@@ -5,6 +5,9 @@ import {TextContext} from './../../context/textContext';
 import {useContext, useRef} from 'react';
 import s from './style.module.css';
 import cn from 'classnames';
+import { Helmet } from 'react-helmet';
+
+
 
 function HomePage() {
 
@@ -12,6 +15,11 @@ function HomePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Сиродавлена олія на дубовому пресі. Львів. Їжа як ліки</title>
+        <meta name="description" content="Олія чорного кмину, конопляна, насіння гарбуза, мигдалева, чорного кунжута, волоського горіха, білого кунжута, лляна, соняшникова, кокосова." />
+        <meta name="theme-color" content="#efd8b4" />
+      </Helmet>
       <Nav />
       <main className={s.home}>
 
