@@ -6,36 +6,16 @@ import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
 import {useContext} from 'react';
 import { Helmet } from 'react-helmet';
-//import { ToastContainer, toast } from 'react-toastify';
-//import 'react-toastify/dist/ReactToastify.css';
 
 function ShopPage() {
 
   const context = useContext(TextContext);
 
-  // const CartButton = () => {
-  //   const notify = () => toast.error("Спочатку у кошик треба додати товари");
-  //   const handleClick = () => {
-  //     if (true) {
-
-  //     } else {
-  //       notify();
-  //     }
-  //   }
-  //   return (
-  //     <div>
-  //       <button onClick={handleClick}>Notify!</button>
-
-  //       <ToastContainer />
-  //     </div>
-  //   );
-  // }
-
   return (
     <>
       <Helmet>
-        <title>Купити сиродавлену олію. Львів. Їжа як ліки</title>
-        <meta name="description" content="Олія чорного кмину, конопляна, насіння гарбуза, мигдалева, чорного кунжута, волоського горіха, білого кунжута, лляна, соняшникова, кокосова." />
+        <title>{context.ua ? `Купити сиродавлену олію. Львів. Їжа як ліки` : `Купить сиродавлену масло. Львов. Еда как лекарство`}</title>
+        <meta name="description" content={context.ua ? `Олія чорного кмину, конопляна, насіння гарбуза, мигдалева, чорного кунжута, волоського горіха, білого кунжута, лляна, соняшникова, кокосова.` : `Масло черного тмина, конопляное, семена тыквы, миндальное, черного кунжута, грецкого ореха, белого кунжута, льняное, подсолнечное, кокосовое.`} />
         <meta name="theme-color" content="#efd8b4" />
       </Helmet>
       <Nav />

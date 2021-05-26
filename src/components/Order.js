@@ -108,23 +108,9 @@ const Order = () => {
     email: true,
   });
 
-  const [errorFields, setErrorFields] = useState({});
-
-  const formVerification = () => { // проверяем только заполненность полей
-    Object.entries(requiredFields).map(([key, value]) => {
-      if (value) { // поле обязательное
-        if (!user[key]) { // поле не заполнено
-
-          errorFields[key] = 'red'; // НЕЛЬЗЯ МУТИРОВАТЬ ОБЪЕКТ?
-        }
-      }
-    })
-  }
-
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (true) { // add conditions of filling forms
       send(
         credentials.service_code,
         credentials.template_code,
@@ -139,9 +125,6 @@ const Order = () => {
         history.push('/error');
         console.log('FAILED...', err);
       });
-    } else {
-      // show error + mark fields with red border
-    }
 
   };
 
@@ -181,8 +164,6 @@ const Order = () => {
           onChange={handleDeliveryChange}
         /> {option2}</label>
         <br />
-
-
 
         <div hidden={delivery !== option}>
           <h3>Відправка на відділення або на адресу</h3>
