@@ -2,7 +2,7 @@ import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
 import {Link} from 'react-router-dom';
 import {TextContext} from './../../context/textContext';
-import {useContext, useRef} from 'react';
+import {useContext} from 'react';
 import s from './style.module.css';
 import cn from 'classnames';
 import { Helmet } from 'react-helmet';

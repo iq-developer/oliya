@@ -126,39 +126,22 @@ header strong {
   max-width: 220px;
 }
 
-/* Shop  */
+/* Page  */
 
 .content {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.page {
+  background: rgba(255, 245, 227, 0.5);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
 /* About  */
 
 .about {
-  background: rgba(255, 245, 227, 0.5);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-  font-size: 1.5em;
-}
-.about h2{
-  font-size: 2em;
-  margin: 0;
-  padding: 50px;
-  color: #fff;
-  background: #846f5b
-}
-.about blockquote {
-  color: #693b3b;
-}
-.about h3 {
-  background: beige;
-  padding: 50px;
-  margin: 0;
-}
-
-.about {
   margin: 0 auto;
-  background: rgba(255, 238, 227, 0.5);
   font-size: 1.3em;
   font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
   text-align: center;
@@ -167,11 +150,25 @@ header strong {
   font-size: 3.5em;
   margin: 0 0.5em;
 }
+.about h2{
+  font-size: 2em;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  padding: 50px;
+  color: #fff;
+  background: #846f5b
+}
 .about h3 {
   font-size: 1.8em;
+  background: beige;
+  padding: 50px;
+  margin: 0;
 }
 .about h4 {
   font-size: 1.5em;
+}
+.about blockquote {
+  color: #693b3b;
 }
 
 /* Order */

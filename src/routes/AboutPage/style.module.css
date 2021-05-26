@@ -120,33 +120,12 @@
 body {
   overflow-x: hidden;
 }
-.about {
-  margin: 0 auto;
-  background: rgba(255, 238, 227, 0.5);
-  font-size: 1.3em;
-  font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
-  text-align: center;
-}
-.about h1 {
-  font-size: 3.5em;
-  margin: 0 0.5em;
-}
-.about h2 {
-  font-size: 2em;
-  margin: 2em 0.5em 0.5em;
-}
-.about h3 {
-  font-size: 1.8em;
-}
-.about h4 {
-  font-size: 1.5em;
-}
+
 
 /* Banner css */
 
 .banner {
   margin-left: calc(50% - 50vw);
-  /* margin-bottom: 30px; */
   width: 100vw;
   height: 37.5vh;
   min-height: 35em;
@@ -158,13 +137,13 @@ body {
   text-align: center;
 }
 .parallax {
-  --img: url(https://oliya.com.ua/img/landing/utp.jpg);
+  --img: url(https://oliya.com.ua/img/syrodavleni_olii.jpg);
 }
 .parallax1 {
-  --img: url(https://oliya.com.ua/img/landing/maslozavod.jpg);
+  --img: url(https://oliya.com.ua/img/maslopress.jpg);
 }
 .parallax2 {
-  --img: url(https://oliya.com.ua/img/landing/smak.jpg);
+  --img: url(https://oliya.com.ua/img/syrodavleni_olii1.jpg);
 }
 .parallax3 {
   --img: url(https://oliya.com.ua/img/landing/smak.jpg);
