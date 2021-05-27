@@ -14,12 +14,12 @@ const Order = () => {
 
   const context = useContext(TextContext);
 
-  const option = "Нова пошта";
-  const option1 = "Львів - заберу при зустричі по домовленності";
-  const option2 = "Львів - самовивіз з кафе Грін (вул. Братів Рогатинців, 5)";
+  const option = context.ua ? `Нова Пошта` : `Новая Почта`;
+  const option1 = context.ua ? `Львів - заберу при зустричі по домовленості` : `Львов - заберу при встрече по договоренности`;
+  const option2 = context.ua ? `Львів - самовивіз з кафе Грін (вул. Братів Рогатинців, 5)` : `Львов - самовывоз из кафе Грин (ул. Братьев Рогатинцев, 5)`;
 
-  const option3 = 'На відділення Нової Пошти';
-  const option4 = "Курь'єрська доставка за адресою";
+  const option3 = context.ua ? `На відділення Нової Пошти` : `На отделение Новой Почты`;
+  const option4 = context.ua ? `Курь'єрська доставка за адресою` : `Курьерская доставка по адресу`;
 
   const [delivery, setDelivery] = useState(option);
   const [deliveryOption, setDeliveryOption] = useState(option3);
@@ -92,22 +92,6 @@ const Order = () => {
     lang: context.ua ? 'UA' : 'RU',
   });
 
-  const [requiredFields, setRequiredFields] = useState({
-    branchNumber: true,
-    address: false, // только при Курь'єрська доставка
-    city: true,
-    region: true,
-
-    phone: true,
-    firstName: true,
-    familyName: true,
-    fathersName: false, // только при Курь'єрська доставка
-
-    contactPhone: true,
-    viber: true,
-    email: true,
-  });
-
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -139,7 +123,7 @@ const Order = () => {
 
     <form onSubmit={onSubmit}>
 
-        <h2>Спосіб доставки</h2>
+        <h2>{context.ua ? `Спосіб доставки` : `Способ доставки`}</h2>
         <label><input
           name="delivery"
           type="radio"
@@ -156,17 +140,17 @@ const Order = () => {
           onChange={handleDeliveryChange}
         /> {option1}</label>
         <br />
-        <label><input
+        {/* <label><input
           name="delivery"
           type="radio"
           value={option2}
           checked={delivery === option2}
           onChange={handleDeliveryChange}
         /> {option2}</label>
-        <br />
+        <br /> */}
 
         <div hidden={delivery !== option}>
-          <h3>Відправка на відділення або на адресу</h3>
+          <h3>{context.ua ? `Відправка на відділення або на адресу` : `Отправка на отделение или на адрес`}</h3>
           <label><input
             name="deliveryOption"
             type="radio"
@@ -185,7 +169,7 @@ const Order = () => {
           <br />
 
           <br hidden={deliveryOption === option4} />
-          <label htmlFor="branchNumber" hidden={deliveryOption === option4} className="w220 float"> № відділення або поштомату</label>
+          <label htmlFor="branchNumber" hidden={deliveryOption === option4} className="w220 float"> {context.ua ? `№ відділення або поштомату` : `№ отделения или почтомата`}</label>
           <input
             id="branchNumber"
             name="branchNumber"
@@ -196,7 +180,7 @@ const Order = () => {
             required={deliveryOption !== option4}
           />
           <br />
-          <label htmlFor="address" hidden={deliveryOption === option3} className="w220 float"> Адреса</label>
+          <label htmlFor="address" hidden={deliveryOption === option3} className="w220 float"> {context.ua ? `Адреса` : `Адрес`}</label>
           <input
             id="address"
             name="address"
@@ -206,7 +190,7 @@ const Order = () => {
             required={deliveryOption !== option3}
           />
           <br />
-          <label htmlFor="city" className="w220 float"> Місто<br /></label>
+          <label htmlFor="city" className="w220 float">{context.ua ? `Місто` : `Город`}<br /></label>
           <input
             id="city"
             name="city"
@@ -216,8 +200,41 @@ const Order = () => {
             required={delivery === option}
             />
           <datalist id="cities">
-            <option value="Львів" />
-            <option value="Київ" />
+            <option value={context.ua ? `Біла Церква` : `Белая Церковь`} />
+            <option value={context.ua ? `Бердянськ` : `Бердянск`} />
+            <option value={context.ua ? `Бровари` : `Бровары`} />
+            <option value={context.ua ? `Вінниця` : `Винница`} />
+            <option value={context.ua ? `Дніпро` : `Днепр`} />
+            <option value={context.ua ? `Житомир` : `Житомир`} />
+            <option value={context.ua ? `Запоріжжя` : `Запорожье`} />
+            <option value={context.ua ? `Івано-Франківськ` : `Ивано-Франковск`} />
+            <option value={context.ua ? `Кам'янське` : `Каменское`} />
+            <option value={context.ua ? `Київ` : `Киев`} />
+            <option value={context.ua ? `Краматорськ` : `Краматорск`} />
+            <option value={context.ua ? `Кременчук` : `Кременчуг`} />
+            <option value={context.ua ? `Кривий Ріг` : `Кривой Рог`} />
+            <option value={context.ua ? `Кропивницький` : `Кропивницкий`} />
+            <option value={context.ua ? `Луцьк` : `Луцк`} />
+            <option value={context.ua ? `Львів` : `Львов`} />
+            <option value={context.ua ? `Маріуполь` : `Мариуполь`} />
+            <option value={context.ua ? `Мелітополь` : `Мелитополь`} />
+            <option value={context.ua ? `Миколаїв` : `Николаев`} />
+            <option value={context.ua ? `Нікополь` : `Никополь`} />
+            <option value={context.ua ? `Одеса` : `Одесса`} />
+            <option value={context.ua ? `Павлоград` : `Павлоград`} />
+            <option value={context.ua ? `Полтава` : `Полтава`} />
+            <option value={context.ua ? `Рівне` : `Ровно`} />
+            <option value={context.ua ? `Севастополь` : `Севастополь`} />
+            <option value={context.ua ? `Слов'янськ` : `Славянск`} />
+            <option value={context.ua ? `Суми` : `суммы`} />
+            <option value={context.ua ? `Тернопіль` : `Тернополь`} />
+            <option value={context.ua ? `Ужгород` : `Ужгород`} />
+            <option value={context.ua ? `Харків` : `Харьков`} />
+            <option value={context.ua ? `Херсон` : `Херсон`} />
+            <option value={context.ua ? `Хмельницький` : `Хмельницкий`} />
+            <option value={context.ua ? `Черкаси` : `Черкассы`} />
+            <option value={context.ua ? `Чернігів` : `Чернигов`} />
+            <option value={context.ua ? `Чернівці` : `Черновцы`} />
           </datalist>
           <br />
           <label htmlFor="region" className="w220 float"> Область<br /></label>
@@ -226,11 +243,38 @@ const Order = () => {
             name="region"
             value={user.region}
             onChange={handleChange}
+            list="regions"
             required={delivery === option}
           />
+          <datalist id="regions">
+            <option value={context.ua ? `Вінницька` : `Винницкая`} />
+            <option value={context.ua ? `Волинська` : `Волынская`} />
+            <option value={context.ua ? `Дніпропетровська` : `Днепропетровская`} />
+            <option value={context.ua ? `Донецька` : `Донецкая`} />
+            <option value={context.ua ? `Житомирська` : `Житомирская`} />
+            <option value={context.ua ? `Закарпатська` : `Закарпатская`} />
+            <option value={context.ua ? `Запорізька` : `Запорожская`} />
+            <option value={context.ua ? `Івано-Франківська` : `Ивано-Франковская`} />
+            <option value={context.ua ? `Київська` : `Киевская`} />
+            <option value={context.ua ? `Кіровоградська` : `Кировоградская`} />
+            <option value={context.ua ? `Луганська` : `Луганская`} />
+            <option value={context.ua ? `Львівська` : `Львовская`} />
+            <option value={context.ua ? `Миколаївська` : `Николаевская`} />
+            <option value={context.ua ? `Одеська` : `Одесская`} />
+            <option value={context.ua ? `Полтавська` : `Полтавская`} />
+            <option value={context.ua ? `Рівненська` : `Ровенская`} />
+            <option value={context.ua ? `Сумська` : `Сумская`} />
+            <option value={context.ua ? `Тернопільська` : `Тернопольская`} />
+            <option value={context.ua ? `Харківська` : `Харьковская`} />
+            <option value={context.ua ? `Херсонська` : `Херсонская`} />
+            <option value={context.ua ? `Хмельницька` : `Хмельницкая`} />
+            <option value={context.ua ? `Черкаська` : `Черкасская`} />
+            <option value={context.ua ? `Чернівецька` : `Черновицкая`} />
+            <option value={context.ua ? `Чернігівська` : `Черниговская`} />
+          </datalist>
         </div>
 
-        <h3>Відомості про одержувача </h3>
+        <h3>{context.ua ? `Відомості про одержувача` : `Сведения о получателе`}</h3>
         <label htmlFor="phone" className="w220 float"> Телефон</label>
         <input
           id="phone"
@@ -240,7 +284,7 @@ const Order = () => {
           required
         />
         <br />
-        <label htmlFor="firstName" className="w220 float"> Ім'я</label>
+        <label htmlFor="firstName" className="w220 float"> {context.ua ? `Ім'я` : `Имя`}</label>
         <input
           id="firstName"
           name="firstName"
@@ -249,7 +293,7 @@ const Order = () => {
           required
         />
         <br />
-        <label htmlFor="familyName" className="w220 float" hidden={delivery !== option}> Призвіще</label>
+        <label htmlFor="familyName" className="w220 float" hidden={delivery !== option}> {context.ua ? `Призвіще` : `Фамилия`}</label>
         <input
           id="familyName"
           name="familyName"
@@ -259,7 +303,7 @@ const Order = () => {
           required={delivery === option}
         />
         <br hidden={delivery !== option} />
-        <label htmlFor="fathersName" className="w220 float" hidden={delivery !== option}> По-батькові</label>
+        <label htmlFor="fathersName" className="w220 float" hidden={delivery !== option}> {context.ua ? `По-батькові` : `Отчество`}</label>
         <input
           id="fathersName"
           name="fathersName"
@@ -269,7 +313,7 @@ const Order = () => {
           required={delivery === option}
         />
         <br hidden={delivery !== option} />
-        <h3>Як з вами контактувати</h3>
+        <h3>{context.ua ? `Як з вами контактувати` : `Как с вами контактировать`}</h3>
         <label className="w220 float">
         <input
           name="isContactPhone"
@@ -328,7 +372,7 @@ const Order = () => {
         />
         <br />
         <br />
-        <button className="big">Замовити</button>
+        <button className="big">{context.ua ? `Замовити` : `Заказать`}</button>
       </form>
 
     </article>

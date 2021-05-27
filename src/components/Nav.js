@@ -25,7 +25,7 @@ const Nav = () => {
     <>
       <nav>
         <div id="top" className="inner">
-          <Link to="/"><img src={logoImg} className="logo" alt="Лого" /></Link>
+          <Link to="/"><img src={logoImg} className="logo" alt={context.ua ? "Лого Їжа як ліки" : "Лого Еда как лекарство"} /></Link>
 
           <menu className={menuActive}>
             <Link to="/">{context.ua ? "Головна" : "Главная"}</Link>

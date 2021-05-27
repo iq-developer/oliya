@@ -150,6 +150,10 @@ header strong {
   font-size: 3.5em;
   margin: 0 0.5em;
 }
+.about .banner_title {
+  font-size: 3.5em;
+  margin: 0 0.5em;
+}
 .about h2{
   font-size: 2em;
   margin-left: calc(50% - 50vw);
@@ -169,6 +173,9 @@ header strong {
 }
 .about blockquote {
   color: #693b3b;
+}
+blockquote {
+  margin: 0;
 }
 
 /* Order */
@@ -267,6 +274,10 @@ small {
 }
 .float {
   float: left;
+  padding-right: 5px;
+}
+.floatR {
+  float: right;
   padding-right: 5px;
 }
 .form {

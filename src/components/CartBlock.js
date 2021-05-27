@@ -22,7 +22,7 @@ const CartBlock = () => {
             <article className="block" key={priceId}>
 
               <div className="title floatResponsive">
-                <img src={product.img} alt={`${context.ua ? product.title : product.titleRu}`} className="float cartIcon" />
+                <img src={product.img} alt={`${context.ua ? product.title : product.titleRu}`} className="floatR cartIcon" />
                 <h2>{context.ua ? product.category : product.categoryRu}<br /><strong>{context.ua ? product.title : product.titleRu}</strong></h2>
               </div>
 

@@ -32,12 +32,12 @@ function HomePage() {
             <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">{context.ua ? `Вибрати олію` : `Выбрать масло`} &#128722;</Link>
           </div>
         </div>
-        <h2 id="special">{context.ua ? `Особливе виробництво - особлива олія` : `Особое производство - особенное масло`}</h2>
+        <h2 id="special">{context.ua ? `Особливе виробництво - незвичайна олія` : `Особое производство - особенное масло`}</h2>
         <p className={s.h2subtitle}>{context.ua ? `подивиться, як дбайливо ми робимо нашу олію` : `посмотрите, как заботливо мы делаем наше масло`}</p>
         <div className={s.bars}>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar0.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar0.jpg"  alt={context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`}</h3>
               <hr />
@@ -46,7 +46,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar1.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar1.jpg"  alt={context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`}</h3>
               <hr />
@@ -55,7 +55,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar2.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar2.jpg"  alt={context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`}</h3>
               <hr />
@@ -64,7 +64,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar3.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar3.jpg"  alt={context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`}</h3>
               <hr />
@@ -73,7 +73,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar4.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar4.jpg"  alt={context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`}</h3>
               <hr />
@@ -82,7 +82,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar5.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar5.jpg"  alt={context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`}</h3>
               <hr />
@@ -91,7 +91,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar8.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar8.jpg"  alt={context.ua ? `Розливаємо в темні скляни пляшки` : `Разливаем в темные стеклянные бутылки`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Розливаємо в темні скляни пляшки` : `Разливаем в темные стеклянные бутылки`}</h3>
               <hr />
@@ -100,7 +100,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar9.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/bar9.jpg"  alt={context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`}</h3>
               <hr />
@@ -131,7 +131,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon1.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon1.png" className={s.gear_img} alt={context.ua ? `сиродавлена олія Подрібнення` : `Измельчение`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Подрібнення` : `Измельчение`}</h3>
                 <hr />
@@ -140,7 +140,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon2.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon2.png" className={s.gear_img} alt={context.ua ? `Екстрагування` : `Экстрагирование`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Екстрагування` : `Экстрагирование`}</h3>
                 <hr />
@@ -149,7 +149,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon3.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon3.png" className={s.gear_img} alt={context.ua ? `Гидратация` : `Гідратація`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Гидратация` : `Гідратація`}</h3>
                 <hr />
@@ -158,7 +158,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon4.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon4.png" className={s.gear_img} alt={context.ua ? `Нейтралізація` : `Нейтрализация`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Нейтралізація` : `Нейтрализация`}</h3>
                 <hr />
@@ -167,7 +167,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon5.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon5.png" className={s.gear_img} alt={context.ua ? `Відбілювання` : `Отбеливание`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Відбілювання` : `Отбеливание`}</h3>
                 <hr />
@@ -176,7 +176,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon6.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon6.png" className={s.gear_img} alt={context.ua ? `Дезодорація` : `Дезодорация`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Дезодорація` : `Дезодорация`}</h3>
                 <hr />
@@ -185,7 +185,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon7.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon7.png" className={s.gear_img} alt={context.ua ? `Виморожування` : `Вымораживание`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Виморожування` : `Вымораживание`}</h3>
                 <hr />
@@ -194,7 +194,7 @@ function HomePage() {
             </div>
 
             <div className={s.gear}>
-              <img src="https://oliya.com.ua/img/landing/icon8.png" className={s.gear_img} alt="" />
+              <img src="https://oliya.com.ua/img/landing/icon8.png" className={s.gear_img} alt={context.ua ? `Фільтрація` : `Фильтрация`} />
               <div className={s.gear_desc}>
                 <h3>{context.ua ? `Фільтрація` : `Фильтрация`}</h3>
                 <hr />
@@ -218,10 +218,10 @@ function HomePage() {
         <div className={s.oils}>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil01.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil01.jpg"  alt={context.ua ? `сиродавлена олія чорного кмину` : `сыродавленное масло черного тмина`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
-              <h3>{context.ua ? `чорного кмину` : `чорного тмина`}</h3>
+              <h3>{context.ua ? `чорного кмину` : `черного тмина`}</h3>
               <hr />
               <div className={cn(s.oil_txt, s.left)}>
                 <p>{context.ua ? `✿ Іммуномодулятор, онкопротектор, загальнозміцнюючий засіб` : `✿ иммуномодулятор, онкопротектор, общеукрепляющее средство`}</p>
@@ -234,10 +234,10 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil02.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil02.jpg"  alt={context.ua ? `сиродавлена олія конопляна` : `сыродавленное масло конопляное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
-              <h3>{context.ua ? `конопляна` : `конопляная`}</h3>
+              <h3>{context.ua ? `конопляна` : `конопляное`}</h3>
               <hr />
               <div className={cn(s.oil_txt, s.left)}>
                 <p>{context.ua ? `✿ Єдина олія, що засвоюється організмом на 100%` : `✿ Единственное масло, которое усваивается организмом на 100%`}</p>
@@ -249,7 +249,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil03.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil03.jpg"  alt={context.ua ? `сиродавлена олія насіння гарбуза` : `сыродавленное масло семян тыквы`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `насіння гарбуза` : `семян тыквы`}</h3>
@@ -264,7 +264,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil04.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil04.jpg"  alt={context.ua ? `сиродавлена олія мигдалева` : `сыродавленное масло миндальное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `мигдалева` : `миндальное`}</h3>
@@ -278,7 +278,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil05.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil05.jpg"  alt={context.ua ? `сиродавлена олія чорного кунжута` : `сыродавленное масло черного кунжута`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `чорного кунжута` : `черного кунжута`}</h3>
@@ -293,7 +293,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil06.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil06.jpg"  alt={context.ua ? `сиродавлена олія волоського горіха` : `сыродавленное масло грецкого горіха`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `волоського горіха` : `грецкого горіха`}</h3>
@@ -308,7 +308,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil07.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil07.jpg"  alt={context.ua ? `сиродавлена олія білого кунжута` : `сыродавленное масло белого кунжута`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `білого кунжута` : `белого кунжута`}</h3>
@@ -322,10 +322,10 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil08.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil08.jpg"  alt={context.ua ? `сиродавлена олія лляна` : `сыродавленное масло льняное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
-              <h3>{context.ua ? `лляна` : `лняное`}</h3>
+              <h3>{context.ua ? `лляна` : `льняное`}</h3>
               <hr />
               <div className={cn(s.oil_txt, s.left)}>
                 <p>{context.ua ? `✿ Вміст Омега-3 перевершує навіть  риб'ячий жир. Має ідеально збалансоване співвідношення Омега-6 і Омега-3` : `✿ Содержание Омега-3 превосходит даже рыбий жир. Имеет идеально сбалансированное соотношение Омега-6 и Омега-3`}</p>
@@ -336,7 +336,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil09.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil09.jpg"  alt={context.ua ? `сиродавлена олія соняшникова` : `сыродавленное масло подсолнечное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `соняшникова` : `подсолнечное`}</h3>
@@ -359,9 +359,9 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil10.jpg"  alt="" />
+            <img src="https://oliya.com.ua/img/landing/oil10.jpg"  alt={context.ua ? `сиродавлена олія кокосова` : `сыродавленное масло кокосовое`} />
             <div className={s.bar_desc}>
-              <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
+              <p><span>{context.ua ? `сиродавлена олія` : `сыродавленное масло`}</span></p>
               <h3>{context.ua ? `кокосова` : `кокосовое`}</h3>
               <hr />
               <div className={cn(s.oil_txt, s.left)}>

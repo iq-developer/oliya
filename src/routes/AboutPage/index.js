@@ -96,7 +96,7 @@ const AboutPageUa = () => {
 
         <div className={cn(s.banner, s.parallax1, s.white)}>
           <div>
-            <h1>Що ми з'ясували</h1>
+          <h4 className="banner_title">Що ми з'ясували</h4>
             <p className={s.subtitle}>
             результати нашого олійного дослідження
             </p>
@@ -219,7 +219,7 @@ const AboutPageUa = () => {
 
         <div className={cn(s.banner, s.parallax2, s.white)}>
           <div>
-            <h1>Ось так ми обрали прес "дубова бочка"</h1>
+          <h4 className="banner_title">Ось так ми обрали прес "дубова бочка"</h4>
             <p className={s.subtitle}>
               Бо тільки в ньому насіння і не нагріваються і не контактують з металом
             </p>
@@ -363,7 +363,7 @@ const AboutPageRu = () => {
 
         <div className={cn(s.banner, s.parallax1, s.white)}>
           <div>
-            <h1>Что мы выяснили</h1>
+            <h4 className="banner_title">Что мы выяснили</h4>
             <p className={s.subtitle}>
             результаты нашего маслянного исследования
             </p>
@@ -485,7 +485,7 @@ const AboutPageRu = () => {
 
          <div className={cn(s.banner, s.parallax2, s.white)}>
           <div>
-            <h1>Так мы выбрали пресс "дубовая бочка"</h1>
+          <h4 className="banner_title">Так мы выбрали пресс "дубовая бочка"</h4>
             <p className={s.subtitle}>
               Так как только в нем семена не нагреваются и не контактируют с металлом
             </p>
