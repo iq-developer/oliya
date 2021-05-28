@@ -10,12 +10,21 @@ import {useState, useEffect} from 'react';
 import {TextContext} from './context/textContext';
 import database from './oliya-db.json';
 import ScrollToTop from './utils/ScrollToTop';
+import ReactGA from 'react-ga';
+import { useLocation,} from 'react-router-dom';
+
+ReactGA.initialize('UA-198144083-1');
 
 function App() {
+  const location = useLocation();
   const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
   const [sum, setSum] = useState(0);
   const [amount, setAmount] = useState(0);
   const [ua, setUa] = useState(true); // ukrainian language by default
+
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
 
   const handleInputChange = (event) => {
     const priceId = event.target.name;
