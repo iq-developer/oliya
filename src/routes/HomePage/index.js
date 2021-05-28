@@ -28,7 +28,7 @@ function HomePage() {
             <h1>{context.ua ? `Сиродавлена олія` : `Сыродавленное масло`}</h1>
             <p className={s.subtitle}>{context.ua ? `виробляємо під замовлення на дубовому пресі` : `выжимаем под заказ на дубовом маслопрессе`}</p>
             <br />
-            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="">{context.ua ? `Що особливого? ▼` : `Что особенного? ▼`}</a>
+            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="/#">{context.ua ? `Що особливого? ▼` : `Что особенного? ▼`}</a>
             <Link className={cn("button", s.big_button, s.bgbeige)} to="/shop">{context.ua ? `Вибрати олію` : `Выбрать масло`} &#128722;</Link>
           </div>
         </div>

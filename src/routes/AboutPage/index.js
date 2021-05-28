@@ -1,12 +1,10 @@
-import cartImg from "./../../assets/cart.png";
 import Nav from "./../../components/Nav";
 import Footer from "./../../components/Footer";
-import { Link } from "react-router-dom";
-import { TextContext } from "./../../context/textContext";
-import { useContext } from "react";
+import {TextContext} from "./../../context/textContext";
+import {useContext} from "react";
 import s from "./style.module.css";
 import cn from "classnames";
-import { Helmet } from 'react-helmet';
+import {Helmet} from 'react-helmet';
 
 const AboutPageUa = () => {
   const context = useContext(TextContext);
@@ -27,7 +25,7 @@ const AboutPageUa = () => {
               <b>чому саме сиродавлена олія та дубова бочка</b>
             </p>
             <br />
-            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="">Як це було ▼</a>
+            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="/about#">Як це було ▼</a>
           </div>
         </div>
 
@@ -294,7 +292,7 @@ const AboutPageRu = () => {
               <b>почему именно сиродавленное масло и дубовая бочка</b>
             </p>
             <br />
-            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="">Как это было ▼</a>
+            <a onClick={context.scroll} className={cn("button", s.big_button, s.bgbeige)} href="/about#">Как это было ▼</a>
           </div>
         </div>
 

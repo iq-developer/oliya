@@ -1,7 +1,7 @@
 import Tr from './Tr';
 import database from '../oliya-db.json';
 import {useContext} from 'react';
-import { TextContext } from '../context/textContext';
+import {TextContext} from '../context/textContext';
 
 const Block = () => {
 

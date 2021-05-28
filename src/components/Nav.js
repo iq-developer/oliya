@@ -4,6 +4,7 @@ import {useState} from 'react';
 import {useContext} from 'react';
 import {TextContext} from './../context/textContext';
 import {Link} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const Nav = () => {
 
@@ -21,6 +22,8 @@ const Nav = () => {
     context.setUa(!context.ua);
   }
 
+  const location = useLocation();
+
   return (
     <>
       <nav>
@@ -34,7 +37,7 @@ const Nav = () => {
           </menu>
 
           <img onClick={menuToggle} src={menuImg} className="mobile_menu" alt="Меню" />
-          <button onClick={langToggle} className="lang_selector">{context.ua ? "UA" : "RU"}</button>
+          <button hidden={location.pathname === '/cart' ? true : false} onClick={langToggle} className="lang_selector">{context.ua ? "UA" : "RU"}</button>
         </div>
       </nav>
 
