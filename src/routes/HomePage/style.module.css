@@ -23,8 +23,6 @@
 /* Bars */
 
 .bars {
-  margin: auto;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1920px;
@@ -82,8 +80,6 @@
 /* Oils */
 
 .oils {
-  margin: auto;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   max-width: 1920px;
@@ -145,9 +141,6 @@ body {
 /* Banner css */
 
 .banner {
-  margin-left: calc(50% - 50vw);
-  /* margin-bottom: 30px; */
-  width: 100vw;
   height: 37.5vh;
   min-height: 35em;
   background: var(--img) 50%/cover;
@@ -219,6 +212,12 @@ body {
   .home h1 {
     font-size: 2em;
   }
+  .home h2 {
+    font-size: 1.5em;
+  }
+  .h2subtitle {
+    font-size: 1em;
+  }
   .subtitle {
     font-size: 1em;
   }
@@ -233,6 +232,6 @@ body {
     width: auto;
   }
   .long {
-    height: 700vh!important;
+    height: 750vh!important;
   }
 }

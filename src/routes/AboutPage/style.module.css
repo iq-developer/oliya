@@ -23,8 +23,6 @@
 /* Bars */
 
 .bars {
-  margin: auto;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1920px;
@@ -82,8 +80,6 @@
 /* Oils */
 
 .oils {
-  margin: auto;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   max-width: 1920px;

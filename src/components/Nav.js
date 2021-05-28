@@ -1,4 +1,5 @@
 import logoImg from './../assets/logo.png';
+import logoRuImg from './../assets/logo_ru.png';
 import menuImg from './../assets/menu.png';
 import {useState} from 'react';
 import {useContext} from 'react';
@@ -28,7 +29,7 @@ const Nav = () => {
     <>
       <nav>
         <div id="top" className="inner">
-          <Link to="/"><img src={logoImg} className="logo" alt={context.ua ? "Лого Їжа як ліки" : "Лого Еда как лекарство"} /></Link>
+          <Link to="/"><img src={context.ua ? logoImg : logoRuImg} className="logo" alt={context.ua ? "Лого Їжа як ліки" : "Лого Еда как лекарство"} /></Link>
 
           <menu className={menuActive}>
             <Link to="/">{context.ua ? "Головна" : "Главная"}</Link>

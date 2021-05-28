@@ -61,7 +61,7 @@
       "category": "Олія сиродавлена",
       "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
-      "title": "чорного кунжута",
+      "title": "чорного кунжуту",
       "titleRu": "черного кунжута",
       "img": "https://oliya.com.ua/img/chornyj-kunzhut.png",
       "price": {
@@ -89,7 +89,7 @@
       "category": "Олія сиродавлена",
       "categoryRu": "Масло сиродавленное",
       "categoryId": 1,
-      "title": "білого кунжута",
+      "title": "білого кунжуту",
       "titleRu": "белого кунжута",
       "img": "https://oliya.com.ua/img/bilyj-kunzhut.png",
       "price": {
@@ -144,7 +144,7 @@
       "category": "Паста горіхова",
       "categoryRu": "Паста ореховая",
       "categoryId": 2,
-      "title": "кешью 100%",
+      "title": "кеш'ю 100%",
       "titleRu": "кешью 100%",
       "img": "https://oliya.com.ua/img/keshju.png",
       "price": {
