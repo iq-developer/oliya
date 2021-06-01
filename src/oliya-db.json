@@ -8,6 +8,7 @@
       "title": "чорного кмину",
       "titleRu": "черного тмина",
       "img": "https://oliya.com.ua/img/chornyj-kmyn.png",
+      "img640": "https://oliya.com.ua/img/oliya-chornyj-kmyn.jpg",
       "price": {
         "100": "232",
         "200": "551",
@@ -22,6 +23,7 @@
       "title": "конопляна",
       "titleRu": "конопляное",
       "img": "https://oliya.com.ua/img/konoplya.png",
+      "img640": "https://oliya.com.ua/img/oliya-konoplya.jpg",
       "price": {
         "100": "119",
         "250": "283",
@@ -36,6 +38,7 @@
       "title": "насіння гарбуза",
       "titleRu": "семян тыквы",
       "img": "https://oliya.com.ua/img/garbuz.png",
+      "img640": "https://oliya.com.ua/img/oliya-garbuz.jpg",
       "price": {
         "100": "107",
         "250": "255",
@@ -50,6 +53,7 @@
       "title": "мигдалева",
       "titleRu": "миндальное",
       "img": "https://oliya.com.ua/img/mygdal.png",
+      "img640": "https://oliya.com.ua/img/oliya-mygdal.jpg",
       "price": {
         "100": "107",
         "250": "255",
@@ -64,6 +68,7 @@
       "title": "чорного кунжуту",
       "titleRu": "черного кунжута",
       "img": "https://oliya.com.ua/img/chornyj-kunzhut.png",
+      "img640": "https://oliya.com.ua/img/oliya-chornyj-kunzhut.jpg",
       "price": {
         "100": "80",
         "250": "190",
@@ -78,6 +83,7 @@
       "title": "волоського горіха",
       "titleRu": "грецкого ореха",
       "img": "https://oliya.com.ua/img/voloskyj-gorikh.png",
+      "img640": "https://oliya.com.ua/img/oliya-voloskyj-gorikh.jpg",
       "price": {
         "100": "78",
         "250": "185",
@@ -92,6 +98,7 @@
       "title": "білого кунжуту",
       "titleRu": "белого кунжута",
       "img": "https://oliya.com.ua/img/bilyj-kunzhut.png",
+      "img640": "https://oliya.com.ua/img/oliya-bilyj-kunzhut.jpg",
       "price": {
         "100": "70",
         "250": "167",
@@ -106,6 +113,7 @@
       "title": "лляна",
       "titleRu": "льняное",
       "img": "https://oliya.com.ua/img/len.png",
+      "img640": "https://oliya.com.ua/img/oliya-len.jpg",
       "price": {
         "100": "60",
         "250": "144",
@@ -120,6 +128,7 @@
       "title": "соняшникова",
       "titleRu": "подсолнечное",
       "img": "https://oliya.com.ua/img/sonyashnyk.png",
+      "img640": "https://oliya.com.ua/img/oliya-sonyashnyk.jpg",
       "price": {
         "100": "45",
         "250": "108",
@@ -134,6 +143,7 @@
       "title": "кокосова",
       "titleRu": "кокосовое",
       "img": "https://oliya.com.ua/img/kokos.png",
+      "img640": "https://oliya.com.ua/img/oliya-kokos.jpg",
       "price": {
         "200": "159",
         "500": "302"
@@ -147,6 +157,7 @@
       "title": "кеш'ю 100%",
       "titleRu": "кешью 100%",
       "img": "https://oliya.com.ua/img/keshju.png",
+      "img640": "https://oliya.com.ua/img/pasta-keshju.jpg",
       "price": {
         "200": "140"
       }
@@ -159,6 +170,7 @@
       "title": "фундук 100%",
       "titleRu": "фундук 100%",
       "img": "https://oliya.com.ua/img/funduk.png",
+      "img640": "https://oliya.com.ua/img/pasta-funduk.jpg",
       "price": {
         "200": "140"
       }
@@ -171,6 +183,7 @@
       "title": "мигдаль 100%",
       "titleRu": "миндаль 100%",
       "img": "https://oliya.com.ua/img/mygdal.png",
+      "img640": "https://oliya.com.ua/img/pasta-mygdal.jpg",
       "price": {
         "200": "130"
       }
@@ -183,6 +196,7 @@
       "title": "волоський 100%",
       "titleRu": "грецкий 100%",
       "img": "https://oliya.com.ua/img/voloskyj-gorikh.png",
+      "img640": "https://oliya.com.ua/img/pasta-voloskyj-gorikh.jpg",
       "price": {
         "200": "120"
       }
@@ -195,6 +209,7 @@
       "title": "кунжут 100%",
       "titleRu": "кунжут 100%",
       "img": "https://oliya.com.ua/img/bilyj-kunzhut.png",
+      "img640": "https://oliya.com.ua/img/pasta-bilyj-kunzhut.jpg",
       "price": {
         "200": "100"
       }
@@ -207,6 +222,7 @@
       "title": "арахіс 100%",
       "titleRu": "арахис 100%",
       "img": "https://oliya.com.ua/img/arakhis.png",
+      "img640": "https://oliya.com.ua/img/pasta-arakhis.jpg",
       "price": {
         "200": "85"
       }

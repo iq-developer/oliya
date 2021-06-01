@@ -5,6 +5,7 @@ import ShopPage from './routes/ShopPage';
 import AboutPage from './routes/AboutPage';
 import ResultPage from './routes/ResultPage';
 import ErrorPage from './routes/ErrorPage';
+import Error404Page from './routes/Error404Page';
 import {Route, Switch} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import {TextContext} from './context/textContext';
@@ -87,6 +88,7 @@ function App() {
         <Route path='/about' component={AboutPage} />
         <Route path='/result' component={ResultPage} />
         <Route path='/error' component={ErrorPage} />
+        <Route path='/error404' component={Error404Page} />
         <Route path='/' component={ErrorPage} />
       </Switch>
     </TextContext.Provider>

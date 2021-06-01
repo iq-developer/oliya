@@ -237,7 +237,7 @@ strong {
 input {
   font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
   font-size: 0.8em;
-  padding: 5px 10px;
+  padding: 5px;
   text-align: center;
 }
 input::placeholder {
@@ -258,11 +258,11 @@ table {
 }
 .block {
   text-align: center;
-  padding: 20px 10px 20px 10px;
+  padding-bottom: 20px;
   background: rgba(255, 245, 227, 0.5);
   color: #9d856c;
   font-weight: bold;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 .pasta {
   background: rgba(245, 234, 226, 0.7);
@@ -326,11 +326,20 @@ small {
 .mTop0 {
   margin-top: 0;
 }
+.mT10B10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .tLeft {
   text-align: left;
 }
 
+/* Shop */
 
+.product_img {
+  width:100%;
+  padding-bottom: 10px;
+}
 
 @media (max-width: 800px) {
 

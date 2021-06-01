@@ -30,7 +30,7 @@ function ShopPage() {
         </div>
       </header>
 
-      <main className="grid content">
+      <main className="grid content mT10B10">
         <Block />
       </main>
 
