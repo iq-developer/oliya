@@ -20,6 +20,20 @@
 
 /* elements (semantic) css */
 
+.vCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Comparison */
+
+.comparison_bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1920px;
+}
+
 /* Bars */
 
 .bars {
@@ -167,6 +181,9 @@ body {
 /* Media */
 
 @media screen and (max-width: 1500px){
+  .bar h3 {
+    font-size: 1.5em;
+  }
   .oils {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -176,6 +193,13 @@ body {
 }
 
 @media screen and (max-width: 1200px){
+  .bar h3 {
+    font-size: 1.3em;
+    margin-bottom: 0;
+  }
+  .bar hr {
+    display: none;
+  }
   .bars {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -199,7 +223,82 @@ body {
     display: none;
   }
 }
+
+@media screen and (max-width: 1000px){
+  .comparison_bars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vCenter {
+    justify-content: flex-start;
+  }
+  .bar h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  .bar hr {
+    display: block;
+  }
+  .bar1 {
+    order: 1;
+  }
+  .bar1Desc {
+    order: 3;
+  }
+  .bar2 {
+    order: 2;
+  }
+  .bar2Desc {
+    order: 4;
+  }
+  .bar3 {
+    order: 5;
+  }
+  .bar3Desc {
+    order: 7;
+  }
+  .bar4 {
+    order: 6;
+  }
+  .bar4Desc {
+    order: 8;
+  }
+}
+
+
 @media screen and (max-width: 640px){
+  .comparison_bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .bar h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  .bar1 {
+    order: 1;
+  }
+  .bar1Desc {
+    order: 2;
+  }
+  .bar2 {
+    order: 11;
+  }
+  .bar2Desc {
+    order: 12;
+  }
+  .bar3 {
+    order: 3;
+  }
+  .bar3Desc {
+    order: 4;
+  }
+  .bar4 {
+    order: 13;
+  }
+  .bar4Desc {
+    order: 14;
+  }
+
+
   .bars {
     grid-template-columns: repeat(1, 1fr);
   }
