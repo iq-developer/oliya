@@ -1,22 +1,3 @@
-/* partial css */
-
-.white {
-  color: #fff;
-}
-.center {
-  margin: 0 auto;
-}
-.left {
-  text-align: left;
-}
-.bgbeige {
-  background: #efd8b4;
-  color: black;
-}
-.bgwhite {
-  background: #fff;
-  color: black;
-}
 
 /* elements (semantic) css */
 
@@ -33,6 +14,15 @@
   grid-template-columns: repeat(4, 1fr);
   max-width: 1920px;
 }
+.bar1Desc {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.bar2Desc {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
 
 /* Bars */
 
@@ -178,6 +168,33 @@ body {
   --img: url(https://oliya.com.ua/img/landing/smak.jpg);
 }
 
+/* partial css */
+
+.white {
+  color: #fff;
+}
+.center {
+  margin: 0 auto;
+}
+.left {
+  text-align: left;
+}
+.bgbeige {
+  background: #efd8b4;
+  color: black;
+}
+.bgwhite {
+  background: #fff;
+  color: black;
+}
+.bgGray {
+  background: #eee;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+
 /* Media */
 
 @media screen and (max-width: 1500px){
@@ -242,12 +259,16 @@ body {
     order: 1;
   }
   .bar1Desc {
+    grid-column-start: auto;
+    grid-column-end: auto;
     order: 3;
   }
   .bar2 {
     order: 2;
   }
   .bar2Desc {
+    grid-column-start: auto;
+    grid-column-end: auto;
     order: 4;
   }
   .bar3 {
