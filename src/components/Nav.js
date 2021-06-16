@@ -35,6 +35,7 @@ const Nav = () => {
             <Link to="/">{context.ua ? "Головна" : "Главная"}</Link>
             <Link to="/shop">{context.ua ? "Купити" : "Купить"}</Link>
             <Link to="/about">{context.ua ? "Про нас" : "О нас"}</Link>
+            <Link to="/discount">{context.ua ? "Знижки" : "Скидки"}</Link>
           </menu>
 
           <img onClick={menuToggle} src={menuImg} className="mobile_menu" alt="Меню" />

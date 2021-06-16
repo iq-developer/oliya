@@ -3,6 +3,7 @@ import HomePage from './routes/HomePage';
 import CartPage from './routes/CartPage';
 import ShopPage from './routes/ShopPage';
 import AboutPage from './routes/AboutPage';
+import DiscountPage from './routes/DiscountPage';
 import ResultPage from './routes/ResultPage';
 import ErrorPage from './routes/ErrorPage';
 import Error404Page from './routes/Error404Page';
@@ -86,6 +87,7 @@ function App() {
         <Route path='/shop' component={ShopPage} />
         <Route path='/cart' component={CartPage} />
         <Route path='/about' component={AboutPage} />
+        <Route path='/discount' component={DiscountPage} />
         <Route path='/result' component={ResultPage} />
         <Route path='/error' component={ErrorPage} />
         <Route path='/error404' component={Error404Page} />

@@ -168,6 +168,15 @@ body {
 .banner2  {
   --img: url(https://oliya.com.ua/img/landing/smak.jpg);
 }
+.banner3  {
+  --img: url(https://oliya.com.ua/img/landing/maslozavod.jpg);
+}
+.banner4  {
+  --img: url(https://oliya.com.ua/img/landing/spravzhnya-oliya.jpg);
+}
+.long {
+  height: 150vh;
+}
 
 /* partial css */
 

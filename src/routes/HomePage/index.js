@@ -70,7 +70,7 @@ function HomePage() {
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar5)}>
-            <img src="https://oliya.com.ua/img/landing/comparison2.jpg"  alt={context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия семена не нагревается`}} />
+            <img src="https://oliya.com.ua/img/landing/comparison2.jpg"  alt={context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия зерно не нагревается`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar5Desc, s.pLeftRight20)}>
               <h3>{context.ua ? `Холодне насіння` : `Холодные семена`}</h3>
@@ -367,6 +367,203 @@ function HomePage() {
           </div>
         </div>
 
+
+        <h2 id="special">{context.ua ? `Ми прагнемо зробити ідеальну олію` : `Мы стремимся сделать идеальное масло`}</h2>
+        <p className={s.h2subtitle}>{context.ua ? `подивиться, як дбайливо ми її виготовляємо` : `посмотрите, как заботливо мы его изготавливаем`}</p>
+
+        <div className={s.bars}>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar0.jpg"  alt={context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`} />
+            <div className={s.bar_desc}>
+
+              <h3>{context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`}</h3>
+              <hr />
+              <p>{context.ua ? `це смачніше, ми перевірили` : `так вкуснее, мы проверили`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar1.jpg"  alt={context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`}</h3>
+              <hr />
+              <p>{context.ua ? `тому що ми фанати якості` : `потому что мы фанаты качества`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar2.jpg"  alt={context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`}</h3>
+              <hr />
+              <p>{context.ua ? `олія не потребує фільтрування` : `масло не нуждается в фильтрации`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar3.jpg"  alt={context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`}</h3>
+              <hr />
+              <p>{context.ua ? `особливо чистий смак` : `особо чистый вкус`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar4.jpg"  alt={context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`}</h3>
+              <hr />
+              <p>{context.ua ? `не смажимо та не перегріваємо` : `не жарим и не перегреваем`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar5.jpg"  alt={context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`}</h3>
+              <hr />
+              <p>{context.ua ? `без жодного контакту з металом` : `без контакта масла с металлом`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar8.jpg"  alt={context.ua ? `Розливаємо в темні скляни пляшки` : `Разливаем в темные стеклянные бутылки`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Розливаємо в темні скляні пляшки` : `Разливаем в темные стеклянные бутылки`}</h3>
+              <hr />
+              <p>{context.ua ? `та обертаємо в паперову етикетку` : `и заворачиваем в бумажную этикетку`}</p>
+            </div>
+          </div>
+
+          <div className={s.bar}>
+            <img src="https://oliya.com.ua/img/landing/bar9.jpg"  alt={context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`} />
+            <div className={s.bar_desc}>
+              <h3>{context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`}</h3>
+              <hr />
+              <p>{context.ua ? `тільки свіжовіджату олію` : `только свежеотжатое масло`}</p>
+            </div>
+          </div>
+
+        </div>
+
+        <h2>{context.ua ? `Що дає таке ретельний процес виробництва?` : `Что дает такой тщательное процесс производства?`}</h2>
+        <p className={s.h2subtitle}>
+        {context.ua ? `Це дозволяє зберегти в олії максимум корисних речовин -
+        вітамінів, важливих омега-кислот та мікроелементів.
+        Саме такі олії насправді є цілющими та життєдайними.
+        Це не просто продукти харчування, це` : `Это позволяет сохранить в масле максимум полезных веществ - витаминов, важных омега-кислот и микроелементов.
+         Такие масла на самом деле являются целебными и живительными.
+         Это не просто продукты питания, это`} <strong>"{context.ua ? `їжа як ліки` : `пища как лекарство`}"</strong>
+        </p>
+
+        <div className={cn(s.banner, s.banner3, s.white, s.long)}>
+
+          <div className={s.gears}>
+
+            <div className={s.gear2col}>
+              <h2>{context.ua ? `А як же виробляється звичайна рафінована олія?` : `А как же производится обычное рафинированное масло?`} </h2>
+              <p className={s.h2subtitle}>
+              {context.ua ? `Ось 8 головних ступенів промислового виробництва та очищення рослинної олії` : `Вот 8 главных ступеней промышленного производства и очистки растительного масла`}
+              </p>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon1.png" className={s.gear_img} alt={context.ua ? `сиродавлена олія Подрібнення` : `Измельчение`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Подрібнення` : `Измельчение`}</h3>
+                <hr />
+                <p>{context.ua ? `розмелювання в мезгу пропусканням крізь вальці` : `размалывание в мезгу пропусканием сквозь вальцы `}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon2.png" className={s.gear_img} alt={context.ua ? `Екстрагування` : `Экстрагирование`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Екстрагування` : `Экстрагирование`}</h3>
+                <hr />
+                <p>{context.ua ? `сырье помещают в НЕФРАС или экстракционный бензин` : `сировину поміщають в НЕФРАС або екстракційний бензин`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon3.png" className={s.gear_img} alt={context.ua ? `Гідратація` : `Гидратация`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Гідратація` : `Гидратация`}</h3>
+                <hr />
+                <p>{context.ua ? `гарячим розчином фосфорної або лимонної кислоти` : `горячим раствором фосфорной или лимонной кислоты`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon4.png" className={s.gear_img} alt={context.ua ? `Нейтралізація` : `Нейтрализация`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Нейтралізація` : `Нейтрализация`}</h3>
+                <hr />
+                <p>{context.ua ? `обробка олії лугом або силікатом натрію` : `обработка масла щелочью или силикатом натрия`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon5.png" className={s.gear_img} alt={context.ua ? `Відбілювання` : `Отбеливание`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Відбілювання` : `Отбеливание`}</h3>
+                <hr />
+                <p>{context.ua ? `з додаванням соляної або сірчаної кислоти` : `с добавление соляной или серной кислоты`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon6.png" className={s.gear_img} alt={context.ua ? `Дезодорація` : `Дезодорация`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Дезодорація` : `Дезодорация`}</h3>
+                <hr />
+                <p>{context.ua ? `вплив перегрітим сухим паром 170-230°С` : `воздействие перегретым сухим паром 170-230°С`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon7.png" className={s.gear_img} alt={context.ua ? `Виморожування` : `Вымораживание`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Виморожування` : `Вымораживание`}</h3>
+                <hr />
+                <p>{context.ua ? `охолодження з додаванням перлітового порошку` : `охлаждение с добавлением перлитового порошка`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear}>
+              <img src="https://oliya.com.ua/img/landing/icon8.png" className={s.gear_img} alt={context.ua ? `Фільтрація` : `Фильтрация`} />
+              <div className={s.gear_desc}>
+                <h3>{context.ua ? `Фільтрація` : `Фильтрация`}</h3>
+                <hr />
+                <p>{context.ua ? `підігрів і пропускання крізь фільтри` : `подогрев и пропускание через фильтры`}</p>
+              </div>
+            </div>
+
+            <div className={s.gear2col}>
+              {/* <button hidden className={cn(s.big_button, s.bgwhite)}>Для чого вони це роблять?</button> */}
+            </div>
+
+          </div>
+
+        </div>
+
+        <h2>{context.ua ? `Для чого вони це все роблять?` : `Для чего они это все делают?`}</h2>
+        <p className={s.h2subtitle}>
+        {context.ua ? `Це робиться для того, щоб олія не окислювалась і могла зберігатися дуже довго. Звичайно, корисних речовин при цьому залишається зовсім небагато. Ми вважаємо, що краще отримати менше олії, нехай вона буде дорожче і не зберігається довго. Але це буде справжня олія.` : `Это делается для того, чтобы масло не окислялось и могло храниться очень долго. Конечно, полезных веществ при этом остается совсем немного. Мы считаем, что лучше получить меньше масла, пусть оно будет дороже и не хранится долго. Но это будет настоящее масло.`}
+        <br />
+        <b>{context.ua ? `Ми обираємо справжнє` : `Мы выбираем настоящее`}</b>
+        </p>
+
+        <div className={cn(s.banner, s.banner4, s.white)}>
+          <div>
+            <h1>{context.ua ? `Ми не створюємо користь` : `Мы не создаем пользу`}</h1>
+            <p className={s.subtitle}>{context.ua ? `ми лише дбайливо зберігаємо те, що було дано природою` : `мы лишь бережно сохраняем то, что было дано природой`} </p>
+            <br />
+            <Link to="/shop" className={cn("button", s.big_button, s.bgbeige)}>{context.ua ? `Та сама олія` : `То самое масло`} &#128722;</Link> <Link className={cn("button", s.big_button, s.bgbeige)} to="/about">{context.ua ? `Або дізнатись ще більше` : `Или узнать ещё больше`} ►</Link>
+          </div>
+        </div>
 
         </main>
 
