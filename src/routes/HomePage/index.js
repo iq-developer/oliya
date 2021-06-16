@@ -37,7 +37,7 @@ function HomePage() {
 
 
         <h2 id="special">{context.ua ? `Сиродавлена олія - особлива` : `Сыродавленное масло - особенное`}</h2>
-        <p className={s.h2subtitle}>{context.ua ? `ось порівняння нашої сиродавленої олії та звичайної олії холодного віджиму` : `вот сравнение нашего сыродавленноого масла и обычного масла холодного отжима`}</p>
+        <p className={s.h2subtitle}>{context.ua ? `порівняння нашої сиродавленої олії та олії холодного віджиму промислового виробництва` : `сравнение нашего сыродавленноого масла и масла холодного отжима промышленного производства`}</p>
 
         <div className={s.comparison_bars}>
 
@@ -53,7 +53,7 @@ function HomePage() {
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar3)}>
-            <img src="https://oliya.com.ua/img/landing/comparison1.jpg"  alt={context.ua ? `Олія завжди свіжовіджата. Робимо її тільки під замовлення.` : `Масло всегда свежеотжатое. Делаем его только под заказ.`} />
+            <img src="https://oliya.com.ua/img/landing/comparison1.jpg"  alt={context.ua ? `Олія завжди свіжа. Виробляємо тільки під замовлення.` : `Масло всегда свежеотжатое. Делаем его только под заказ.`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar3Desc, s.pLeftRight20)}>
               <h3>{context.ua ? `Неокислена олія` : `Неокисленное масло`}</h3>
@@ -66,16 +66,16 @@ function HomePage() {
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar4Desc, s.bgGray, s.pLeftRight20)}>
               <h3>{context.ua ? `Окислена олія` : `Окисленное масло`}</h3>
               <hr />
-              <p>{context.ua ? `Якщо така олія стоїть в теплі, вона швидко окислюється` : `Если такое масло стоит в тепле, оно быстро окисляется`}</p>
+              <p>{context.ua ? `Чим довше зберігається, тим більше окислюється` : `Чем дольше хранится, тем сильнее окисляется`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar5)}>
-            <img src="https://oliya.com.ua/img/landing/comparison2.jpg"  alt={context.ua ? `На дубовому пресі насіння не нагрівається` : `На дубовом прессе семена не нагреваются`} />
+            <img src="https://oliya.com.ua/img/landing/comparison2.jpg"  alt={context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия семена не нагревается`}} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar5Desc, s.pLeftRight20)}>
               <h3>{context.ua ? `Холодне насіння` : `Холодные семена`}</h3>
               <hr />
-              <p>{context.ua ? `На дубовому пресі насіння взагалі не нагрівається` : `На дубовом прессе семена вообще не нагреваются`}</p>
+              <p>{context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия зерно не нагревается`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar6)}>
             <img src="https://oliya.com.ua/img/landing/comparison12.jpg"  alt={context.ua ? `Шнекові преси нагрівають насіння понад 50°C` : `Шнековые прессы нагревают семена более 50°C`} />
@@ -83,7 +83,7 @@ function HomePage() {
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar6Desc, s.bgGray, s.pLeftRight20)}>
               <h3>{context.ua ? `Нагрівання насіння` : `Нагрев семян`}</h3>
               <hr />
-              <p>{context.ua ? `Шнекові преси нагрівають насіння понад 50°C` : `Шнековые прессы нагревают семена более 50°C`}</p>
+              <p>{context.ua ? `Шнекові преси неминуче нагрівають насіння понад 50°C` : `Шнековые прессы неизбежно нагревают семена более 50°C`}</p>
           </div>
 
 
@@ -93,15 +93,15 @@ function HomePage() {
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar7Desc, s.pLeftRight20)}>
               <h3>{context.ua ? `Ціле насіння` : `Целые семена`}</h3>
               <hr />
-              <p>{context.ua ? `Насіння не розмелюють а стискаються` : `Семена не размалываются а сдавливаются`}</p>
+              <p>{context.ua ? `Насіння не розмелюються, тому олія не потребує фільтрації` : `Семена не размалываются, поэтому масло не нуждается в фильтрации`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar8)}>
             <img src="https://oliya.com.ua/img/landing/comparison13.jpg"  alt={context.ua ? `Насіння перетіраются в макуху` : `Семена перетираются в жмых`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar8Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Макуха з насіння` : `Жмых из семян`}</h3>
+              <h3>{context.ua ? `Перетерте насіння` : `Перетертые семена`}</h3>
               <hr />
-              <p>{context.ua ? `Насіння перетіраются в мезгу` : `Семена перетираются в мезгу`}</p>
+              <p>{context.ua ? `Насіння перетіраются в мезгу, потім масло фільтрується або відстоюється` : `Семена перетираются в мезгу, затем масло фильтруется или отстаивается`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar9)}>
@@ -116,7 +116,7 @@ function HomePage() {
             <img src="https://oliya.com.ua/img/landing/comparison14.jpg"  alt={context.ua ? `Контакт з металом посилює окислення` : `Контакт с металлом усиливает окисление`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar10Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Металевий прес` : `Металлический пресс`}</h3>
+              <h3>{context.ua ? `Металевий шнек` : `Металлический шнек`}</h3>
               <hr />
               <p>{context.ua ? `Контакт з металом посилює окислення` : `Контакт с металлом усиливает окисление`}</p>
           </div>
@@ -127,7 +127,7 @@ function HomePage() {
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar11Desc, s.pLeftRight20)}>
               <h3>{context.ua ? `Чисте насіння` : `Чистые семена`}</h3>
               <hr />
-              <p>{context.ua ? `Насіння ретельно миється і сушиться` : `Семена тщательно моются и сушатся`}</p>
+              <p>{context.ua ? `Насіння ретельно миється і сушиться при 30°C` : `Семена тщательно моются и сушатся при 30°C`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar12)}>
             <img src="https://oliya.com.ua/img/landing/comparison15.jpg"  alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
