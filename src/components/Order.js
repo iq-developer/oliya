@@ -15,11 +15,11 @@ const Order = () => {
   const context = useContext(TextContext);
 
   const option = context.ua ? `Нова Пошта` : `Новая Почта`;
-  const option1 = context.ua ? `Львів - заберу при зустричі по домовленості` : `Львов - заберу при встрече по договоренности`;
+  const option1 = context.ua ? `Львів - заберу при зустрічі по домовленості` : `Львов - заберу при встрече по договоренности`;
   // const option2 = context.ua ? `Львів - самовивіз з кафе Грін (вул. Братів Рогатинців, 5)` : `Львов - самовывоз из кафе Грин (ул. Братьев Рогатинцев, 5)`;
 
   const option3 = context.ua ? `На відділення Нової Пошти` : `На отделение Новой Почты`;
-  const option4 = context.ua ? `Курь'єрська доставка за адресою` : `Курьерская доставка по адресу`;
+  const option4 = context.ua ? `Кур'єрська доставка за адресою` : `Курьерская доставка по адресу`;
 
   const [delivery, setDelivery] = useState(option);
   const [deliveryOption, setDeliveryOption] = useState(option3);

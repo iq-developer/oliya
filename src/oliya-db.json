@@ -11,7 +11,7 @@
       "img640": "https://oliya.com.ua/img/oliya-chornyj-kmyn.jpg",
       "price": {
         "100": "232",
-        "200": "551",
+        "250": "551",
         "500": "882"
       },
       "available": true
@@ -94,7 +94,7 @@
         "250": "185",
         "500": "296"
       },
-      "available": true
+      "available": false
     },
     "code7" : {
       "id": 7,
