@@ -97,6 +97,14 @@ footer {
   opacity: 1;
 }
 
+.message_error {
+  color: white;
+  background: #C21E56;
+  font-size: 1.5em;
+  padding: 20px;
+  text-align: center;
+}
+
 /* Header panel */
 
 header {
