@@ -13,7 +13,7 @@ import { TextContext } from './context/textContext';
 import database from './oliya-db.json';
 import ScrollToTop from './utils/ScrollToTop';
 import ReactGA from 'react-ga';
-import { useLocation, } from 'react-router-dom';
+import { useLocation, Redirect } from 'react-router-dom';
 
 ReactGA.initialize('UA-198144083-1');
 
@@ -84,6 +84,7 @@ function App() {
     }}>
       <ScrollToTop />
       <Switch>
+        <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} />
         <Route path='/' exact component={HomePage} />
         <Route path='/home' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
