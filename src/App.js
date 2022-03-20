@@ -7,13 +7,13 @@ import DiscountPage from './routes/DiscountPage';
 import ResultPage from './routes/ResultPage';
 import ErrorPage from './routes/ErrorPage';
 import Error404Page from './routes/Error404Page';
-import {Route, Switch} from 'react-router-dom';
-import {useState, useEffect} from 'react';
-import {TextContext} from './context/textContext';
+import { Route, Switch } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { TextContext } from './context/textContext';
 import database from './oliya-db.json';
 import ScrollToTop from './utils/ScrollToTop';
 import ReactGA from 'react-ga';
-import { useLocation,} from 'react-router-dom';
+import { useLocation, } from 'react-router-dom';
 
 ReactGA.initialize('UA-198144083-1');
 
@@ -31,26 +31,28 @@ function App() {
   const handleInputChange = (event) => {
     const priceId = event.target.name;
     const inputValue = event.target.value;
-    if (+inputValue || +inputValue === 0){
+    if (+inputValue || +inputValue === 0) {
       setCart(prevState => {
-        return {...prevState, [priceId]: +inputValue};
+        return { ...prevState, [priceId]: +inputValue };
       });
     }
   };
 
-  useEffect(() => {setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
-   const [code, priceKey] = priceId.split('-');
-   const priceValue = database.products[code].price[priceKey]; //заменил на ключ БД
-   return sum + amount * priceValue;
-  }, 0))}, [cart]);
+  useEffect(() => {
+    setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
+      const [code, priceKey] = priceId.split('-');
+      const priceValue = database.products[code].price[priceKey]; //заменил на ключ БД
+      return sum + amount * priceValue;
+    }, 0))
+  }, [cart]);
 
-  useEffect(() => {setAmount(Object.values(cart).reduce((sum, current) => sum + +current, 0))}, [cart]);
+  useEffect(() => { setAmount(Object.values(cart).reduce((sum, current) => sum + +current, 0)) }, [cart]);
 
   const handlePlus = (event) => {
     event.preventDefault();
     const newValue = cart[event.target.name] ? cart[event.target.name] + 1 : 1;
     setCart(prevState => {
-      return {...prevState, [event.target.name]: newValue};
+      return { ...prevState, [event.target.name]: newValue };
     });
   }
 
@@ -58,13 +60,13 @@ function App() {
     event.preventDefault();
     const newValue = cart[event.target.name] ? cart[event.target.name] - 1 : '';
     setCart(prevState => {
-      return {...prevState, [event.target.name]: newValue};
+      return { ...prevState, [event.target.name]: newValue };
     });
   }
 
   const scroll = (e) => {
     e.preventDefault();
-    window.scroll({top:820, behavior:'smooth'});
+    window.scroll({ top: 820, behavior: 'smooth' });
   }
 
   return (
