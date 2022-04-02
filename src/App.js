@@ -87,6 +87,7 @@ function App() {
         <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} /> {/* remove trailing slash */}
         <Route path='/' exact component={HomePage} />
         <Route path='/home' component={HomePage} />
+        <Route path="/oliya" render={() => <Redirect to="/" />} />
         <Route path='/shop' component={ShopPage} />
         <Route path='/cart' component={CartPage} />
         <Route path='/about' component={AboutPage} />

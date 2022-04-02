@@ -98,6 +98,7 @@ footer {
 }
 
 .message_error {
+  display: none;
   color: white;
   background: #C21E56;
   font-size: 1.5em;
