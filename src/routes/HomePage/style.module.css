@@ -1,0 +1,518 @@
+
+/* elements (semantic) css */
+
+.vCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Bars */
+
+.bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1920px;
+}
+.bar {
+  background: #fff;
+  margin:1px;
+}
+.bar > img {
+  width: 100%;
+}
+.bar hr {
+  width: 50%;
+  margin: 20px auto;
+  color: brown;
+}
+.bar_desc {
+  padding: 20px 20px 40px;
+}
+.bar span {
+  color: #9d856c;
+}
+.bar_desc p {
+  font-size: 1.2em;
+}
+
+/* Comparison */
+
+.comparison_bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1920px;
+}
+.comparison_bar > img {
+  width: 100%;
+  height: 100%;
+}
+.comparison_bar {
+  margin: 0 0 1px 0;
+}
+.bar1Desc {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.bar2Desc {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.bar1Desc, .bar3Desc, .bar5Desc, .bar7Desc, .bar9Desc, .bar11Desc, .bar13Desc, .bar15Desc {
+  margin-right: 10px;
+}
+
+
+/* Gears */
+
+.gears {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1000px;
+}
+.gear {
+  width: 500px;
+  height: 150px;
+  text-align: left;
+  margin: 20px 50px 20px 0;
+}
+.gear2col {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.gear_img {
+  float: left;
+  margin-right: 20px;
+  width: 150px;
+}
+.gears h3 {
+  margin: 0;
+}
+
+/* Oils */
+
+.oils {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1920px;
+}
+.oil_txt {
+  font-size: 0.8em;
+}
+
+/* Other */
+
+.subtitle {
+  font-size: 1.5em;
+  margin: 0 2em 0.5em;
+}
+.h2subtitle {
+  font-size: 1.5em;
+  margin: 0 2em 3em;
+}
+.big_button {
+  font-size: 1.2em;
+  padding: 0.7em 1.2em;
+  margin: 5px;
+  display: inline-block;
+}
+.big_button:hover {
+  color: #fff;
+}
+.placeholder {
+  display: none;
+}
+
+/* Common */
+
+body {
+  overflow-x: hidden;
+}
+.home {
+  margin: 0 auto;
+  background: rgba(255, 238, 227, 0.5);
+  font-size: 1.3em;
+  font-family: 'Comic Sans MS', Cursive, Verdana, sans-serif;
+  text-align: center;
+}
+.home h1 {
+  font-size: 3.5em;
+  margin: 0 0.5em;
+}
+.home h2 {
+  font-size: 2em;
+  margin: 2em 0.5em 0.5em;
+}
+.home h3 {
+  font-size: 1.8em;
+}
+.home h4 {
+  font-size: 1.5em;
+}
+
+/* Banner css */
+
+.banner {
+  height: 37.5vh;
+  min-height: 35em;
+  background: var(--img) 50%/cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner1 {
+  --img: url(https://oliya.com.ua/img/landing/utp.jpg);
+}
+.banner2  {
+  --img: url(https://oliya.com.ua/img/landing/smak.jpg);
+}
+.banner3  {
+  --img: url(https://oliya.com.ua/img/landing/maslozavod.jpg);
+}
+.banner4  {
+  --img: url(https://oliya.com.ua/img/landing/spravzhnya-oliya.jpg);
+}
+.long {
+  height: 150vh;
+}
+
+/* partial css */
+
+.white {
+  color: #fff;
+}
+.center {
+  margin: 0 auto;
+}
+.left {
+  text-align: left;
+}
+.bgbeige {
+  background: #efd8b4;
+  color: black;
+}
+.bgwhite {
+  background: #fff;
+  color: black;
+}
+.bgGray {
+  background: #cac8c8;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.pLeftRight20 {
+  padding: 0 20px 0;
+}
+
+
+/* Media */
+
+@media screen and (max-width: 1500px){
+  .bar h3 {
+    font-size: 1.5em;
+  }
+  .oils {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .placeholder {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .bar h3 {
+    font-size: 1.3em;
+    margin-bottom: 0;
+  }
+  .bar hr {
+    display: none;
+  }
+  .bars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .oils {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gears {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gear {
+    margin: 20px auto;
+  }
+  .long {
+    height: 350vh!important;
+  }
+  .gear2col {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .placeholder {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .comparison_bars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vCenter {
+    justify-content: flex-start;
+  }
+  .bar h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  .bar hr {
+    display: block;
+  }
+  .bar1, .bar3, .bar5, .bar7, .bar9, .bar11, .bar13, .bar15 {
+    margin-right: 10px;
+  }
+
+  .bar1Desc {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    order: 3;
+  }
+  .bar2Desc {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    order: 4;
+  }
+  .bar3 {
+    order: 5;
+  }
+  .bar3Desc {
+    order: 7;
+  }
+  .bar4 {
+    order: 6;
+  }
+  .bar4Desc {
+    order: 8;
+  }
+  .bar5 {
+    order: 9;
+  }
+  .bar5Desc {
+    order: 11;
+  }
+  .bar6 {
+    order: 10;
+  }
+  .bar6Desc {
+    order: 12;
+  }
+  .bar7 {
+    order: 13;
+  }
+  .bar7Desc {
+    order: 15;
+  }
+  .bar8 {
+    order: 14;
+  }
+  .bar8Desc {
+    order: 16;
+  }
+  .bar9 {
+    order: 17;
+  }
+  .bar9Desc {
+    order: 19;
+  }
+  .bar10 {
+    order: 18;
+  }
+  .bar10Desc {
+    order: 20;
+  }
+  .bar11 {
+    order: 21;
+  }
+  .bar11Desc {
+    order: 23;
+  }
+  .bar12 {
+    order: 22;
+  }
+  .bar12Desc {
+    order: 24;
+  }
+  .bar13 {
+    order: 25;
+  }
+  .bar13Desc {
+    order: 27;
+  }
+  .bar14 {
+    order: 26;
+  }
+  .bar14Desc {
+    order: 28;
+  }
+  .bar15 {
+    order: 29;
+  }
+  .bar15Desc {
+    order: 31;
+  }
+  .bar16 {
+    order: 30;
+  }
+  .bar16Desc {
+    order: 32;
+  }
+
+}
+
+
+@media screen and (max-width: 640px){
+  .comparison_bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .bar h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  .bar1Desc, .bar3Desc, .bar5Desc, .bar7Desc, .bar9Desc, .bar11Desc, .bar13Desc, .bar15Desc {
+    margin-right: 0;
+  }
+  .bar1, .bar3, .bar5, .bar7, .bar9, .bar11, .bar13, .bar15 {
+    margin-right: 0;
+  }
+
+  .bar1Desc {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    order: 1;
+  }
+  .bar2Desc {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    order: 102;
+    margin-top: 100px;
+  }
+  .bar3 {
+    order: 3;
+  }
+  .bar3Desc {
+    order: 3;
+  }
+  .bar4 {
+    order: 104;
+  }
+  .bar4Desc {
+    order: 104;
+  }
+  .bar5 {
+    order: 5;
+  }
+  .bar5Desc {
+    order: 5;
+  }
+  .bar6 {
+    order: 106;
+  }
+  .bar6Desc {
+    order: 106;
+  }
+  .bar7 {
+    order: 7;
+  }
+  .bar7Desc {
+    order: 7;
+  }
+  .bar8 {
+    order: 108;
+  }
+  .bar8Desc {
+    order: 108;
+  }
+  .bar9 {
+    order: 9;
+  }
+  .bar9Desc {
+    order: 9;
+  }
+  .bar10 {
+    order: 110;
+  }
+  .bar10Desc {
+    order: 110;
+  }
+  .bar11 {
+    order: 11;
+  }
+  .bar11Desc {
+    order: 11;
+  }
+  .bar12 {
+    order: 112;
+  }
+  .bar12Desc {
+    order: 112;
+  }
+  .bar13 {
+    order: 13;
+  }
+  .bar13Desc {
+    order: 13;
+  }
+  .bar14 {
+    order: 114;
+  }
+  .bar14Desc {
+    order: 114;
+  }
+  .bar15 {
+    order: 15;
+  }
+  .bar15Desc {
+    order: 15;
+  }
+  .bar16 {
+    order: 116;
+  }
+  .bar16Desc {
+    order: 116;
+  }
+
+  .bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .oils {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .placeholder {
+    display: none;
+  }
+  .home h1 {
+    font-size: 2em;
+  }
+  .home h2 {
+    font-size: 1.5em;
+  }
+  .h2subtitle {
+    font-size: 1em;
+  }
+  .subtitle {
+    font-size: 1em;
+  }
+  .gear {
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: 20px;
+  }
+  .gear_img {
+    float: none;
+    width: auto;
+  }
+  .long {
+    height: 750vh!important;
+  }
+}
