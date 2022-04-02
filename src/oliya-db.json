@@ -14,7 +14,7 @@
         "250": "551",
         "500": "882"
       },
-      "available": false
+      "available": true
     },
     "code2" : {
       "id": 2,
@@ -30,7 +30,7 @@
         "250": "283",
         "500": "452"
       },
-      "available": false
+      "available": true
     },
     "code3" : {
       "id": 3,
@@ -46,7 +46,7 @@
         "250": "255",
         "500": "408"
       },
-      "available": false
+      "available": true
     },
     "code4" : {
       "id": 4,
@@ -62,7 +62,7 @@
         "250": "255",
         "500": "408"
       },
-      "available": false
+      "available": true
     },
     "code5" : {
       "id": 5,
@@ -78,7 +78,7 @@
         "250": "190",
         "500": "305"
       },
-      "available": false
+      "available": true
     },
     "code6" : {
       "id": 6,
@@ -94,7 +94,7 @@
         "250": "185",
         "500": "296"
       },
-      "available": false
+      "available": true
     },
     "code7" : {
       "id": 7,
@@ -110,7 +110,7 @@
         "250": "167",
         "500": "267"
       },
-      "available": false
+      "available": true
     },
     "code8" : {
       "id": 8,
@@ -126,7 +126,7 @@
         "250": "144",
         "500": "230"
       },
-      "available": false
+      "available": true
     },
     "code9" : {
       "id": 9,
@@ -142,7 +142,7 @@
         "250": "108",
         "500": "172"
       },
-      "available": false
+      "available": true
     },
     "code10" : {
       "id": 10,
@@ -157,7 +157,7 @@
         "200": "159",
         "500": "302"
       },
-      "available": false
+      "available": true
     },
     "code11" : {
       "id": 11,
@@ -171,7 +171,7 @@
       "price": {
         "200": "140"
       },
-      "available": false
+      "available": true
     },
     "code12" : {
       "id": 12,
@@ -198,7 +198,7 @@
       "price": {
         "200": "130"
       },
-      "available": false
+      "available": true
     },
     "code14" : {
       "id": 14,
@@ -212,7 +212,7 @@
       "price": {
         "200": "120"
       },
-      "available": false
+      "available": true
     },
     "code15" : {
       "id": 15,
@@ -226,7 +226,7 @@
       "price": {
         "200": "100"
       },
-      "available": false
+      "available": true
     },
     "code16" : {
       "id": 16,
@@ -240,7 +240,7 @@
       "price": {
         "200": "85"
       },
-      "available": false
+      "available": true
     }
 
   }

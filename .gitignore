@@ -24,3 +24,4 @@ yarn-error.log*
 src/tpm.html
 src/credentials.js
 OLD/.htaccess
+src/.env

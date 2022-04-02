@@ -19,7 +19,7 @@ ReactGA.initialize('UA-198144083-1');
 
 function App() {
   const location = useLocation();
-  const [cart, setCart] = useState({}); // {priceId: amount, priceId: amount...}
+  const [cart, setCart] = useState({});
   const [sum, setSum] = useState(0);
   const [amount, setAmount] = useState(0);
   const [ua, setUa] = useState(true); // ukrainian language by default
@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
       const [code, priceKey] = priceId.split('-');
-      const priceValue = database.products[code].price[priceKey]; //заменил на ключ БД
+      const priceValue = database.products[code].price[priceKey];
       return sum + amount * priceValue;
     }, 0))
   }, [cart]);
@@ -84,7 +84,7 @@ function App() {
     }}>
       <ScrollToTop />
       <Switch>
-        <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} />
+        <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} /> {/* remove trailing slash */}
         <Route path='/' exact component={HomePage} />
         <Route path='/home' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
