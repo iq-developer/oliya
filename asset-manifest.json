@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.327e8a4f.chunk.css",
-    "main.js": "/static/js/main.94af537e.chunk.js",
-    "main.js.map": "/static/js/main.94af537e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.fe669e5c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.fe669e5c.js.map",
-    "static/js/2.7f62b71d.chunk.js": "/static/js/2.7f62b71d.chunk.js",
-    "static/js/2.7f62b71d.chunk.js.map": "/static/js/2.7f62b71d.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.327e8a4f.chunk.css.map": "/static/css/main.327e8a4f.chunk.css.map",
-    "static/js/2.7f62b71d.chunk.js.LICENSE.txt": "/static/js/2.7f62b71d.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/background.53afdabf.jpg"
+    "main.css": "/oliya/static/css/main.6cab61a4.chunk.css",
+    "main.js": "/oliya/static/js/main.1c906bde.chunk.js",
+    "main.js.map": "/oliya/static/js/main.1c906bde.chunk.js.map",
+    "runtime-main.js": "/oliya/static/js/runtime-main.a2372614.js",
+    "runtime-main.js.map": "/oliya/static/js/runtime-main.a2372614.js.map",
+    "static/js/2.7f62b71d.chunk.js": "/oliya/static/js/2.7f62b71d.chunk.js",
+    "static/js/2.7f62b71d.chunk.js.map": "/oliya/static/js/2.7f62b71d.chunk.js.map",
+    "index.html": "/oliya/index.html",
+    "static/css/main.6cab61a4.chunk.css.map": "/oliya/static/css/main.6cab61a4.chunk.css.map",
+    "static/js/2.7f62b71d.chunk.js.LICENSE.txt": "/oliya/static/js/2.7f62b71d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/oliya/static/media/background.53afdabf.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fe669e5c.js",
+    "static/js/runtime-main.a2372614.js",
     "static/js/2.7f62b71d.chunk.js",
-    "static/css/main.327e8a4f.chunk.css",
-    "static/js/main.94af537e.chunk.js"
+    "static/css/main.6cab61a4.chunk.css",
+    "static/js/main.1c906bde.chunk.js"
   ]
 }
