@@ -1,6 +1,8 @@
-<h1 align="center">Online store</h1>
+<h1 align="center">Custom online store on React.js</h1>
 
-<h4 align="center">Raw pressed vegetable oil online store on React.js</h4>
+<h4 align="center">Online store with responsive template, language selector and SEO-optimisation.
+<br>  
+Pre-rendering (react-snap), meta tags (react-helmet), google analytics (react-ga)</h4>
 
 <p align="center">
 <a href="https://github.com/iq-developer/oliya/commits/main" target='_blank'>
@@ -42,5 +44,7 @@
   npm install
   npm start
   ```
+This will open [http://localhost:3000](http://localhost:3000) in your browser.  
+
 ### License
 For demonstration purposes only
