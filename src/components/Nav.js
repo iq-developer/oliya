@@ -46,7 +46,7 @@ const Nav = () => {
 
 
       </nav>
-      <div className="message_error">{context.ua ? "Тимчасово не працюємо" : "Временно не работаем"}</div>
+      <div className="message_error">{context.ua ? "Ми знову працюємо" : "Мы снова работаем"}</div>
     </>
   );
 }

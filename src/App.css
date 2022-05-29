@@ -98,9 +98,8 @@ footer {
 }
 
 .message_error {
-  display: none;
   color: white;
-  background: #C21E56;
+  background: orange;
   font-size: 1.5em;
   padding: 20px;
   text-align: center;
@@ -202,6 +201,12 @@ blockquote {
 }
 .block-order input:valid {
   background: #e5ffce;
+}
+
+/* Cart */
+
+.cart-list {
+  padding: 30px;
 }
 
 /* Elements */
