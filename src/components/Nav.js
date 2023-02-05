@@ -1,11 +1,9 @@
 import logoImg from './../assets/logo.png';
 import logoRuImg from './../assets/logo_ru.png';
 import menuImg from './../assets/menu.png';
-import { useState } from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { TextContext } from './../context/textContext';
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Nav = () => {
 
@@ -46,7 +44,7 @@ const Nav = () => {
 
 
       </nav>
-      
+
     </>
   );
 }

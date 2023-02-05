@@ -68,7 +68,7 @@ function App() {
     window.scroll({ top: 820, behavior: 'smooth' });
   }
 
-  const memoContect = useMemo(() => ({
+  const memoContext = useMemo(() => ({
     cart,
     setCart,
     sum,
@@ -95,7 +95,7 @@ function App() {
 
 
   return (
-    <TextContext.Provider value={memoContect}>
+    <TextContext.Provider value={memoContext}>
       <ScrollToTop />
       <Switch>
         <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} /> {/* remove trailing slash */}

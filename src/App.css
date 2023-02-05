@@ -9,6 +9,7 @@ blockquote {
   background: beige;
   padding: 5px 50px;
   border: #e2d0ba dotted 2px;
+  margin: 0;
 }
 
 /* Navigation panel */
@@ -31,7 +32,7 @@ nav {
   margin: 0 auto;
 }
 .big {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .fullWidth {
   width: 100%;
@@ -182,9 +183,6 @@ header strong {
 .about blockquote {
   color: #693b3b;
 }
-blockquote {
-  margin: 0;
-}
 
 /* Order */
 
@@ -323,9 +321,6 @@ small {
 }
 .error {
   border: 2px solid red;
-}
-.big {
-  font-size: 1.2em;
 }
 .show {
   display: block;

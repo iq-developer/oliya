@@ -20,7 +20,27 @@ const Order = () => {
 
   const [delivery, setDelivery] = useState(option);
   const [deliveryOption, setDeliveryOption] = useState(option3);
-  const [user, setUser] = useState({ isContactPhone: true, isViber: false, isEmail: false });
+  const [user, setUser] = useState({
+    delivery: '',
+    deliveryOption: '',
+    branchNumber: '',
+    address: '',
+    city: '',
+    region: '',
+
+    phone: '',
+    firstName: '',
+    familyName: '',
+    fathersName: '',
+
+    contactPhone: '',
+    viber: '',
+    email: '',
+
+    isContactPhone: true,
+    isViber: false,
+    isEmail: false,
+  });
 
   const handleDeliveryChange = (event) => {
     setDelivery(event.target.value);
@@ -165,7 +185,12 @@ const Order = () => {
           <br />
 
           <br hidden={deliveryOption === option4} />
-          <label htmlFor="branchNumber" hidden={deliveryOption === option4} className="w220 float"> {context.ua ? `№ відділення або поштомату` : `№ отделения или почтомата`}</label>
+          <label
+            htmlFor="branchNumber"
+            hidden={deliveryOption === option4}
+            className="w220 float">
+            {context.ua ? `№ відділення або поштомату` : `№ отделения или почтомата`}
+          </label>
           <input
             id="branchNumber"
             name="branchNumber"
