@@ -1,8 +1,8 @@
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
-import {TextContext} from './../../context/textContext';
-import {useContext} from 'react';
-import { Helmet } from 'react-helmet';
+import { TextContext } from './../../context/textContext';
+import { useContext } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 const ErrorPage = () => {
@@ -10,7 +10,7 @@ const ErrorPage = () => {
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>{context.ua ? `Помилка сервера. Не вдалось відправити ваше замовлення` : `Ошибка сервера. Не удалось отправить ваш заказ`}</title>
         <meta name="theme-color" content="red" />
@@ -25,7 +25,7 @@ const ErrorPage = () => {
         <br />
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
 
   );
 }

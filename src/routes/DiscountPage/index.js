@@ -4,13 +4,13 @@ import { TextContext } from "./../../context/textContext";
 import { useContext } from "react";
 import s from "./style.module.css";
 import cn from "classnames";
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const DiscountPageUa = () => {
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Знижки -10% -20%. Даємо знижки за докладні відгуки про наш олії</title>
         <meta name="description" content="В якості подяки за приділений нам час, ми хотіли б запропонувати вам знижку на ваше замовлення" />
@@ -83,7 +83,7 @@ const DiscountPageUa = () => {
 
 
       </main>
-    </>
+    </HelmetProvider>
   );
 };
 
@@ -92,7 +92,7 @@ const DiscountPageRu = () => {
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Скидки -10% -20% даем скидки за подробные отзывы о нашем масле</title>
         <meta name="description" content="В качестве благодарности за уделенное нам время, мы хотели бы предложить вам скидки на всю нашу продукцию." />
@@ -165,7 +165,7 @@ const DiscountPageRu = () => {
 
 
       </main>
-    </>
+    </HelmetProvider>
   );
 };
 

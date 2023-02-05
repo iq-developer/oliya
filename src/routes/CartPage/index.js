@@ -2,15 +2,15 @@ import CartBlock from './../../components/CartBlock';
 import Order from './../../components/Order';
 import Sum from '../../components/Total';
 import returnImg from './../../assets/return.png';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const CartPage = () => {
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Кошик товарів. Їжа як ліки</title>
         <meta name="description" content="Оформити ваше замовлення" />
@@ -29,7 +29,7 @@ const CartPage = () => {
         <Order />
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
 
   );
 }

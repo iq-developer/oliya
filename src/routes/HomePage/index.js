@@ -5,16 +5,16 @@ import { TextContext } from './../../context/textContext';
 import { useContext } from 'react';
 import s from './style.module.css';
 import cn from 'classnames';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-//{context.ua ? `` : ``}
+// use this snippet for translation: {context.ua ? `` : ``}
 
 function HomePage() {
 
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>{context.ua ? `Сиродавлена олія на дубовому пресі. Львів. Їжа як ліки` : `Сиродавлена масло на дубовой прессе. Львов. Еда как лекарство`}</title>
         <meta name="description" content={context.ua ? `Олія чорного кмину, конопляна, насіння гарбуза, мигдалева, чорного кунжута, волоського горіха, білого кунжуту, лляна, соняшникова, кокосова.` : `Масло черного тмина, конопляное, семена тыквы, миндальное, черного кунжута, грецкого ореха, белого кунжута, льняное, подсолнечное, кокосовое.`} />
@@ -568,7 +568,7 @@ function HomePage() {
       </main>
 
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }
 

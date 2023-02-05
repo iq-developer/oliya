@@ -1,8 +1,8 @@
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
-import {TextContext} from '../../context/textContext';
-import {useContext} from 'react';
-import { Helmet } from 'react-helmet';
+import { TextContext } from '../../context/textContext';
+import { useContext } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 const Error404Page = () => {
@@ -10,7 +10,7 @@ const Error404Page = () => {
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>{context.ua ? `Помилка 404 - на сайті немає сторінки з такою адресою` : `Ошибка 404 - на сайте нет страницы с таким адресом`}</title>
         <meta name="theme-color" content="red" />
@@ -25,7 +25,7 @@ const Error404Page = () => {
         <br />
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
 
   );
 }

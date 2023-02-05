@@ -1,11 +1,11 @@
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const ResultPage = () => {
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Замовлення зроблено успішно</title>
         <meta name="description" content="Дякуємо за ваше замовлення" />
@@ -17,7 +17,7 @@ const ResultPage = () => {
         <p>Ми зв'яжемось з вами для підтвердження замовлення на протязі 2 годин (в робочий час з 10:00 до 20:00).</p>
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
 
   );
 }

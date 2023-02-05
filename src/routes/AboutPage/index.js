@@ -4,13 +4,13 @@ import { TextContext } from "./../../context/textContext";
 import { useContext } from "react";
 import s from "./style.module.css";
 import cn from "classnames";
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const AboutPageUa = () => {
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Про нас. Сиродавлена олія. Львів. Їжа як ліки</title>
         <meta name="description" content="Наша олійна історія або, чому саме сиродавлена олія, та навіщо треба дубова бочка" />
@@ -234,7 +234,7 @@ const AboutPageUa = () => {
 
         </div>
       </main>
-    </>
+    </HelmetProvider>
   );
 };
 
@@ -243,7 +243,7 @@ const AboutPageRu = () => {
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Про нас. Сиродавленное масло. Львов. Еда как лекарство</title>
         <meta name="description" content="Наша масляная история или, почему именно сиродавленное масло, и зачем понадобилась дубовая бочка" />
@@ -462,7 +462,7 @@ const AboutPageRu = () => {
 
         </div>
       </main>
-    </>
+    </HelmetProvider>
   );
 };
 

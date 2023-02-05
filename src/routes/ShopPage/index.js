@@ -2,17 +2,17 @@ import cartImg from './../../assets/cart.png';
 import Block from './../../components/Block';
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
-import {Link} from 'react-router-dom';
-import {TextContext} from './../../context/textContext';
-import {useContext} from 'react';
-import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { TextContext } from './../../context/textContext';
+import { useContext } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function ShopPage() {
 
   const context = useContext(TextContext);
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>{context.ua ? `Купити сиродавлену олію. Львів. Їжа як ліки` : `Купить сиродавлену масло. Львов. Еда как лекарство`}</title>
         <meta name="description" content={context.ua ? `Олія чорного кмину, конопляна, насіння гарбуза, мигдалева, чорного кунжута, волоського горіха, білого кунжута, лляна, соняшникова, кокосова.` : `Масло черного тмина, конопляное, семена тыквы, миндальное, черного кунжута, грецкого ореха, белого кунжута, льняное, подсолнечное, кокосовое.`} />
@@ -35,7 +35,7 @@ function ShopPage() {
       </main>
 
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }
 
