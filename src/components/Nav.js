@@ -46,9 +46,11 @@ const Nav = () => {
 
 
       </nav>
-      <div className="message_error">{context.ua ? "Ми знову працюємо" : "Мы снова работаем"}</div>
+      
     </>
   );
 }
+
+
 
 export default Nav;

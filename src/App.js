@@ -7,13 +7,12 @@ import DiscountPage from './routes/DiscountPage';
 import ResultPage from './routes/ResultPage';
 import ErrorPage from './routes/ErrorPage';
 import Error404Page from './routes/Error404Page';
-import { Route, Switch } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Route, Switch, useLocation, Redirect } from 'react-router-dom';
+import { useState, useEffect, useMemo } from 'react';
 import { TextContext } from './context/textContext';
 import database from './oliya-db.json';
 import ScrollToTop from './utils/ScrollToTop';
 import ReactGA from 'react-ga';
-import { useLocation, Redirect } from 'react-router-dom';
 
 ReactGA.initialize('UA-198144083-1');
 
@@ -69,19 +68,34 @@ function App() {
     window.scroll({ top: 820, behavior: 'smooth' });
   }
 
+  const memoContect = useMemo(() => ({
+    cart,
+    setCart,
+    sum,
+    amount,
+    handleInputChange,
+    handlePlus,
+    handleMinus,
+    scroll,
+    ua,
+    setUa
+  }), [{
+    cart,
+    setCart,
+    sum,
+    amount,
+    handleInputChange,
+    handlePlus,
+    handleMinus,
+    scroll,
+    ua,
+    setUa
+  }])
+
+
+
   return (
-    <TextContext.Provider value={{
-      cart,
-      setCart,
-      sum,
-      amount,
-      handleInputChange,
-      handlePlus,
-      handleMinus,
-      scroll,
-      ua,
-      setUa
-    }}>
+    <TextContext.Provider value={memoContect}>
       <ScrollToTop />
       <Switch>
         <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} /> {/* remove trailing slash */}

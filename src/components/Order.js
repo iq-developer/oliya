@@ -1,10 +1,8 @@
-import {useState, useEffect} from 'react';
-import {useContext} from 'react';
-import {TextContext} from './../context/textContext';
-import {send} from 'emailjs-com';
-import {init} from 'emailjs-com';
+import { useState, useContext, useEffect } from 'react';
+import { TextContext } from './../context/textContext';
+import { send, init } from 'emailjs-com';
 import credentials from './../credentials.js';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 init(credentials.user_code);
 
@@ -16,34 +14,35 @@ const Order = () => {
 
   const option = context.ua ? `Нова Пошта` : `Новая Почта`;
   const option1 = context.ua ? `Львів - заберу при зустрічі по домовленості` : `Львов - заберу при встрече по договоренности`;
-  // const option2 = context.ua ? `Львів - самовивіз з кафе Грін (вул. Братів Рогатинців, 5)` : `Львов - самовывоз из кафе Грин (ул. Братьев Рогатинцев, 5)`;
 
   const option3 = context.ua ? `На відділення Нової Пошти` : `На отделение Новой Почты`;
   const option4 = context.ua ? `Кур'єрська доставка за адресою` : `Курьерская доставка по адресу`;
 
   const [delivery, setDelivery] = useState(option);
   const [deliveryOption, setDeliveryOption] = useState(option3);
-  const [user, setUser] = useState({isContactPhone: true, isViber: true, isEmail: true});
+  const [user, setUser] = useState({ isContactPhone: true, isViber: false, isEmail: false });
 
   const handleDeliveryChange = (event) => {
     setDelivery(event.target.value);
+    console.log('delivery:', event.target.value);
+
   }
   const handleDeliveryOptionChange = (event) => {
     setDeliveryOption(event.target.value);
   }
   const handleChange = (event) => {
     setUser(prevState => {
-      return {...prevState, [event.target.name]: event.target.value}
+      return { ...prevState, [event.target.name]: event.target.value }
     });
   }
   const handleCheckbox = (event) => {
     setUser(prevState => {
-      return {...prevState, [event.target.name]: event.target.checked}
+      return { ...prevState, [event.target.name]: event.target.checked }
     });
   }
   const handlePhone = (event) => {
     setUser(prevState => {
-      return {...prevState, phone: event.target.value, contactPhone: event.target.value, viber: event.target.value}
+      return { ...prevState, phone: event.target.value, contactPhone: event.target.value, viber: event.target.value }
     });
   }
 
@@ -95,12 +94,12 @@ const Order = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-      send(
-        credentials.service_code,
-        credentials.template_code,
-        toSend,
-        credentials.user_code,
-      )
+    send(
+      credentials.service_code,
+      credentials.template_code,
+      toSend,
+      credentials.user_code,
+    )
       .then((response) => {
         history.push('/result');
         console.log('SUCCESS!', response.status, response.text);
@@ -113,7 +112,12 @@ const Order = () => {
   };
 
   useEffect(() => {
-    setToSend({...toSend, ...user, delivery, deliveryOption});
+    setToSend(prev => ({
+      ...prev,
+      ...user,
+      delivery,
+      deliveryOption,
+    }));
   }, [user, delivery, deliveryOption]);
 
   //EmailJS end
@@ -121,7 +125,7 @@ const Order = () => {
   return (
     <article className="block-order">
 
-    <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit}>
 
         <h2>{context.ua ? `Спосіб доставки` : `Способ доставки`}</h2>
         <label><input
@@ -140,14 +144,6 @@ const Order = () => {
           onChange={handleDeliveryChange}
         /> {option1}</label>
         <br />
-        {/* <label><input
-          name="delivery"
-          type="radio"
-          value={option2}
-          checked={delivery === option2}
-          onChange={handleDeliveryChange}
-        /> {option2}</label>
-        <br /> */}
 
         <div hidden={delivery !== option}>
           <h3>{context.ua ? `Відправка на відділення або на адресу` : `Отправка на отделение или на адрес`}</h3>
@@ -198,7 +194,7 @@ const Order = () => {
             onChange={handleChange}
             list="cities"
             required={delivery === option}
-            />
+          />
           <datalist id="cities">
             <option value={context.ua ? `Біла Церква` : `Белая Церковь`} />
             <option value={context.ua ? `Бердянськ` : `Бердянск`} />
@@ -224,7 +220,6 @@ const Order = () => {
             <option value={context.ua ? `Павлоград` : `Павлоград`} />
             <option value={context.ua ? `Полтава` : `Полтава`} />
             <option value={context.ua ? `Рівне` : `Ровно`} />
-            <option value={context.ua ? `Севастополь` : `Севастополь`} />
             <option value={context.ua ? `Слов'янськ` : `Славянск`} />
             <option value={context.ua ? `Суми` : `суммы`} />
             <option value={context.ua ? `Тернопіль` : `Тернополь`} />
@@ -315,14 +310,14 @@ const Order = () => {
         <br hidden={delivery !== option} />
         <h3>{context.ua ? `Як з вами контактувати` : `Как с вами контактировать`}</h3>
         <label className="w220 float">
-        <input
-          name="isContactPhone"
-          type="checkbox"
-          value="isContactPhone"
-          checked={user.isContactPhone}
-          onChange={handleCheckbox}
-        />
-        &nbsp;Телефон&nbsp;</label>
+          <input
+            name="isContactPhone"
+            type="checkbox"
+            value="isContactPhone"
+            checked={user.isContactPhone}
+            onChange={handleCheckbox}
+          />
+          &nbsp;Телефон&nbsp;</label>
         <input
           id=""
           name="contactPhone"
@@ -333,15 +328,15 @@ const Order = () => {
         />
         <br />
         <label className="w220 float">
-        <input
-          id=""
-          name="isViber"
-          type="checkbox"
-          value="isViber"
-          checked={user.isViber}
-          onChange={handleCheckbox}
-        />
-        &nbsp;Вайбер&nbsp;</label>
+          <input
+            id=""
+            name="isViber"
+            type="checkbox"
+            value="isViber"
+            checked={user.isViber}
+            onChange={handleCheckbox}
+          />
+          &nbsp;Вайбер&nbsp;</label>
         <input
           id=""
           name="viber"
@@ -352,15 +347,15 @@ const Order = () => {
         />
         <br />
         <label className="w220 float">
-        <input
-          id=""
-          name="isEmail"
-          type="checkbox"
-          value="isEmail"
-          checked={user.isEmail}
-          onChange={handleCheckbox}
-        />
-        &nbsp;Email&nbsp;</label>
+          <input
+            id=""
+            name="isEmail"
+            type="checkbox"
+            value="isEmail"
+            checked={user.isEmail}
+            onChange={handleCheckbox}
+          />
+          &nbsp;Email&nbsp;</label>
         <input
           type="email"
           id=""

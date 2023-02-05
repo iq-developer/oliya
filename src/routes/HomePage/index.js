@@ -1,8 +1,8 @@
 import Nav from './../../components/Nav';
 import Footer from './../../components/Footer';
-import {Link} from 'react-router-dom';
-import {TextContext} from './../../context/textContext';
-import {useContext} from 'react';
+import { Link } from 'react-router-dom';
+import { TextContext } from './../../context/textContext';
+import { useContext } from 'react';
 import s from './style.module.css';
 import cn from 'classnames';
 import { Helmet } from 'react-helmet';
@@ -42,134 +42,134 @@ function HomePage() {
         <div className={s.comparison_bars}>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar1Desc, s.pLeftRight20)}>
-              <h3 className={s.uppercase}>{context.ua ? `Наша сиродавлена олія` : `Наше сыродавленное масло`}</h3>
-              <hr />
-              <p>{context.ua ? `ТМ "Їжа як ліки"` : `ТМ "Еда как лекарство"`}</p>
+            <h3 className={s.uppercase}>{context.ua ? `Наша сиродавлена олія` : `Наше сыродавленное масло`}</h3>
+            <hr />
+            <p>{context.ua ? `ТМ "Їжа як ліки"` : `ТМ "Еда как лекарство"`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar2Desc, s.bgGray, s.pLeftRight20)}>
-              <h3 className={s.uppercase}>{context.ua ? `Олія холодного віджиму` : `Масло холодного отжима`}</h3>
-              <hr />
-              <p>{context.ua ? `Звичайне промислове виробництво` : `Обычное промышленное производство`}</p>
+            <h3 className={s.uppercase}>{context.ua ? `Олія холодного віджиму` : `Масло холодного отжима`}</h3>
+            <hr />
+            <p>{context.ua ? `Звичайне промислове виробництво` : `Обычное промышленное производство`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar3)}>
-            <img src="https://oliya.com.ua/img/landing/comparison1.jpg"  alt={context.ua ? `Олія завжди свіжа. Виробляємо тільки під замовлення.` : `Масло всегда свежеотжатое. Делаем его только под заказ.`} />
+            <img src="https://oliya.com.ua/img/landing/comparison1.jpg" alt={context.ua ? `Олія завжди свіжа. Виробляємо тільки під замовлення.` : `Масло всегда свежеотжатое. Делаем его только под заказ.`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar3Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Неокислена олія` : `Неокисленное масло`}</h3>
-              <hr />
-              <p>{context.ua ? `Олія завжди свіжовіджата. Робимо її тільки під замовлення.` : `Масло всегда свежеотжатое. Делаем его только под заказ.`}</p>
+            <h3>{context.ua ? `Неокислена олія` : `Неокисленное масло`}</h3>
+            <hr />
+            <p>{context.ua ? `Олія завжди свіжовіджата. Робимо її тільки під замовлення.` : `Масло всегда свежеотжатое. Делаем его только под заказ.`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar4)}>
-            <img src="https://oliya.com.ua/img/landing/comparison11.jpg"  alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
+            <img src="https://oliya.com.ua/img/landing/comparison11.jpg" alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar4Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Окислена олія` : `Окисленное масло`}</h3>
-              <hr />
-              <p>{context.ua ? `Чим довше зберігається, тим більше окислюється` : `Чем дольше хранится, тем сильнее окисляется`}</p>
+            <h3>{context.ua ? `Окислена олія` : `Окисленное масло`}</h3>
+            <hr />
+            <p>{context.ua ? `Чим довше зберігається, тим більше окислюється` : `Чем дольше хранится, тем сильнее окисляется`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar5)}>
-            <img src="https://oliya.com.ua/img/landing/comparison2.jpg"  alt={context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия зерно не нагревается`} />
+            <img src="https://oliya.com.ua/img/landing/comparison2.jpg" alt={context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия зерно не нагревается`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar5Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Холодне насіння` : `Холодные семена`}</h3>
-              <hr />
-              <p>{context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия зерно не нагревается`}</p>
+            <h3>{context.ua ? `Холодне насіння` : `Холодные семена`}</h3>
+            <hr />
+            <p>{context.ua ? `В процесі пресування насіння не нагрівається` : `В процессе отжатия зерно не нагревается`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar6)}>
-            <img src="https://oliya.com.ua/img/landing/comparison12.jpg"  alt={context.ua ? `Шнекові преси нагрівають насіння понад 50°C` : `Шнековые прессы нагревают семена более 50°C`} />
+            <img src="https://oliya.com.ua/img/landing/comparison12.jpg" alt={context.ua ? `Шнекові преси нагрівають насіння понад 50°C` : `Шнековые прессы нагревают семена более 50°C`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar6Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Нагрівання насіння` : `Нагрев семян`}</h3>
-              <hr />
-              <p>{context.ua ? `Шнекові преси неминуче нагрівають насіння понад 50°C` : `Шнековые прессы неизбежно нагревают семена более 50°C`}</p>
+            <h3>{context.ua ? `Нагрівання насіння` : `Нагрев семян`}</h3>
+            <hr />
+            <p>{context.ua ? `Шнекові преси неминуче нагрівають насіння понад 50°C` : `Шнековые прессы неизбежно нагревают семена более 50°C`}</p>
           </div>
 
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar7)}>
-            <img src="https://oliya.com.ua/img/landing/comparison3.jpg"  alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
+            <img src="https://oliya.com.ua/img/landing/comparison3.jpg" alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar7Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Ціле насіння` : `Целые семена`}</h3>
-              <hr />
-              <p>{context.ua ? `Насіння не розмелюються, тому олія не потребує фільтрації` : `Семена не размалываются, поэтому масло не нуждается в фильтрации`}</p>
+            <h3>{context.ua ? `Ціле насіння` : `Целые семена`}</h3>
+            <hr />
+            <p>{context.ua ? `Насіння не розмелюються, тому олія не потребує фільтрації` : `Семена не размалываются, поэтому масло не нуждается в фильтрации`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar8)}>
-            <img src="https://oliya.com.ua/img/landing/comparison13.jpg"  alt={context.ua ? `Насіння перетіраются в макуху` : `Семена перетираются в жмых`} />
+            <img src="https://oliya.com.ua/img/landing/comparison13.jpg" alt={context.ua ? `Насіння перетіраются в макуху` : `Семена перетираются в жмых`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar8Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Перетерте насіння` : `Перетертые семена`}</h3>
-              <hr />
-              <p>{context.ua ? `Насіння перетіраются в мезгу, потім масло фільтрується або відстоюється` : `Семена перетираются в мезгу, затем масло фильтруется или отстаивается`}</p>
+            <h3>{context.ua ? `Перетерте насіння` : `Перетертые семена`}</h3>
+            <hr />
+            <p>{context.ua ? `Насіння перетіраются в мезгу, потім масло фільтрується або відстоюється` : `Семена перетираются в мезгу, затем масло фильтруется или отстаивается`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar9)}>
-            <img src="https://oliya.com.ua/img/landing/comparison4.jpg"  alt={context.ua ? `Дубова бочка - тільки дерево` : `Дубовая бочка - только дерево`} />
+            <img src="https://oliya.com.ua/img/landing/comparison4.jpg" alt={context.ua ? `Дубова бочка - тільки дерево` : `Дубовая бочка - только дерево`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar9Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Немає металу` : `Нет металла`}</h3>
-              <hr />
-              <p>{context.ua ? `Дубова бочка - тільки дерево` : `Дубовая бочка - только дерево`}</p>
+            <h3>{context.ua ? `Немає металу` : `Нет металла`}</h3>
+            <hr />
+            <p>{context.ua ? `Дубова бочка - тільки дерево` : `Дубовая бочка - только дерево`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar10)}>
-            <img src="https://oliya.com.ua/img/landing/comparison14.jpg"  alt={context.ua ? `Контакт з металом посилює окислення` : `Контакт с металлом усиливает окисление`} />
+            <img src="https://oliya.com.ua/img/landing/comparison14.jpg" alt={context.ua ? `Контакт з металом посилює окислення` : `Контакт с металлом усиливает окисление`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar10Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Металевий шнек` : `Металлический шнек`}</h3>
-              <hr />
-              <p>{context.ua ? `Контакт з металом посилює окислення` : `Контакт с металлом усиливает окисление`}</p>
+            <h3>{context.ua ? `Металевий шнек` : `Металлический шнек`}</h3>
+            <hr />
+            <p>{context.ua ? `Контакт з металом посилює окислення` : `Контакт с металлом усиливает окисление`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar11)}>
-            <img src="https://oliya.com.ua/img/landing/comparison5.jpg"  alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
+            <img src="https://oliya.com.ua/img/landing/comparison5.jpg" alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar11Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Чисте насіння` : `Чистые семена`}</h3>
-              <hr />
-              <p>{context.ua ? `Насіння ретельно миється і сушиться при 30°C` : `Семена тщательно моются и сушатся при 30°C`}</p>
+            <h3>{context.ua ? `Чисте насіння` : `Чистые семена`}</h3>
+            <hr />
+            <p>{context.ua ? `Насіння ретельно миється і сушиться при 30°C` : `Семена тщательно моются и сушатся при 30°C`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar12)}>
-            <img src="https://oliya.com.ua/img/landing/comparison15.jpg"  alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
+            <img src="https://oliya.com.ua/img/landing/comparison15.jpg" alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar12Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Немите насіння` : `Немытые семена`}</h3>
-              <hr />
-              <p>{context.ua ? `Може містити пил, пилок, труху` : `Могут содержать пыль, пыльцу, труху`}</p>
+            <h3>{context.ua ? `Немите насіння` : `Немытые семена`}</h3>
+            <hr />
+            <p>{context.ua ? `Може містити пил, пилок, труху` : `Могут содержать пыль, пыльцу, труху`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar13)}>
-            <img src="https://oliya.com.ua/img/landing/comparison6.jpg"  alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
+            <img src="https://oliya.com.ua/img/landing/comparison6.jpg" alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar13Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Вихід олії менше` : `Выход масла меньше`}</h3>
-              <hr />
-              <p>{context.ua ? `Вміст корисних речовин більше` : `Содержание полезных веществ больше`}</p>
+            <h3>{context.ua ? `Вихід олії менше` : `Выход масла меньше`}</h3>
+            <hr />
+            <p>{context.ua ? `Вміст корисних речовин більше` : `Содержание полезных веществ больше`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar14)}>
-            <img src="https://oliya.com.ua/img/landing/comparison16.jpg"  alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
+            <img src="https://oliya.com.ua/img/landing/comparison16.jpg" alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar14Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Вихід олії більше` : `Выход масла больше`}</h3>
-              <hr />
-              <p>{context.ua ? `Завдяки нагріванню та подрібненню` : `Из-за нагрева и измельчения`}</p>
+            <h3>{context.ua ? `Вихід олії більше` : `Выход масла больше`}</h3>
+            <hr />
+            <p>{context.ua ? `Завдяки нагріванню та подрібненню` : `Из-за нагрева и измельчения`}</p>
           </div>
 
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar15)}>
-            <img src="https://oliya.com.ua/img/landing/comparison7.jpg"  alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
+            <img src="https://oliya.com.ua/img/landing/comparison7.jpg" alt={context.ua ? `Свіжовіджата олія - робимо тільки під замовлення` : `Свежевыжатое масло - делаем только под заказ`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar15Desc, s.pLeftRight20)}>
-              <h3>{context.ua ? `Коштує дорожче` : `Стоит дороже`}</h3>
-              <hr />
-              <p>{context.ua ? `Вона того варта :)` : `Оно того стоит :)`}</p>
+            <h3>{context.ua ? `Коштує дорожче` : `Стоит дороже`}</h3>
+            <hr />
+            <p>{context.ua ? `Вона того варта :)` : `Оно того стоит :)`}</p>
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar16)}>
-            <img src="https://oliya.com.ua/img/landing/comparison17.jpg"  alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
+            <img src="https://oliya.com.ua/img/landing/comparison17.jpg" alt={context.ua ? `Звичайні олії довго стоять на вітрині або на складі` : `Обычные растительные масла долго стоят на витрине или на складе`} />
           </div>
           <div className={cn(s.bar, s.comparison_bar, s.vCenter, s.bar16Desc, s.bgGray, s.pLeftRight20)}>
-              <h3>{context.ua ? `Коштує дешевше` : `Стоит дешевле`}</h3>
-              <hr />
-              <p>{context.ua ? `Явно менш корисна` : `Явно менее полезное`}</p>
+            <h3>{context.ua ? `Коштує дешевше` : `Стоит дешевле`}</h3>
+            <hr />
+            <p>{context.ua ? `Очевидно менш корисна` : `Явно менее полезное`}</p>
           </div>
 
         </div>
@@ -177,13 +177,13 @@ function HomePage() {
 
         <h2>{context.ua ? `Сиродавлені олії не просто краще. Вони зовсім інші` : `Сиродавленные масла не просто лучше. Они совсем другие`}</h2>
         <p className={s.h2subtitle}>
-        {context.ua ? `А ще, різні олії мають різні корисні властивості. Ось подивіться` : `А еще, разные масла имеют различные полезные свойства. Вот посмотрите`}
+          {context.ua ? `А ще, різні олії мають різні корисні властивості. Ось подивіться` : `А еще, разные масла имеют различные полезные свойства. Вот посмотрите`}
         </p>
 
         <div className={s.oils}>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil01.jpg"  alt={context.ua ? `сиродавлена олія чорного кмину` : `сыродавленное масло черного тмина`} />
+            <img src="https://oliya.com.ua/img/landing/oil01.jpg" alt={context.ua ? `сиродавлена олія чорного кмину` : `сыродавленное масло черного тмина`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `чорного кмину` : `черного тмина`}</h3>
@@ -199,7 +199,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil02.jpg"  alt={context.ua ? `сиродавлена олія конопляна` : `сыродавленное масло конопляное`} />
+            <img src="https://oliya.com.ua/img/landing/oil02.jpg" alt={context.ua ? `сиродавлена олія конопляна` : `сыродавленное масло конопляное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `конопляна` : `конопляное`}</h3>
@@ -214,7 +214,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil03.jpg"  alt={context.ua ? `сиродавлена олія насіння гарбуза` : `сыродавленное масло семян тыквы`} />
+            <img src="https://oliya.com.ua/img/landing/oil03.jpg" alt={context.ua ? `сиродавлена олія насіння гарбуза` : `сыродавленное масло семян тыквы`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `насіння гарбуза` : `семян тыквы`}</h3>
@@ -229,7 +229,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil04.jpg"  alt={context.ua ? `сиродавлена олія мигдалева` : `сыродавленное масло миндальное`} />
+            <img src="https://oliya.com.ua/img/landing/oil04.jpg" alt={context.ua ? `сиродавлена олія мигдалева` : `сыродавленное масло миндальное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `мигдалева` : `миндальное`}</h3>
@@ -243,7 +243,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil05.jpg"  alt={context.ua ? `сиродавлена олія чорного кунжуту` : `сыродавленное масло черного кунжута`} />
+            <img src="https://oliya.com.ua/img/landing/oil05.jpg" alt={context.ua ? `сиродавлена олія чорного кунжуту` : `сыродавленное масло черного кунжута`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `чорного кунжуту` : `черного кунжута`}</h3>
@@ -258,7 +258,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil06.jpg"  alt={context.ua ? `сиродавлена олія волоського горіха` : `сыродавленное масло грецкого горіха`} />
+            <img src="https://oliya.com.ua/img/landing/oil06.jpg" alt={context.ua ? `сиродавлена олія волоського горіха` : `сыродавленное масло грецкого горіха`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `волоського горіха` : `грецкого горіха`}</h3>
@@ -273,7 +273,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil07.jpg"  alt={context.ua ? `сиродавлена олія білого кунжуту` : `сыродавленное масло белого кунжута`} />
+            <img src="https://oliya.com.ua/img/landing/oil07.jpg" alt={context.ua ? `сиродавлена олія білого кунжуту` : `сыродавленное масло белого кунжута`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `білого кунжуту` : `белого кунжута`}</h3>
@@ -287,7 +287,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil08.jpg"  alt={context.ua ? `сиродавлена олія лляна` : `сыродавленное масло льняное`} />
+            <img src="https://oliya.com.ua/img/landing/oil08.jpg" alt={context.ua ? `сиродавлена олія лляна` : `сыродавленное масло льняное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `лляна` : `льняное`}</h3>
@@ -301,7 +301,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil09.jpg"  alt={context.ua ? `сиродавлена олія соняшникова` : `сыродавленное масло подсолнечное`} />
+            <img src="https://oliya.com.ua/img/landing/oil09.jpg" alt={context.ua ? `сиродавлена олія соняшникова` : `сыродавленное масло подсолнечное`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сиродавленное масло`}</span></p>
               <h3>{context.ua ? `соняшникова` : `подсолнечное`}</h3>
@@ -316,7 +316,7 @@ function HomePage() {
           </div>
 
           <div className={cn(s.bar, s.placeholder)}>
-          <img src="https://oliya.com.ua/img/landing/oil11.jpg"  alt="placeholder" />
+            <img src="https://oliya.com.ua/img/landing/oil11.jpg" alt="placeholder" />
             <div className={s.bar_desc}>
               <div className={cn(s.oil_txt, s.left)}>
               </div>
@@ -324,7 +324,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/oil10.jpg"  alt={context.ua ? `сиродавлена олія кокосова` : `сыродавленное масло кокосовое`} />
+            <img src="https://oliya.com.ua/img/landing/oil10.jpg" alt={context.ua ? `сиродавлена олія кокосова` : `сыродавленное масло кокосовое`} />
             <div className={s.bar_desc}>
               <p><span>{context.ua ? `сиродавлена олія` : `сыродавленное масло`}</span></p>
               <h3>{context.ua ? `кокосова` : `кокосовое`}</h3>
@@ -338,7 +338,7 @@ function HomePage() {
           </div>
 
           <div className={cn(s.bar, s.placeholder)}>
-            <img src="https://oliya.com.ua/img/landing/oil11.jpg"  alt="placeholder" />
+            <img src="https://oliya.com.ua/img/landing/oil11.jpg" alt="placeholder" />
             <div className={s.bar_desc}>
               <div className={cn(s.oil_txt, s.left)}>
               </div>
@@ -349,7 +349,7 @@ function HomePage() {
 
         <h2>{context.ua ? `Дуже корисні олії. А як вони смакують?` : `Очень полезны масла. А как они на вкус?`}</h2>
         <p className={s.h2subtitle}>
-        {context.ua ? `Смачні, без гіркоти, мають тонкий приємний аромат.
+          {context.ua ? `Смачні, без гіркоти, мають тонкий приємний аромат.
           Не будемо багато казати, краще спробувати.
           Ми можемо віджати для вас навіть 100 мл олії,
           щоб ви мали змогу особисто відчути її якості.` : `Вкусные, без горечи, имеют тонкий приятный аромат.
@@ -374,7 +374,7 @@ function HomePage() {
         <div className={s.bars}>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar0.jpg"  alt={context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`} />
+            <img src="https://oliya.com.ua/img/landing/bar0.jpg" alt={context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`} />
             <div className={s.bar_desc}>
 
               <h3>{context.ua ? `Тільки свіжий врожай` : `Только свежий урожай`}</h3>
@@ -384,7 +384,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar1.jpg"  alt={context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`} />
+            <img src="https://oliya.com.ua/img/landing/bar1.jpg" alt={context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Обираємо якісне насіння` : `Выбираем лучшие семена`}</h3>
               <hr />
@@ -393,7 +393,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar2.jpg"  alt={context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`} />
+            <img src="https://oliya.com.ua/img/landing/bar2.jpg" alt={context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Використовуємо цільне зерно` : `Используем цельное зерно`}</h3>
               <hr />
@@ -402,7 +402,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar3.jpg"  alt={context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`} />
+            <img src="https://oliya.com.ua/img/landing/bar3.jpg" alt={context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Миємо під проточною водою` : `Моем под проточной водой`}</h3>
               <hr />
@@ -411,7 +411,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar4.jpg"  alt={context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`} />
+            <img src="https://oliya.com.ua/img/landing/bar4.jpg" alt={context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Сушимо при температурі 30°C` : `Сушим при температуре 30°C`}</h3>
               <hr />
@@ -420,7 +420,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar5.jpg"  alt={context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`} />
+            <img src="https://oliya.com.ua/img/landing/bar5.jpg" alt={context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Віджимаємо на дубовому пресі` : `Выжимаем на дубовом прессе`}</h3>
               <hr />
@@ -429,7 +429,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar8.jpg"  alt={context.ua ? `Розливаємо в темні скляни пляшки` : `Разливаем в темные стеклянные бутылки`} />
+            <img src="https://oliya.com.ua/img/landing/bar8.jpg" alt={context.ua ? `Розливаємо в темні скляни пляшки` : `Разливаем в темные стеклянные бутылки`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Розливаємо в темні скляні пляшки` : `Разливаем в темные стеклянные бутылки`}</h3>
               <hr />
@@ -438,7 +438,7 @@ function HomePage() {
           </div>
 
           <div className={s.bar}>
-            <img src="https://oliya.com.ua/img/landing/bar9.jpg"  alt={context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`} />
+            <img src="https://oliya.com.ua/img/landing/bar9.jpg" alt={context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`} />
             <div className={s.bar_desc}>
               <h3>{context.ua ? `Відправляємо Новою Поштою` : `Отправляем Новой Почтой`}</h3>
               <hr />
@@ -450,7 +450,7 @@ function HomePage() {
 
         <h2>{context.ua ? `Що дає таке ретельний процес виробництва?` : `Что дает такой тщательное процесс производства?`}</h2>
         <p className={s.h2subtitle}>
-        {context.ua ? `Це дозволяє зберегти в олії максимум корисних речовин -
+          {context.ua ? `Це дозволяє зберегти в олії максимум корисних речовин -
         вітамінів, важливих омега-кислот та мікроелементів.
         Саме такі олії насправді є цілющими та життєдайними.
         Це не просто продукти харчування, це` : `Это позволяет сохранить в масле максимум полезных веществ - витаминов, важных омега-кислот и микроелементов.
@@ -465,7 +465,7 @@ function HomePage() {
             <div className={s.gear2col}>
               <h2>{context.ua ? `А як же виробляється звичайна рафінована олія?` : `А как же производится обычное рафинированное масло?`} </h2>
               <p className={s.h2subtitle}>
-              {context.ua ? `Ось 8 головних ступенів промислового виробництва та очищення рослинної олії` : `Вот 8 главных ступеней промышленного производства и очистки растительного масла`}
+                {context.ua ? `Ось 8 головних ступенів промислового виробництва та очищення рослинної олії` : `Вот 8 главных ступеней промышленного производства и очистки растительного масла`}
               </p>
             </div>
 
@@ -551,9 +551,9 @@ function HomePage() {
 
         <h2>{context.ua ? `Для чого вони це все роблять?` : `Для чего они это все делают?`}</h2>
         <p className={s.h2subtitle}>
-        {context.ua ? `Це робиться для того, щоб олія не окислювалась і могла зберігатися дуже довго. Звичайно, корисних речовин при цьому залишається зовсім небагато. Ми вважаємо, що краще отримати менше олії, нехай вона буде дорожче і не зберігається довго. Але це буде справжня олія.` : `Это делается для того, чтобы масло не окислялось и могло храниться очень долго. Конечно, полезных веществ при этом остается совсем немного. Мы считаем, что лучше получить меньше масла, пусть оно будет дороже и не хранится долго. Но это будет настоящее масло.`}
-        <br />
-        <b>{context.ua ? `Ми обираємо справжнє` : `Мы выбираем настоящее`}</b>
+          {context.ua ? `Це робиться для того, щоб олія не окислювалась і могла зберігатися дуже довго. Звичайно, корисних речовин при цьому залишається зовсім небагато. Ми вважаємо, що краще отримати менше олії, нехай вона буде дорожче і не зберігається довго. Але це буде справжня олія.` : `Это делается для того, чтобы масло не окислялось и могло храниться очень долго. Конечно, полезных веществ при этом остается совсем немного. Мы считаем, что лучше получить меньше масла, пусть оно будет дороже и не хранится долго. Но это будет настоящее масло.`}
+          <br />
+          <b>{context.ua ? `Ми обираємо справжнє` : `Мы выбираем настоящее`}</b>
         </p>
 
         <div className={cn(s.banner, s.banner4, s.white)}>
@@ -565,9 +565,9 @@ function HomePage() {
           </div>
         </div>
 
-        </main>
+      </main>
 
-        <Footer />
+      <Footer />
     </>
   );
 }

@@ -51,7 +51,7 @@ const DiscountPageUa = () => {
               <strong>Знижка - 20%</strong> за відеовідгук (1 - 3 хв), з посиланням на нас в інстаграм, фейсбук або ютуб.
             </p>
             <p>
-            Відгуки, які нам особливо подобаються отримують ще більшу знижку <strong>–50%</strong> (Ми не жадібні :)
+              Відгуки, які нам особливо подобаються отримують ще більшу знижку <strong>–50%</strong> (Ми не жадібні :)
             </p>
           </blockquote>
 
@@ -74,23 +74,11 @@ const DiscountPageUa = () => {
           <h3>Персональні дані</h3>
 
           <p>
-             Розміщуючи відгук про нас, згідно з описаною вище бонусної програмі, ви даєте згоду на використання відгуку, (включаючи ваше ім'я, прізвище і картинку користувача опубліковані в ваших соцмережах) в наших публікаціях і рекламних матеріалах.</p>
+            Розміщуючи відгук про нас, згідно з описаною вище бонусної програмі, ви даєте згоду на використання відгуку, (включаючи ваше ім'я, прізвище і картинку користувача опубліковані в ваших соцмережах) в наших публікаціях і рекламних матеріалах.</p>
           <p>
             Якщо ви хотіли б, щоб ми не вказували ваші дані, напишіть про це нам - ми зробимо так як ви захочете.
           </p>
 
-        </div>
-
-        <div className={cn(s.banner, s.parallax1, s.white)}>
-          <div>
-            <h4 className="banner_title">А також в інстаграме</h4>
-            <p className={s.subtitle}>
-              роздаємо знижки, пробники, проводимо розіграші нашої продукції (іноді)
-            </p>
-
-            <a className={cn("button", s.big_button, s.bgbeige)} href="https://www.instagram.com/oliya_com_ua/" target="_blank" rel="noopener noreferrer">Підписатися <img src="https://oliya.com.ua/img/landing/instagram_icon.jpg" alt="Інстаграм" /></a>
-
-          </div>
         </div>
 
 
@@ -173,18 +161,6 @@ const DiscountPageRu = () => {
             Если вы хотели бы, чтобы мы не указывали ваши данные, напишите об этом нам – мы сделаем так как вы захотите.
           </p>
 
-        </div>
-
-        <div className={cn(s.banner, s.parallax1, s.white)}>
-          <div>
-            <h4 className="banner_title">А также в инстаграме</h4>
-            <p className={s.subtitle}>
-              раздаем скидки, пробники, проводим розыгрыши нашей продукции (иногда)
-            </p>
-
-            <a className={cn("button", s.big_button, s.bgbeige)} href="https://www.instagram.com/oliya_com_ua/" target="_blank" rel="noopener noreferrer">Подписаться <img src="https://oliya.com.ua/img/landing/instagram_icon.jpg" alt="Інстаграм" /></a>
-
-          </div>
         </div>
 
 

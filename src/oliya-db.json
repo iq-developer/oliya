@@ -46,7 +46,7 @@
         "250": "255",
         "500": "408"
       },
-      "available": false
+      "available": true
     },
     "code4" : {
       "id": 4,
@@ -94,7 +94,7 @@
         "250": "185",
         "500": "296"
       },
-      "available": false
+      "available": true
     },
     "code7" : {
       "id": 7,
@@ -157,7 +157,7 @@
         "200": "159",
         "500": "302"
       },
-      "available": false
+      "available": true
     },
     "code11" : {
       "id": 11,
