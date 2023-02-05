@@ -8,7 +8,7 @@ import ResultPage from './routes/ResultPage';
 import ErrorPage from './routes/ErrorPage';
 import Error404Page from './routes/Error404Page';
 import { Route, Switch, useLocation, Redirect } from 'react-router-dom';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { TextContext } from './context/textContext';
 import database from './oliya-db.json';
 import ScrollToTop from './utils/ScrollToTop';
@@ -27,7 +27,7 @@ function App() {
     ReactGA.pageview(location.pathname + location.search);
   }, [location]);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = useCallback((event) => {
     const priceId = event.target.name;
     const inputValue = event.target.value;
     if (+inputValue || +inputValue === 0) {
@@ -35,38 +35,28 @@ function App() {
         return { ...prevState, [priceId]: +inputValue };
       });
     }
-  };
+  }, []);
 
-  useEffect(() => {
-    setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
-      const [code, priceKey] = priceId.split('-');
-      const priceValue = database.products[code].price[priceKey];
-      return sum + amount * priceValue;
-    }, 0))
-  }, [cart]);
-
-  useEffect(() => { setAmount(Object.values(cart).reduce((sum, current) => sum + +current, 0)) }, [cart]);
-
-  const handlePlus = (event) => {
+  const handlePlus = useCallback((event) => {
     event.preventDefault();
     const newValue = cart[event.target.name] ? cart[event.target.name] + 1 : 1;
     setCart(prevState => {
       return { ...prevState, [event.target.name]: newValue };
     });
-  }
+  }, [cart]);
 
-  const handleMinus = (event) => {
+  const handleMinus = useCallback((event) => {
     event.preventDefault();
     const newValue = cart[event.target.name] ? cart[event.target.name] - 1 : '';
     setCart(prevState => {
       return { ...prevState, [event.target.name]: newValue };
     });
-  }
+  }, [cart]);
 
-  const scroll = (e) => {
-    e.preventDefault();
+  const scroll = useCallback((event) => {
+    event.preventDefault();
     window.scroll({ top: 820, behavior: 'smooth' });
-  }
+  }, []);
 
   const memoContext = useMemo(() => ({
     cart,
@@ -79,7 +69,7 @@ function App() {
     scroll,
     ua,
     setUa
-  }), [{
+  }), [
     cart,
     setCart,
     sum,
@@ -90,9 +80,17 @@ function App() {
     scroll,
     ua,
     setUa
-  }])
+  ])
 
+  useEffect(() => {
+    setSum(Object.entries(cart).reduce((sum, [priceId, amount]) => {
+      const [code, priceKey] = priceId.split('-');
+      const priceValue = database.products[code].price[priceKey];
+      return sum + amount * priceValue;
+    }, 0))
+  }, [cart]);
 
+  useEffect(() => { setAmount(Object.values(cart).reduce((sum, current) => sum + +current, 0)) }, [cart]);
 
   return (
     <TextContext.Provider value={memoContext}>
