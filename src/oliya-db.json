@@ -10,9 +10,9 @@
       "img": "https://oliya.com.ua/img/chornyj-kmyn.png",
       "img640": "https://oliya.com.ua/img/oliya-chornyj-kmyn.jpg",
       "price": {
-        "100": "232",
-        "250": "551",
-        "500": "882"
+        "100": "325",
+        "250": "730",
+        "500": "1180"
       },
       "available": true
     },
@@ -26,9 +26,9 @@
       "img": "https://oliya.com.ua/img/konoplya.png",
       "img640": "https://oliya.com.ua/img/oliya-konoplya.jpg",
       "price": {
-        "100": "119",
-        "250": "283",
-        "500": "452"
+        "100": "180",
+        "250": "420",
+        "500": "700"
       },
       "available": true
     },
@@ -42,9 +42,9 @@
       "img": "https://oliya.com.ua/img/garbuz.png",
       "img640": "https://oliya.com.ua/img/oliya-garbuz.jpg",
       "price": {
-        "100": "107",
-        "250": "255",
-        "500": "408"
+        "100": "180",
+        "250": "420",
+        "500": "700"
       },
       "available": true
     },
@@ -58,9 +58,9 @@
       "img": "https://oliya.com.ua/img/mygdal.png",
       "img640": "https://oliya.com.ua/img/oliya-mygdal.jpg",
       "price": {
-        "100": "107",
-        "250": "255",
-        "500": "408"
+        "100": "210",
+        "250": "430",
+        "500": "720"
       },
       "available": true
     },
@@ -74,9 +74,9 @@
       "img": "https://oliya.com.ua/img/chornyj-kunzhut.png",
       "img640": "https://oliya.com.ua/img/oliya-chornyj-kunzhut.jpg",
       "price": {
-        "100": "80",
-        "250": "190",
-        "500": "305"
+        "100": "180",
+        "250": "420",
+        "500": "700"
       },
       "available": true
     },
@@ -90,9 +90,9 @@
       "img": "https://oliya.com.ua/img/voloskyj-gorikh.png",
       "img640": "https://oliya.com.ua/img/oliya-voloskyj-gorikh.jpg",
       "price": {
-        "100": "78",
-        "250": "185",
-        "500": "296"
+        "100": "120",
+        "250": "275",
+        "500": "450"
       },
       "available": true
     },
@@ -106,9 +106,9 @@
       "img": "https://oliya.com.ua/img/bilyj-kunzhut.png",
       "img640": "https://oliya.com.ua/img/oliya-bilyj-kunzhut.jpg",
       "price": {
-        "100": "70",
-        "250": "167",
-        "500": "267"
+        "100": "140",
+        "250": "310",
+        "500": "500"
       },
       "available": true
     },
@@ -122,9 +122,9 @@
       "img": "https://oliya.com.ua/img/len.png",
       "img640": "https://oliya.com.ua/img/oliya-len.jpg",
       "price": {
-        "100": "60",
-        "250": "144",
-        "500": "230"
+        "100": "100",
+        "250": "230",
+        "500": "380"
       },
       "available": true
     },
@@ -138,9 +138,9 @@
       "img": "https://oliya.com.ua/img/sonyashnyk.png",
       "img640": "https://oliya.com.ua/img/oliya-sonyashnyk.jpg",
       "price": {
-        "100": "45",
-        "250": "108",
-        "500": "172"
+        "100": "65",
+        "250": "150",
+        "500": "245"
       },
       "available": true
     },
@@ -154,11 +154,12 @@
       "img": "https://oliya.com.ua/img/kokos.png",
       "img640": "https://oliya.com.ua/img/oliya-kokos.jpg",
       "price": {
-        "200": "159",
-        "500": "302"
+        "200": "240",
+        "500": "450"
       },
       "available": true
     },
+
     "code11" : {
       "id": 11,
       "category": "Паста горіхова",
