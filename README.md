@@ -17,7 +17,7 @@ Pre-rendering (react-snap), meta tags (react-helmet), google analytics (react-ga
 </p>
 
 ## Demo
-### [View live demo](https://iq-developer.github.io/oliya/)
+### [View live demo](https://oliya.com.ua/)
 ## Screenshot
 ![oliya](https://user-images.githubusercontent.com/70282845/161394272-e488289e-a2a8-4ff5-a17e-678cae84ecc1.jpg)
 ## Build with
